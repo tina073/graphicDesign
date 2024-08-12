@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조윤정 - 렉서스 자동차 홈페이지 리뉴얼</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        li { list-style: none;}
+        a { color: #000; text-decoration: none;}
+        body { font-size: 16px; font-family: 프리젠테이션; /*background: url(images/bg_grid.gif);*/}
+        /*------------- 리셋 -------------*/
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        /*------- 메뉴바 -------*/
+            header {
+                width: 100%;
+                height: 70px;
+                position: relative;
+                z-index: 9999;
+            }
+            header a {
+                font-weight: bold;
+                font-size: 20px;
+
+            }
+                .logo_container {
+                    width: 288px;
+                    height: 70px;
+                    float: left;
+                }
+                    .logo_container img {
+                        
+                        padding: 15px 34px;
+                    }
+                    .gnb_btn ul {
+                        align-items: center;
+                        display: flex;
+                        height: 70px;
+                        padding-left: 80px;
+                        float: left;
+                    }
+                        .gnb_btn ul li {
+                            padding: 0 10px;
+                        }
+                .login_btn { 
+                    align-items: center;
+                    display: flex;
+                    float: right;
+                    padding: 0 34px;
+                    height: 70px;
+                }
+                        .login_btn ul li a{
+                            padding-left: 20px;
+                        }
+                        .gnb_btn ul li:hover a, .login_btn ul li:hover a {
+                            color:#707070;
+                        }
+        /*------- 광고 배너 -------*/
+        main {
+            position: relative;  /*.slide img의 기준점을 주기 위한 코드*/
+        }
+            .slide img {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 100;
+            }
+            #slide_container img {
+                position: relative;
+            }
+            #slide_container .title {
+                color: #fff;
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                z-index: 200;
+            }
+                #slide_container h1 {
+                    border-bottom: 1px solid #fff;
+                    font-size: 8vh;
+                    display: block;
+                    padding-bottom: 10px;
+                }
+                #slide_container h2 {
+                    padding-top: 10px;
+                }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="gnb"><!-- 메뉴바 -->
+                <div class="logo_container">
+                    <h1><a href="#"><img src="images/logo_lexus.svg" alt="렉서스 로고"></a></h1>
+                </div>
+                <div class="gnb_btn">
+                    <ul>
+                        <li><a href="#">LINE UP</a></li>
+                        <li><a href="#">BRAND</a></li>
+                        <li><a href="#">LEXUS NEWS</a></li>
+                        <li><a href="#">REQUEST</a></li>
+                    </ul>
+                </div>
+                <ul class="login_btn">
+                    <li><img src="images/Search_2x.png" width="35px" alt="검색 돋보기"></li>
+                    <li><a href="#">LOGIN</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <!-- 광고배너 -->
+            <div id="eventSlide">
+                <div id="slide_container" class="slide slide1">
+                    <img src="images/slide_image1.webp" alt="광고배너1">
+                    <div class="title slide1_title">
+                        <h1>LBX MORIZO RR <br>CONCEPT</h1>
+                        <h2>LBX를 베이스로 한 하이퍼포먼스 컨셉 모델을 발표</h2>
+                    </div>
+                </div>
+                
+                <div id="slide_container" class="slide slide2">
+                    <img src="images/slide_image2.webp" alt="광고배너2">
+                    <div class="title slide2_title">
+                        <h1>LEXUS LM</h1>
+                        <h2>편안함과 창의성을 제공하는 럭셔리 무버</h2>
+                    </div>
+                </div><!--
+                <div id="slide_container" class="slide slide3">
+                    <img src="images/slide_image3.webp" alt="광고배너3">
+                    <div class="title slide3_title">
+                        <h1>LEXUS NX</h1>
+                        <h2>NX의 일부를 개량하며 동시에 "OVERTRAIL" 패키지 추가 설정</h2>
+                    </div>
+                </div>
+                <div id="slide_container" class="slide slide4">
+                    <img src="images/slide_image4.webp" alt="광고배너4">
+                    <div class="title slide4_title">
+                        <h1>LEXUS UX300h</h1>
+                        <h2>시스템의 출력 상향<br>하이브리드 시스템을 탑재한 UX300h 발매</h2>
+                    </div>
+                </div>
+                <div id="slide_container" class="slide slide5">
+                    <img src="images/slide_image5.webp" alt="광고배너5">
+                    <div class="title slide5_title">
+                        <h1>LEXUS UX300e</h1>
+                        <h2>급속 충전 성능 향상<br>보다 안심감있는 배터리 EV로 진화한 UX300e 발매</h2>
+                    </div>
+                </div>
+            </div>
+
+             모델 리스트 
+            <div id="lineUp_container">
+                <h1>LINE UP</h1>
+                <ul class="lineUp_nav">
+                    <li>BEV</li>
+                        <ul class="model_list">
+                            <li><a href="#"><img src="images/bev_image1.png" alt="RZ 모델 사진"></a></li>
+                        </ul>
+                    <li>SUV</li>
+                    <li>SEDAN</li>
+                    <li>MPV</li>
+                    <li>COUPE</li>
+                    <li>YACHT</li>
+                </ul>
+
+            </div>-->
+        </main>
+
+        <footer></footer>
+    </div>
+</body>
+</html>
