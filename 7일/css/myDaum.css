@@ -1,0 +1,109 @@
+﻿@charset "utf-8";
+
+* { margin:0; padding:0; }
+li { list-style-type:none; }
+img,fieldset { border:none; }
+address,em { font-style:normal; }
+a { text-decoration:none; color:#000; }
+body { font-size:12px; font-family:돋움; }
+
+	#wrapper {
+	width:980px;
+	margin:0 auto; 
+	outline:1px solid red; 
+	}
+	
+		#header { margin:25px 0 10px; }
+			h1 {
+				width:78px;
+				height:39px;
+				background:url(../images/logo.gif); 
+				outline:1px solid red;
+				text-indent:-9999px;
+				overflow:hidden;
+				float:left;
+			}
+			
+			dl { height:39px; }
+				dt, dd { 
+					height:39px; 
+					float:left;
+					text-indent:-9999px;
+					overflow:hidden;
+				}
+				dt { 
+					width:130px;
+					background:url(../images/media.gif); 
+				}
+				
+				dd:nth-of-type(1) {
+					width:58px;
+					background:url(../images/menuTopSports.gif); 
+				}
+				dd:nth-of-type(2) {
+					width:57px;
+					background:url(../images/menuTopAgora.gif); 
+				}
+				dd:nth-of-type(3) {
+					width:83px;
+					background:url(../images/menuTopMan.gif); 
+				}
+				dd:nth-of-type(4) {
+					width:55px;
+					background:url(../images/menuTopView.gif); 
+				}
+			#mainNavi { 
+				clear:both; 
+				background-color:#00f;
+				overflow:hidden;
+			}
+				#mainNavi li { display:inline; }
+				
+					#mainNavi a {
+						color:#fff;
+						font-weight:bold;
+						font-size:14px;
+						padding:12px 7px;
+						display:inline-block;
+					}
+						a:hover { text-decoration:underline; }
+				.navLeft { float:left; }
+				.navRight { float:right; }
+				
+		#contents { overflow:hidden; }
+			#contents div { 
+				float:left; 
+				text-align:center;
+				font-size:20px;
+				font-weight:bold;
+				color:#fff;
+			}
+				#left {
+					width:118px;
+					height:200px;
+					line-height:200px;
+					background-color:#ff91e5;
+				}
+				#center {
+					width:592px;
+					height:400px;
+					line-height:400px;
+					background-color:#ffd94f;
+					margin:0 10px;
+				}
+				#right {
+					width:250px;
+					height:200px;
+					line-height:200px;
+					background-color:#4f75ff;
+				}
+		#footer { 
+			text-align:center; 
+			line-height:20px;
+			border-top:1px solid #000; 
+			margin-top:30px;
+			padding-top:10px
+		}
+			#footer li { 
+				display:inline;
+			}

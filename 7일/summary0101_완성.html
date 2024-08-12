@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>활용 강좌를 위한 CSS 스타일</title>
+			<style type="text/css">
+				* { margin:0; padding:0; }
+				body { font:0.9em "맑은 고딕"; background:#eeeeaa url(images/banner.gif) repeat-x; }
+					#div1 { border:1px solid #000; background:url(images/banner.gif) no-repeat right bottom; }
+					.txt1 { font-style:italic; }
+					.txt2 { font-weight:bold; }
+					.txt3 { word-spacing:20px; }
+					.txt4 { letter-spacing:-0.1em; }
+					.txt5 { font-size:200%; }
+					.txt6 { font:italic 36px verdana, geneva, sans-serif; }
+					.txt7 { line-height:16px; }
+					.txt8 { text-indent:20px; }
+					.txt9 { color:#00f; ]
+			</style>
+	</head>
+
+	<body>
+		<div id="div1" style="width:300px; height:300px;" class="bg1"></div>
+		<p class="txt1">txt1</p>
+		<p class="txt2">txt2</p>
+		<p class="txt3">txt3 txt3 <em>txt3</em> txt3</p>
+		<p class="txt4">txt4</p>
+		<p class="txt5">txt5</p>
+		<p class="txt6">txt6</p>
+		<p class="txt7">txt7<br />txt7</p>
+		<p class="txt8">txt8</p>
+		<p class="txt9">txt9</p>
+
+		<!--
+		1 전체글꼴은 맑은고딕체에 글자크기는 0.9em으로 적용하세요.
+		2 문서에 배경색을 넣을 수 있습니다.(#eeeeaa)
+		3 문서에 배경 이미지를 넣을 수 있습니다.(가로 방향으로만 반복)
+		4 div에 배경 이미지를 원하는 위치에 놓을 수 있습니다.(오른쪽 하단)
+		5 문서에 기본 텍스트를 지정합니다.
+			▶ txt1은 기울임을 적용
+			▶ txt2는 진하게 적용
+			▶ txt3은 단어들의 간격을 20픽셀씩 띄우기
+			▶ txt4는 글자들의 간격을 -0.1em 적용
+			▶ txt5는 부모요소의 두배크기로 글자크기 지정
+			▶ txt6은 단축속성을 이용하여 글자크기 36픽셀의 기울임으로 Verdana, Geneva, sans-serif글꼴 순으로 배치
+			▶ txt7은 줄간격을 16픽셀 적용
+			▶ txt8은 들여쓰기 20픽셀 적용
+			▶ txt9는 글자색을 파란색을 적용
+		-->
+	</body>
+</html>

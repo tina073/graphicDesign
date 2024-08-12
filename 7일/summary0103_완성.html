@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>활용 강좌를 위한 CSS 스타일_소스</title>
+		<link rel="stylesheet" href="outstyle.css">
+		<style type="text/css">
+			* { margin:0; padding:0; }
+			li { list-style-type:none; }
+			img,fieldset { border:none; }
+			address,em { font-style:normal; }
+			
+			body {
+				font-family: "맑은 고딕";
+				font-size: 0.9em;
+				background:url(images/bg_grid.gif);
+			}
+			div {
+				margin-top: 10px;
+				padding: 10px;
+				width: 200px;
+				height: 100px;
+				border: 1px solid #000;
+			}
+			/*내방식
+				#div1 { float:right; }
+				#div2 { float:right; }
+				#div3 { clear:both; }
+				#div4 { text-align:center; line-height:100px; }
+				#div5 { text-align:center; display:table-cell; vertical-align:middle; }
+				#div6 { display: flex; justify-content: center; align-items: center; }
+					#inner { width:100px; height:50px; text-align:center; line-height:50px;}
+				h1 { font:24px "Times New Roman",Times,serif; color:#699; }
+				.rolloverMenu { width:600px; }
+					ul li { display:inline; border:2px solid red; padding:5px 10px; }
+					ul li a { text-decoration:none; }
+					*/
+					
+				#div1, #div2 { float:right; }
+				#div3 { clear:both; }
+				#div4 { text-align:center; line-height:100px; }
+				#div5 { text-align:center; display:table-cell; vertical-align:middle; }
+				#div6 { position:relative; }
+					#inner { width:100px; height:50px; position:absolute; left:50%; top:50%; margin-left:-60px; margin-top:-35px; }
+				h1 { font:24px "Times New Roman",Times,serif; color:#699; }
+				.rolloverMenu { 
+					width:600px; 
+					background-color:#fff; 
+					outline:2px solid red; 
+					}
+					#nav { 
+						border-bottom:1px solid #000; 
+						padding-bottom:25px; 
+						}
+						li { display:inline; }
+							li a { 
+								display:inline-block;
+								outline:2px solid red; 
+								padding:10px 20px;
+								color:#ff32b1; 
+								font-weight:bold; 
+								font-family:arial; 
+								text-decoration:none; 
+								font-size:20px; 
+								}
+							li a:hover { 
+								color:#000;
+								background:url(images/tab_pyra.gif) no-repeat center bottom;
+								}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">div1</div>
+		<div id="div2">div2</div>
+		<div id="div3">div3</div>
+		<div id="div4">div4</div>
+		<div id="div5">
+			<img src="images/banner.gif" />
+		</div>
+		<div id="div6">
+			<div id="inner">inner</div>
+		</div>
+
+		<br /></br /><br /></br />
+
+		<span class="mytext">외부 스타일 활용</span>
+		<br /></br /><br /></br />
+
+		<h1>Web Standard</h1>
+		<br /></br /><br /></br />
+
+		<div class="rolloverMenu">
+			<ul id="nav">
+				<li id="apples_tab"><a href="#">Apples</a></li>
+				<li id="spag_tab"><a href="#">Spaghetti</a></li>
+				<li id="beans_tab"><a href="#">Green Beans</a></li>
+				<li id="milk_tab"><a href="#">Milk</a></li>
+			</ul>
+		</div>
+		<BR /><BR /><BR /><BR /><BR /><BR /><BR />
+		<!--
+		11 div1과 div2를 우측으로 배치
+		12 위에서 적용한 float을 해제
+		13 div4안의 텍스트를 정가운데 정렬
+		14 div5안의 이미지를 정가운데 정렬
+		15 div6안의 하위 div를 100X50의 크기로 정가운데 정렬
+		16 link로 외부에 있는 outstyle.css를 연결
+		17 h1태그에 글자크기 24픽셀의 Times New Roman체를 적용하되 해당 글꼴이 없을때를 대비해 Times와 serif체를 대체 글꼴로 지정. 글자색 변경(#699)
+		18 ul / li 목록 태그를 사용해서 롤오버 메뉴를 만들 수 있습니다.
+		-->
+	</body>
+</html>
