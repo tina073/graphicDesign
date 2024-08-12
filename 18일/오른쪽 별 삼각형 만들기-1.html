@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>9.별 삼각형 만들기</title>
+	<style>
+		body { margin:100px;}
+		span {
+			font-size:80px;
+			font-weight:bold;
+			color:red;
+			line-height:10px;
+		}
+		.gong { font-size:100px; }
+	</style>
+</head>
+<body>
+	<script>
+	/*
+		for(let line= 10; line >= 1; line--) {
+			for(let gong = 10 - line; gong >= 1 ; gong--){ //공백찍기
+				document.write("<span class='gong'>&nbsp;</span>")
+			}
+			for(let star = 1; star <= line; star++){  //별찍기
+				document.write("<span>*</span>")
+			}
+			document.write("<br>")
+		}
+		*/
+		
+			for(let line= 1; line <= 10; line++) {
+			for(let gong = 0; gong <= line-2 ; gong++){ //공백찍기
+				document.write("<span class='gong'>&nbsp;</span>")
+			}
+			for(let star = 10; star >= line; star--){  //별찍기
+				document.write("<span>*</span>")
+			}
+			document.write("<br>")
+		}
+	</script>
+</body>
+</html>
