@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<title> 예제 소스</title>
+		<style>
+			.ex1 { font-style:italic; }
+			.ex2 { font-variant:small-caps; }
+			.ex3 { font-weight:bold; }
+			.ex4 { font-size:40px; }
+			.ex5 { font-family:"Times New Roman",Georgia,serif; }
+			.ex6 { font-size:2.1em; }
+			.ex10 { font:bold italic 30px 200% 궁서, Georgia, serif; } /* { font:bold italic 30px/2 궁서, Georgia, serif; }*/
+		</style>
+	</head>
+
+	<body>
+		<p class="ex1">This is font-style</p>
+		<p class="ex2">This is font-variant</p>
+		<p class="ex3">This is font-weight</p>
+		<p class="ex4">This is font-size 40px</p>
+		<p class="ex5">This is font-family</p>
+		<p class="ex6">This is font-size used "EM" 2.1</p>
+		<p class="ex10">This is font</p>
+		<pre>
+class ex10은 아래와 같은 형식으로 지정한다.
+글자크기 30픽셀 기울임 진하게 줄높이 200%  궁서 
+만약 궁서가 없다면 Georgia 이것도 없다면 기본 시스템 글꼴인 serif로 글꼴을 지정한다.
+
+font:weight   style     variant   size/line-height   family순으로 적는다.
+      bold    normal     normal
+     normal  italic   small-caps
+              oblique
+		</pre>
+		
+	</body>
+</html>

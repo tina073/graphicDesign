@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>박스모델 연습4_가상클래스 네임_소스</title>
+		<style type="text/css">
+			#wrapper{
+				width:298px;
+				border:1px solid red;
+				padding:10px 0 15px 20px;
+			
+			}
+			
+			.one{
+				width:146px;
+				height:146px;
+				border:2px solid red;
+				margin:10px 0 0;
+			}
+			
+			.one:first-child{
+				margin:0;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<div class="one" style="line-height:146px; text-align:center;">150X150</div>
+			<div class="one" style="line-height:146px; text-align:center;">150X150</div>
+			<div class="one" style="line-height:146px; text-align:center;">150X150</div>
+		</div>
+		<img src="images/img2.jpg" /><br /><br /><br />
+		<div id="clear">
+			<span style="font-size:30px; color:red; font-weight:bold;">현재 첫번째 박스의 위쪽공간이 20픽셀인 상황!!! </span><br /><br />
+			가상클래스는 말 그대로 클래스네임을 따로 넣어주지 않고도 사용하는 것을 말한다.<br />
+			안쪽박스의 클래스 네임을 전부 [one]으로 주고 위쪽으로 마진을 10픽셀을 주었다면<br />
+			안쪽 첫번째 박스의 마진이 wrapper에 준 패딩이랑 겹쳐서 위쪽이 총 20픽셀의 공간이 생긴다.<br />
+			<br />
+			위처럼 같은 이름을 가진 동급의 자식요소들중<br />
+			first-child를 써서 첫번째 요소를 지정하거나 last-child를 써서 마지막 요소를 지정할 수 있다.<br />
+			<br />
+			멀티클래스를 사용ㅇ했을때와 동일하게 wrapper에 패딩을 사방으로 넣고<br />
+			one에 위쪽으로 패딩 10픽셀을 준 후, one용 첫번째 요소의 마진을 다시 0으로 만든다.<br />
+			그리하여 결과물은 똑같이 출력이 된다.
+		</div>
+	</body>
+</html>

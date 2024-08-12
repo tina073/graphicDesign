@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<title> 예제 소스</title>
+		<style>
+			/*
+			* { margin:0; padding:0; }
+			.one { width:500px; background-color:#fed5bc; }
+			.two { width:360px; background-color:#d9c6ff; padding:60px 40px 30px 100px; }
+			*/
+			
+			* { margin:0; padding:0; }
+			div { width:500px; border:5px double green; background-color:lightgreen; margin:20px;}
+			div:nth-child(2) { padding:60px 40px 30px 100px; }
+		
+		</style>
+	</head>
+
+	<body>
+		<div class="one">현재 폭 500픽셀의 크기 div로 감싸져 있습니다.
+		상하좌우의 안쪽여백이 전혀 없습니다.
+		이것은 패딩값을 넣기 전이죠.
+		</div>
+		<div class="two">현재 폭 500픽셀의 크기 div로 감싸져 있습니다.
+		상:60픽셀, 하: 30픽셀, 좌: 100픽셀, 우40픽셀의 안쪽여백이 적용되었습니다.
+		이것은 패딩값을 넣은 후이죠.
+		</div>
+	</body>
+</html>

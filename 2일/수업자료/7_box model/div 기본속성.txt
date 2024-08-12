@@ -1,0 +1,9 @@
+div 기본속성
+
+1. 가로폭은 부모요소를 가득 채우며, 세로높이는 내용만큼 차지한다.
+
+2. 자식요소가 부모보다 사이즈가 커질 경우 부모영역을 벗어난다.
+
+3. 자식 요소의 width, height 값이 백분율일 경우 부모 width, height를 기준으로 한다.
+
+4. 자식요소에게 border, padding을 줄 경우 width, height에는 border, padding을 뺀 수치를 적용해 준다.

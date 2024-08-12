@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="utf-8">
+	<head>
+		<meta charset="UTF-8" />
+		<title> 링크와 스타일시트_소스 </title>
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+	
+		<style>
+a:link{ color:#000; text-decoration:overline; }/*아무런액션이 없을때 보여짐*/
+
+a:visited{ color:red; text-decoration:none; } /*:link의 text-decoration이 상속이 되므로 none은 무시가 된다*/ /* 마우스를 누르고난 후 */
+
+a:hover{ color:green; text-decoration:overline; border-bottom:5px soild red; border-color:blue; } /*-bottom의 색상은 따로 쓰지 않으면 :visited의 글자색이 상속*/ /* 마우스를 올려놨을때 */	
+			
+a:active{ color:#ff0; text-decoration:none; } /*border-bottom:hover에서 상속*/ /* 마우스를 눌렀을때 */
+
+
+		</style>
+	</head>
+
+	<body>
+		<a href=#>[공지]홈페이지 리뉴얼되었습니다. 많이 많이 방문을...</a><br>
+		<a href=#>[공지]홈페이지 리뉴얼되었습니다. 많이 많이 방문을...</a><br>
+		<a href=#>[공지]홈페이지 리뉴얼되었습니다. 많이 많이 방문을...</a><br>
+		<a href=#>[공지]홈페이지 리뉴얼되었습니다. 많이 많이 방문을...</a><br>
+		<a href=#>[공지]홈페이지 리뉴얼되었습니다. 많이 많이 방문을...</a><br>
+	 </body>
+</html>

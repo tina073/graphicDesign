@@ -1,0 +1,13 @@
+﻿@charset "utf-8";
+
+* { margin:0; padding:0;}
+li { list-style-type:none; }
+img { border:0; }
+
+body { background:url(../images/bg.jpg); font:12px/160% 굴림; }
+h1 { padding:20px 0 30px; font-size: 50px; font-weight:bold; font-family:arial; text-align:center; /*width:500px; margin:20px auto;*/}
+ul { text-align:center; }
+li { display:inline;}
+	li a { background-color:purple; display:inline-block; color:#fff; font-size:16px; font-weight:bold; font-family:arial; padding:10px 20px; }
+h2 { text-align:center; margin:10px 0 20px }
+p { width:700px; margin:0 auto; padding:10px 0; text-align:justify; }

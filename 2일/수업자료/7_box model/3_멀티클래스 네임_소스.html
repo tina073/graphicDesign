@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>박스모델 연습3_멀티클래스 네임_소스</title>
+		<style type="text/css">
+			#wrapper{
+				width:298px;
+				border:1px solid red;
+				padding:10px 0 15px 20px;
+				float:left;
+			}
+			
+			.one{
+				width:146px;
+				height:146px;
+				border:2px solid red;
+				margin:10px 0 0;
+			}
+			
+			#wrapper .one.two{
+				margin:0;
+			}
+			
+			img{
+				float:right;
+				margin-bottom:30px;
+			}
+			
+			#clear{
+				clear:both;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<div class="one two" style="line-height:146px; text-align:center;">150X150</div>
+				<!-- 한칸 띄고 클래스 네임을 [two]라고 하나 더 준다. -->
+			
+			<div class="one" style="line-height:146px; text-align:center;">150X150</div>
+			<div class="one" style="line-height:146px; text-align:center;">150X150</div>
+		</div>
+		<img src="images/img2.jpg" /><br /><br /><br />
+		<div id="clear">
+			<span style="font-size:30px; color:red; font-weight:bold;">현재 첫번째 박스의 위쪽공간이 20픽셀인 상황!!! </span><br /><br />
+			멀티클래스는 여러개의 클래스네임을 같이 사용하는 것을 말한다.<br />
+			안쪽박스의 클래스 네임을 전부 [one]으로 주고 위쪽으로 마진을 10픽셀을 주었다면<br />
+			안쪽 첫번째 박스의 마진이 wrapper에 준 패딩이랑 겹쳐서 위쪽이 총 20픽셀의 공간이 생긴다.<br />
+			<br />
+			이때 첫번째 박스에 한칸 띄어 클래스 네임을 더 주고 <br />
+			.one.two 식으로 사용하여 마진을 0으로 만들면 매 위쪽에 들어간 마진 10픽셀이 빠진다.<br />
+			<br />
+			스타일이 중복이 될 경우 클래스 네임 한개보다 클래스 네임 두개를 쓴것이 우선되므로<br />
+			첫번째 .one에서 안쪽박스들의 마진을 위쪽으로 전부 준 후에<br />
+			두번째 .one.two에서 첫번째 박스의 위쪽으로 준 마진 하나가 다시 빠진다.
+		</div>
+	</body>
+</html>

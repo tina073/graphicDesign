@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>블록 레벨 스타일(박스 내부의 overflow에 대한 설정)</title>
+<style type="text/css">
+body {
+	font-family: "맑은 고딕";
+	font-size: 0.9em;
+}
+</style>
+</head>
+
+<body>
+<h1>내용이 박스의 높이보다 많은 경우</h1>
+<!-- overflow: visible; -->
+<div>
+	<h2>overflow의 네가지 설정을 활용</h2>
+	<ul>
+		<li>vislble : 넘쳐서 보이는 경우</li>
+		<li>scroll : 강제 스크롤</li>
+		<li>auto : 영역이 모자란 경우 스크롤</li>
+		<li>hidden : 가려지는 경우</li>
+	</ul>
+</div>
+
+<!-- overflow: scroll; -->
+<div>
+	<h2>overflow의 네가지 설정을 활용</h2>
+	<ul>
+		<li>vislble : 넘쳐서 보이는 경우</li>
+		<li>scroll : 강제 스크롤</li>
+		<li>auto : 영역이 모자란 경우 스크롤</li>
+		<li>hidden : 가려지는 경우</li>
+	</ul>
+</div>
+
+<!-- overflow: auto; -->
+<div>
+	<h2>overflow의 네가지 설정을 활용</h2>
+	<ul>
+		<li>vislble : 넘쳐서 보이는 경우</li>
+		<li>scroll : 강제 스크롤</li>
+		<li>auto : 영역이 모자란 경우 스크롤</li>
+		<li>hidden : 가려지는 경우</li>
+	</ul>
+</div>
+
+<!-- overflow: hidden; -->
+<div>
+	<h2>overflow의 네가지 설정을 활용</h2>
+	<ul>
+		<li>vislble : 넘쳐서 보이는 경우</li>
+		<li>scroll : 강제 스크롤</li>
+		<li>auto : 영역이 모자란 경우 스크롤</li>
+		<li>hidden : 가려지는 경우</li>
+	</ul>
+</div>
+<p>
+	Left margin + Left border + Left padding + width + Right padding + Right + border + Right margin, 모든 박스 element를 합산한 결과가 실제 폭입니다. 박스 내부의 element가 넘치는 부분(overflow)에 대한 설정이 필요합니다.
+</p>
+</body>
+</html>

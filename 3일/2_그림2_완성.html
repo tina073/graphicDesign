@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>박스모델 연습2_예제 그림2만들기_소스</title>
+		<style type="text/css">
+			/*내 방식
+			* { margin:0; padding:0; }
+			#wrapper { border:1px solid red; padding:10px; width:298px; }
+			#header { border:2px solid red; width:146px; height:146px; text-align:center; line-height:146px; margin-left:10px; }
+			.contents { border:2px solid red; width:146px; 
+			height:146px; text-align:center; line-height:146px; margin:10px;}
+			#footer { border:2px solid red; width:146px; height:146px; text-align:center; line-height:146px; margin-left:10px; margin-bottom:5px;}
+			*/
+			
+			/*강사방식 1
+			* { margin:0; padding:0; }
+			#wrapper { width:298px; padding-top:10px; padding-right:0px; padding-bottom:15px; padding-left:20px; border:1px solid red; } 
+				->단축형(방향=위부터 시계방향) : padding:10px 0 15px 20px;
+			#header { width: 146px; height:146px; border:2px solid red; text-align:center; line-height:146px; margin-bottom:10px;}
+			.contents { width: 146px; height:146px; border:2px solid red; text-align:center; line-height:146px; margin-bottom:10px;}
+			#footer { width: 146px; height:146px; border:2px solid red; text-align:center; line-height:146px;}
+			*/
+			/*강사방식 2(최적화)
+			* { margin:0; padding:0; }
+			#wrapper { width:318px; border:1px solid red; padding-bottom:15px; }
+			#header, .contents, #footer { width:146px; height:146px; border:2px solid red; text-align:center; line-height:146px; margin-top:10px; margin-left:20px; }
+			*/
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<div id="header">150X150</div>
+			<p class="contents">150X150</p>
+			<div id="footer">150X150</div>
+		</div>
+		<img src="images/img2.jpg" />
+	</body>
+</html>
