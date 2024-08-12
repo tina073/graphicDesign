@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>활용 강좌를 위한 CSS 스타일</title>
+<style type="text/css">
+body {
+	font-family: "맑은 고딕";
+	font-size: 0.9em;
+	background:url(images/bg_grid.gif);
+	margin:0;
+	padding:0;
+}
+div {
+	width: 200px;
+	height: 200px;
+	border: 1px solid #000;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="div1">div1</div>	
+	<div id="div2">div2</div>
+	<div id="div3">div3</div>	
+	<div id="div4">div4</div>
+	<img src="images/banner.gif" class="gap" />
+	<img src="images/banner.gif" />
+	<div id="div5" style="width:500px; height:300px;">
+		<img src="images/banner.gif">
+	</div>
+	<div id="div6">div6</div>
+	<a href="#">link</a><br /><br />
+	<span class="news"><a href="#">news class link</a></span>
+	<br /><br /><br /><br /><br /><br /><br />
+
+<!--
+6 div에 패딩, 마진을 줄 수 있습니다.
+	▶ div1에 위쪽마진을 10픽셀적용
+	▶ div2는 div1와 위쪽을 10픽셀 띄우며 화면의 가운데 정렬
+	▶ div3는 상:10픽셀, 하:30픽셀, 좌:0픽셀 우:20픽셀 마진값 지정
+	▶ div4는 화면의 가운데 정렬을 시킨 후 위쪽으로 다시 한번 더 마진값을 50픽셀을 지정	
+7 클래스 gap에 오른쪽 마진 20픽셀 지정
+8 div5안에 그림을 박스중앙에를 배치
+9 div6에 마진 20픽셀을 준 후 
+		위   쪽테두리 : 4픽셀 이중선 빨간색
+            아래쪽테두리 : 5픽셀 실선 파란색 
+		오른쪽테두리 : 3픽셀 파선(긴 점선) 녹색
+		왼   쪽테두리 : 5픽셀 점선 검은색
+10 기본 링크 스타일 : 밑줄없이 글자색 변경(#9C6)
+     오버 스타일 : 진하게 글자색 변경(#960)
+11 news 클래스 기본 링크 스타일 : 글자위, 아래로 선지정 
+	오버 스타일 : 검고 진한 글자, 배경색 지정(#ffC400)
+-->
+</body>
+</html>

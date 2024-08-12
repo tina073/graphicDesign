@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title> 제주도_css전 </title>
+			<style type="text/css">
+				* { margin:0; padding:0; }
+				img,fieldset { border:none; }
+				li { list-style-type:none; }
+				table{border-collapse:collapse;}
+				table,th,td{border:1px solid #000;}
+				/*내방식
+				body { background:url(images/bg_grid.gif); font: 15px 굴림; line-height:20px;}
+					#wrapper { outline:1px solid red; margin:0 100px; width:650px; position:relative; }
+						h1 { margin:20px 0; }
+						h2 { display:none; }
+						p { text-indent:15px; margin:10px 0;}
+						.trip { position:relative; left:25px; }
+						ol { border:1px solid #000; width:253px; padding:15px 0 0 15px; }
+							ol li { position:relative; left:30px; line-height:30px; }
+							ol li ul { list-style:none; text-indent:-30px; }
+								li a { color:#000; text-decoration:none; }
+						.jeju { height:525px; position:absolute; top:360px; left:290px; }
+				*/
+				#wrapper { outline:1px solid red; position:relative; width:650px; margin:0 auto; }
+					h2 { display:none; }
+					p { text-indent:16px; margin:10px 0; }
+					a { text-decoration:none; color:#000; }
+					a:hover { text-decoration:underline; color:orange; }
+					.trip { padding-left:30px; }
+						.trip li { list-style:disc; }
+					ol { width:220px; padding:15px 0 0 50px; border:2px dashed blue; }
+						ol li { list-style-type:decimal; line-height:160%; }
+						ol ul li {list-style-type:none; }
+					.jeju { position:absolute; right:0; top:390px; height:455px; }
+			</style>
+	</head>
+	<body>
+	<div id="wrapper">
+		<h1>제주도</h1>
+		<h2>제주도의 개요</h2>
+		<p><strong>제주도(濟州島)</strong>는 한반도 서남방에 있는 <strong>섬</strong>이다. 제주특별자치도청이 소재한 섬이며, <strong>대한민국</strong> 면적의 1.9%에 해당되는 <strong>제주특별자치도</strong>에서 가장 큰 섬이자 한국에서 가장 큰 섬이다. 황해·동중국해·남해의 초점에 자리잡아 한국·중국·일본 3개 국의 교통상의 요지는 물론 <strong>정치,경제,군사상 중요한 지위</strong>를 차지하고 있다.</p>
+		
+		<p>중앙의 한라산을 중심으로 완만한 경사를 이루어 동서 73km, 남북 41km의 타원형을 하고 있다. 일주도로 길이는 181km, 해안선은 258km이다.</p>
+		
+		<h2>여행정보</h2>
+		<ul class="trip">
+			<li>북쪽 끝: <a href="#">김녕해수욕장</a></li>
+			<li>남쪽 끝: <a href="#">송악산</a></li>
+			<li>서쪽 끝: <a href="#">수월봉</a></li>
+			<li>동쪽 끝: <a href="#">성산 일출봉</a></li>
+		</ul>	
+		
+		<p>제주도는 난대 기후여서 겨울에도 거의 영하로 떨어지지 않고 영상을 유지한다. 한라산, 성산 일출봉, 거문오름 용암동굴계가 학술·문화·관광·생태 등의 가치와 중요성을 인정받아 2007년 6월, 제주 화산섬과 용암 동굴이라는 이름으로 세계자연유산에 등록되었다.</p>
+		<br>
+		<h2>목차</h2>
+		<ol>		
+				<li><a href="jijil.html">지질 및 지형</a>
+					<ul>
+						<li>1.1 지질</li>
+						<li>1.2 지형</li>
+					</ul>
+				</li>
+
+				<li>Example.ogg</li>
+				
+				<li>부속도서
+					<ul>
+						<li>3.1 사람이 사는 섬</li>
+						<li>3.2 사람이 살지 않는 섬</li>
+						<li>3.3 전설</li>
+					</ul>
+				</li>
+				
+				<li>기후</li>
+				
+				<li>생태계
+					<ul>
+						<li>5.1 식물</li>
+						<li>5.2 동물</li>
+					</ul>
+				</li>
+				
+				<li>역사
+					<ul>
+						<li>6.1 형성과정</li>
+					</ul>
+				</li>
+				
+				<li>같이 보기</li>
+				
+				<li>주석</li>
+				
+				<li>참고문헌 및 바깥 고리</li>
+		</ol>
+		
+		<img class="jeju" src="images/jeju1.jpg" alt="제주도의위치는 동아시아, 좌표는동경 126도~~~, 면적은 184592 제곱킬로미터, 최고점은 한라산 1950 미터이다"  />
+		
+	</div>
+	</body>
+</html>

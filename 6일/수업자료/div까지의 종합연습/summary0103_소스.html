@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>활용 강좌를 위한 CSS 스타일_소스</title>
+<style type="text/css">
+body {
+	font-family: "맑은 고딕";
+	font-size: 0.9em;
+	background:url(images/bg_grid.gif);
+}
+div {
+	margin-top: 10px;
+	padding: 10px;
+	width: 200px;
+	height: 100px;
+	border: 1px solid #000;
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+<div id="div4">div4</div>
+<div id="div5">
+	<img src="images/banner.gif" />
+</div>
+<div id="div6">
+	<div id="inner">inner</div>
+</div>
+
+<br /></br /><br /></br />
+
+<span class="mytext">외부 스타일 활용</span>
+<br /></br /><br /></br />
+
+<h1>Web Standard</h1>
+<br /></br /><br /></br />
+
+<div class="rolloverMenu">
+	<ul id="nav">
+		<li id="apples_tab"><a href="#">Apples</a></li>
+		<li id="spag_tab"><a href="#">Spaghetti</a></li>
+		<li id="beans_tab"><a href="#">Green Beans</a></li>
+		<li id="milk_tab"><a href="#">Milk</a></li>
+	</ul>
+</div>
+<BR /><BR /><BR /><BR /><BR /><BR /><BR />
+<!--
+11 div1과 div2를 우측으로 배치
+12 위에서 적용한 float을 해제
+13 div4안의 텍스트를 정가운데 정렬
+14 div5안의 이미지를 정가운데 정렬
+15 div6안의 하위 div를 100X50의 크기로 정가운데 정렬
+16 link로 외부에 있는 outstyle.css를 연결
+17 h1태그에 글자크기 24픽셀의 Times New Roman체를 적용하되 해당 글꼴이 없을때를 대비해 Times와 serif체를 대체 글꼴로 지정. 글자색 변경(#699)
+18 ul / li 목록 태그를 사용해서 롤오버 메뉴를 만들 수 있습니다.
+-->
+</body>
+</html>

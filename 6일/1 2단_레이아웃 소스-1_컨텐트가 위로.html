@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>레이아웃 연습1</title>
+		<style type="text/css">
+			body{ margin:0; padding:0;}
+				/*내 방식
+				#wrapper { width:600px; height:360px; display:inline-block; }
+					div { overflow:hidden; height:120px; text-align:center; line-height:120px; }
+						.header, .footer { width:600px;  }
+						.content, .sidebar { width:180px; }
+						.header { background-color:#ffffb9; }
+						.content { float:left; background-color:#11cf23; }
+						.sidebar { float:right; background-color:#11cdcf; }
+						.footer { background-color:#e677d4; }
+					*/
+					
+				#wrapper { width:600px; margin:0 auto; }
+					.header { width:100%; height:120px; line-height:120px; text-align:center; background-color:#ffffb9; }
+					.content { float:left; width:180px; height:120px; line-height:120px; text-align:center; background-color:#11cf23; }
+					.sidebar { float:right; width:180px; height:120px; line-height:120px; text-align:center; background-color:#11cdcf; }
+					.footer { clear:both; width:100%; height:120px; line-height:120px; text-align:center; background-color:#e677d4; }
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div class="header">header </div>
+			<div class="content"> content (컨텐츠)</div>
+			<div class="sidebar"> sidebar (사이드바)</div>
+			<div class="footer"> footer</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
