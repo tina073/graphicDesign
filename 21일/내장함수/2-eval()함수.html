@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 2-eval()함수  </title>
+		<script>
+			let word, num;
+			word = "3 * 5"  //문자열
+			num = 3 * 5  //계산식
+			document.write("word = " + word + "<br>");
+			document.write("eval(word) = " + eval(word) + "<br>");  //문자열이 eval() 함수를 통해 계산이 가능하게 되었다
+			document.write("num = " + num + "<br>");
+			document.write("<hr>");
+			eval("var re" + "sult = 15")  //변수가 아닌 문자열
+			document.write("result = " + result + "<br>");  //15를 출력, eval()을 통해 자바스크립트 구문으로 인식
+			
+			/*
+			eval : 문자열로 된 수식을 계산하여 결과를 반환
+			입력양식을 통해 입력받은 수식을 처리할 때 유용하게 사용
+			*/
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

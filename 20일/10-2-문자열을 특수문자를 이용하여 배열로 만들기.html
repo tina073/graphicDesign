@@ -1,0 +1,26 @@
+﻿
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 10-2-문자열을 특수문자를 이용하여 배열로 만들기 </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+		<script>
+			let ss = "a/b/c/d";
+			document.write(ss);
+			document.write("<hr>");
+			let arr1 = ss.split("/");
+			let arr2 = ss.split();  //구분자가 없다면 ["a/b/c/d"]로 문자열 전체가 0번 인덱스의 데이터 하나로 전달된다
+			let arr3 = ss.split("/",2);
+			document.write(arr1 + "<br>");
+			document.write(arr2 + "<br>");
+			document.write(arr3 + "<br>");
+			console.log(arr3);
+
+		</script>
+	</body>
+</html>

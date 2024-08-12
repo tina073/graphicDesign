@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 2 오늘 날짜 today.html </title>
+	</head>
+
+	<body>
+	<!--
+Date() 객체 : 날짜와 시간에 대한 정보를 조절할 수 있는 객체
+
+new Date() :  현재 날짜를 갖는 인스턴스가 만들어진다.
+new Date(특정 날짜) : 특정 날짜에 대한 인스턴스가 만들어진다.
+
+	let 변수 = new Date() 또는
+	let 변수 = new Date(년, 월-1, 일, 시, 분, 초)
+	
+	ex) 실제 생년월일이 1970년 7월 7일 경우
+		let birthday = new Date(1970,7,7); 
+		document.write (birthday.getMonth() + "월 ");
+		이라고 입력하면 화면상에서는 7월로 찍히지만 
+		프로그램상에서는 8월로 인식이 됨.
+		
+		요일을 찍었을때 1970년 7월 7일은 화요일이지만
+		화면상에는 1970년 7월 7일 금요일로 찍힌다.
+		그래서 월의 입력은 월-1 입력 후 
+			let birthday = new Date(1970,6,7);
+			document.write( (birthday.getMonth() +1) + "월 ");
+			
+		getMonth()에 +1을 해주어 화면상에는 7월로 찍히고
+		프로그램상에는 7월로 인식이 되게 해주어야 한다. -->
+		<script>
+let today = new Date(2024,4,23); // 2024년 5월 23일(목) 입력
+document.write("<h2>");
+document.write("당신의 생일은 ");
+document.write(today.getFullYear() + "년 ");
+document.write((today.getMonth() + 1) + "월 ");// 
+document.write( today.getDate() + "일 ");
+// document.write( today.getDay()); 해당 날짜의 요일을 숫자로 표시
+switch(today.getDay()){ // 일:0~토:6
+	case 0 : var week = "일"; break;
+	case 1 : var week = "월"; break;
+	case 2 : var week = "화"; break;
+	case 3 : var week = "수"; break;
+	case 4 : var week = "목"; break;
+	case 5 : var week = "금"; break;
+	case 6 : var week = "토"; break;
+}
+document.write( week + "요일 입니다.");
+document.write("</h2>");
+document.write(today.getYear() + "년 ");
+document.write(today.getYear() + 1900 + "년 ");
+		</script>
+		
+		
+		
+		
+		
+		<!-- 
+				---- 결과 ----
+		today.getYear( ) : 116년 
+		today.getYear( ) : 2016년 
+		today.getFullYear( ) : 2016년 
+		today.getMonth() : 7월 
+		today.getMonth() + 1 : 8월 
+		20일
+				
+		1월 January 	7월 July				Monday(월요일)
+		2월 February	8월 August			Tuesday(화요일)
+		3월 March		9월 September	Wednesday(수요일)
+		4월 April		10월 October		Thursday(목요일)
+		5월 May			11월 November	Friday(금요일)
+		6월 June		12월 December	Saturday(토요일)
+													Sunday(일요일) 			
+			
+		-->
+
+	</body>
+</html>

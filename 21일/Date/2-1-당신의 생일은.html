@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 2-오늘 날짜 today </title>
+		<script>
+			let birthday = new Date(2023,7,31);
+				document.write("<h2>");
+				document.write("당신의 생일은 ");
+				document.write(birthday.getFullYear() + "년 ");
+				document.write((birthday.getMonth() + 1) + "월");
+				document.write(birthday.getDate() + "일 ");
+				//document.write(birthday.getDay()); 해당 날짜의 요일을 숫자로 표시
+				switch(birthday.getDay()) { 
+					case 0 : var yoil = "<img src='../images/sun.gif'>"; break;
+					case 1 : var yoil = "<img src='../images/mon.gif'>"; break;
+					case 2 : var yoil = "<img src='../images/tue.gif'>"; break;
+					case 3 : var yoil = "<img src='../images/wed.gif'>"; break;
+					case 4 : var yoil = "<img src='../images/thu.gif'>"; break;
+					case 5 : var yoil = "<img src='../images/fri.gif'>"; break;
+					case 6 : var yoil = "<img src='../images/sat.gif'>"; break;
+				}
+				document.write(yoil + "요일 입니다.");
+				document.write("</h2>");
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>
+

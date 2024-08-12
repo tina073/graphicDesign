@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>주사위 횟수 문제</title>
+		<style>
+			#ans{ font:30px 맑은고딕; }
+		</style>
+	</head>
+	<body>	
+		<div id="ans">
+			총 25번을 무작위로 주사위를 추출하여 각 번호마다 나온 횟수를 정리하여 나타내시오.
+		</div>
+		<script>
+			let one = 0, two = 0, three = 0, four = 0; five = 0, six = 0;
+			
+			let table="<table border='1' width='400' height='400'>";
+			for(row=1; row<=5; row++){
+				table += "<tr>";
+				for(col=1; col<=5; col++){
+					let num = Math.ceil(Math.random()  * 6);  // num : 1~6
+					table += "<th><img src='../images/dice-" + num + ".png' width='50'></th>";
+					if(num==1){
+						one++;
+					}else if(num==2){
+						two++;
+					}else if(num==3){
+						three++;
+					}else if(num==4){
+						four++;
+					}else if(num==5){
+						five++;
+					}else{
+						six++;
+					}				
+				}
+				table += "</tr>";
+			} 
+			table += "</table>";
+			document.write(table+"<hr />");
+			document.write("<h1>*******주사위를 총 " + (row-1)*(col-1)  +"번 던진 결과*******<br />");
+			document.write("주사위 눈금 1은 총 " + one + "번 나왔고, <br />");
+			document.write("주사위 눈금 2는 총 " + two + "번 나왔고, <br />");
+			document.write("주사위 눈금 3은 총 " + three + "번 나왔고, <br />");
+			document.write("주사위 눈금 4는 총 " + four + "번 나왔고, <br />");
+			document.write("주사위 눈금 5는 총 " + five + "번 나왔고, <br />");
+			document.write("주사위 눈금 6은 총 " + six + "번 나왔습니다. 감가합니다. </h1><br />");
+			document.write("다시 실행하시려면 F5키를 눌러 주세요.");
+		</script>	
+	</body>
+</html>
+
+

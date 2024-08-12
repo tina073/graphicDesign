@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 9-객체 추가 삭제 </title>
+	</head>
+	<body>
+	<!--
+      자바스크립트는 인터프리터이며 객체의 내부가 키와 값의 쌍을 개수의 제약없이 저장하는 해시로 되어 있으므로 실행중 추가/삭제가 가능하다.
+	  
+	  추가 : 새로운 속성이 필요할 때 새로운 속성에 값을 대입
+	  삭제 : delete 명령 다음에 삭제할 속성을 지정.
+   -->
+		<script>
+			var human = {
+				name: '슈퍼맨',
+				age: 29,
+			};
+			
+			human.salary = 520; //추가
+			delete human.age; //삭제
+			document.write(human.name + "의 월급" + human.salary + "<br>");
+			document.write(human.name + "의 나이" + human.age + "<br>");
+			
+		</script>
+		
+		<!--
+---결과---
+         이름 = 배트맨, 나이 = 29
+         주소 = 고담시 금은동 638
+         
+         
+      주소는 시, 동, 번지 등의 여러 가지 세부 요소로 구성되므로 이런 정보를 가지는 별도의 객체로 구성했다. 
+      포함된 객체를 참조할 때는 점(.)연산자를 두 번 연속 사용한다.
+      
+      
+      객체에 포함 될 수 있는 마지막 타입은 함수이다.
+      함수도 하나의 타입이므로 객체의 멤버가 될 수 있다.
+      객체에 포함된 함수를 메서드(Method), 
+      함수가 아닌 일반 데이터 멤버는 속성(Property, 프로퍼티)라고 부른다.
+      즉, 객체는 속성과 메서드로 구성되어
+      속성은 객체의 특성을 정의하고
+      메서드는 객체의 동작을 정의한다.
+      
+      <script>
+         let name="이순신";
+         let age = 60; 
+         
+         var human = {
+            name: "배트맨",
+            age: 29,
+            intro: function() {
+               //document.write("name = " + this.name + "<br>"); // 이름 = 배트맨
+               //document.write("age = " + this.age + "<br>"); // 나이 = 29
+               document.write("name = " + name + "<br>"); // name = 이순신
+               document.write("age = " + age + "<br>"); // age = 60
+            }
+         };
+      
+         human.intro();  // 함수의 호출이므로 ()가 반드시 있어야 한다.
+      </script>
+
+         ---결과---
+            이름 = 배트맨
+            나이 = 29
+      
+      
+      intro라는 이름의 함수를 객체안에 포함시켰다.--- 메서드
+      intro: 다음에 동작을 정의하는 함수 리터럴을 작성한다.
+      메서드에서 객체의 멤버를 참조할 때는 this 키워드를 사용하는데 this는 메서드가 속해 있는 객체 자신을 나타낸다.
+      메서드가 객체안에 있으므로 this를 생략해도 될 것 같지만
+      자바스크립트는 객체 내부의 멤버를 참조한다는 것을 분명히 하기 위해 this의 생략을 허용하지 않는다.
+      
+      this가 빠지면 전역 변수를 참조하므로 반드시 this.name, this.age 식으로 자신의 멤버를 읽어야 한다.
+      
+      메서드가 여러개 객체 포함되어 있으면 함수 리터럴의 끝은 콤마(,)로 구분한다.
+      콤마(,)를 빼 먹거나 세미콜론(;)으로 끝나서는 안되지만 마지막 함수 리터럴의 끝은 콤마(,)를 생략할 수 있다.
+      
+      <script>
+         var dog = {
+            type: "치와와",
+            weight: 2,
+            male: true,
+            eat: function() {
+               document.write("냠냠.<br>");
+            },
+            sleep: function() {
+               document.write("쿨~쿨~<br>");
+            }
+         };
+
+         dog.eat();
+         dog.sleep();
+      </script>
+      
+      -->
+	</body>
+</html>

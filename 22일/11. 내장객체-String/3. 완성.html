@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> String 객체 문제  </title>
+		<style>
+		#ans{ font:30px 맑은고딕; }
+		</style>
+	</head>
+	<body>
+		<div id="ans">
+			방문객에게 이름을 영문으로 입력받은 후<br> 
+			무조건 대문자로 바꿔 출력하고, <br>
+			핸드폰번호를 "-"없이 숫자만 입력받아<br> 
+			맨 뒷자리 4개의 숫자는 "*"로 표시하시오.<br><br>
+			ex) parkdohoon ---&gt; PARKDOHOON<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01094654088 ---&gt;  010 - 9465 - ****<br>
+			concat, prompt, substring, toUpperCase를 이용하세요..
+		</div>
+		<script>
+			let userName = prompt("당신의 이름을 영문으로 입력하세요.");
+			let usetNum = prompt("당신의 핸드폰번호를 '-'없이 숫자만 입력하세요.");
+			
+			let upperName = userName.toUpperCase();
+			let resultNum = usetNum.substring(0, 3).concat(" - ");
+			resultNum += usetNum.substring(3, 7).concat(" - ****");
+			
+			document.write("<br />당신의 이름은 " + upperName + "이고, 당신의 핸드폰 번호는 " + resultNum + "입니다.<br />");
+			
+		</script>		
+	</body>
+</html>

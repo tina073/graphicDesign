@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>문제 - 현재시간을 24시각제로 표시</title>
+	</head>
+	<body>
+		<script>
+			let today=new Date(); // 2024-05-23 목
+			document.write("****** 현재 시간을 24시각제로 표시 ******");
+			document.write("<h1>지금은 ");
+			document.write(today.getFullYear() + "년 ");
+			document.write(today.getMonth() +1+ "월 ");
+			document.write(today.getDate() + "일 <br />"); 			
+	
+			document.write(today.getHours() + "시 "); 	
+			document.write(today.getMinutes() + "분 "); 	
+			document.write(today.getSeconds() + "초 입니다."); 	
+			document.write("</h1>");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 2-오늘 날짜 today </title>
+		<script>
+			let today = new Date();
+				document.write("<h1>");
+				document.write("지금은 " + today.getFullYear() + "년 ");
+				document.write((today.getMonth() + 1) + "월");
+				document.write(today.getDate() + "일<br>");
+				let nowHours = today.getHours()
+				if(nowHours > 12) {
+					document.write("오후 " + (nowHours - 12) +"시 ")
+				} else {
+					document.write("오전 " + nowHours +"시 ")
+				}
+				document.write(today.getMinutes() + "분 ");
+				document.write(today.getSeconds() + "초 입니다");
+				document.write("</h1>");
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>
+

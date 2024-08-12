@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>이메일 주소체크</title>		
+	</head>
+	<body>
+		
+		<script>
+let userEmail=prompt("당신의 이메일 주소는?");  // yabosu@naver.com
+let arrUrl=[".co.kr",".com",".net",".or.kr",".go.kr"];    //이메일 주소에 뒷부분 형식을 배열로 저장하였습니다.
+  
+let check1=false;	//초기 값 저장
+let check2=false; 	//초기 값 저장
+  
+/*방문자가 입력한 이메일 주소에 "@"포함되어 있으면 변수
+check1에 true가 저장되도록 하였습니다.*/
+if(userEmail.indexOf("@")>0) {
+	check1=true;
+}
+
+for(let i=0; i<arrUrl.length; i++) {//이메일에 배열 데이터 포함여부 검사
+	if(userEmail.indexOf(arrUrl[i])>0) { // yabosu@naver.com
+		check2=true;
+	}
+}
+			  			
+if(check1 && check2){	//AND(&&)연산자는 모두 피연산자가 모두 true여야 true를 반환합니다.
+	document.write("당신의 이메일 주소는 " + userEmail + " 입니다.");
+} else {
+	alert("이메일 형식이 잘못되었습니다.");
+}
+		</script>		
+	</body>
+</html>
+
+
+
+

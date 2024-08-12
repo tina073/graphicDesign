@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 배열의 순회_for in 문 </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+		<pre>
+			배열은 크기가 정해져 있으므로 모든 요소를 읽을 때 반복 횟수가 일정하다.
+			그래서 주로 for문으로 배열을 순회하는데 이때 for in문을 이용한다.
+			for in문의 제어변수는 배열의 첨자나 객체의 속성을 순서대로 순회하며 
+			루프에서는 제어 변수를 참조하여 실제값을 읽어낸다.
+			
+			형식
+					for (let 변수(key) in 배열) {
+						실행문;
+					}
+		</pre>	
+		<script>
+			let arr=["개나리", "진달래", "장미꽃", "무궁화"];
+			
+			document.write("<br><<<<< for~in 사용 >>>><br>");
+			/*  일반 for문 사용
+			for (let i=0; i<=arr.length; i++){
+				document.write(arr[i] + "<br>");
+			}			
+			*/
+			for(let i in arr){ //배열의 크기만큼 자동반복됨. n에는 배열첨자가 저장된다.
+				document.write(arr[i] + "<br>");
+			}
+			document.write("=================<br><br>");
+		</script>
+	
+		<!--	
+				<script>
+					let arScore = [88, 78, 96, 54, 23];  
+
+					0번째 학생의 성적 : 88
+					1번째 학생의 성적 : 78
+					2번째 학생의 성적 : 96
+					3번째 학생의 성적 : 54
+					4번째 학생의 성적 : 23
+
+for (let st in arScore) {
+	document.write(st + "번째 학생의 성적 : " + arScore[st] + "<br>");			
+}
+				</script>
+				
+				일반 for문으로 변환
+						<script>
+let arScore = [88, 78, 96, 54, 23];  
+
+for (let st=0; st<arScore.length; st++) {
+	document.write(st + "번째 학생의 성적 : " + arScore[st] + "<br>");			
+}
+						</script>
+				
+				
+				------ 결과 -------
+					0번째 학생의 성적 : 88
+					1번째 학생의 성적 : 78
+					2번째 학생의 성적 : 96
+					3번째 학생의 성적 : 54
+					4번째 학생의 성적 : 23
+				
+				for in문에서 주의할 것
+① 제어 변수가 요소의 값을 읽는 것이 아니라 요소의 첨자를 읽는다는 점.
+	위의 예제에서 st는 학생의 성적이 아니라 학생의 번호이므로 실제값을 읽을때는 arScore[st]로 요소를 읽어야 한다.
+				
+② 배열의 첨자가 연속적이지 않거나 정수가 아닌 경우는 두 문장의 결과가 다르다.
+	for in문은 undefined을 인식하지 못하고
+	for문은 정수가 아닌 인덱스번호는 인식하지 못한다.
+						
+						== for in문의 경우 ==
+						
+							<script>
+let arScore = [88, 78, 96, 54, 23];
+
+delete(arScore[2]);   // 두번째 요소 96을 삭제
+arScore["반장"] = 100;  // "반장"이라는 키에 값 100을 저장
+
+
+for (let st in arScore) {
+	document.write(st + "번째 학생의 성적 : " + arScore[st] + "<br>");			
+}
+							</script>
+				
+								------ 결과 -------
+									0번째 학생의 성적 : 88
+									1번째 학생의 성적 : 78
+									3번째 학생의 성적 : 54
+									4번째 학생의 성적 : 23
+									반장번째 학생의 성적 : 100
+								
+==> for in문으로 순회를 하면 undefined 요소를 건너띄고 0, 1, 3, 4만 	
+		순회하며 정수가 아닌 키도 같이 순회를 한다.
+		for in문은 존재하는 첨자나 속성에 대해서만 순회한다.
+		배열이나 객체를 순회할 때는 for in문이 더 편리하고 완벽하다.
+					
+				
+						== for 문의 경우 ==
+						
+							<script>
+let arScore = [88, 78, 96, 54, 23];
+delete(arScore[2]);  // 두번째 요소 96을 삭제
+arScore["반장"] = 100;  // "반장"이라는 키에 값 100을 저장
+
+for (let st = 0; st < arScore.length; st++) {
+	document.write(st + "번째 학생의 성적 : " + arScore[st] + "<br>");			
+}
+							</script>
+								------ 결과 -------
+									0번째 학생의 성적 : 88
+									1번째 학생의 성적 : 78
+									2번째 학생의 성적 : undefined
+									3번째 학생의 성적 : 54
+									4번째 학생의 성적 : 23
+								
+==> for문은 삭제된 2번째요소도 순회를 하며, 정수가 아닌 키는 읽지 못한다.
+	   배열 길이만큼 값을 단순히 증가시키며 순회한다.
+
+		-->
+	</body>
+</html>

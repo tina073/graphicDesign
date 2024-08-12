@@ -1,0 +1,68 @@
+﻿
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 9-배열의 중간에 인자 추가삭제 </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+		<script>
+			// splice는 첫번째 인자에 해당하는 원소부터 두번째 인자에 해당하는 원소의 숫자만큼의 값을 배열로부터 제거한 후에 리턴한다. 그리고 세번째 인자부터 전달된 인자들을 첫번째 인자의 원소 뒤에 추가한다.
+			//splice(시작 인덱스 번호, 추가(0)/삭제(0이외의 숫자(삭제할 개수), 생략)/수정, 추가, 복사나 수정할 내용)
+			/*
+			let arr = ['a', 'b', 'c', 'd', 'e'];
+			document.write(arr);
+			arr.splice(2, 0, 'B'); //인덱스 번호 0:a, 1:b, 2:c, 3:d, 4:e
+			document.write("<hr>");
+			document.write(arr);
+			document.write("<br><br>");
+			document.write("<hr>");
+			*/
+			
+			let number1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+			let other = number1.splice(2);
+			alert(other); //array[3, 4, 5, 6, 7, 8, 9, 10] 시작점 2부터 배열의 마지막 원소까지를 대상으로 한다.
+			alert(number1); //array[1, 2] 원본이 수정된다.
+			document.write(number1 + "<br>");
+			document.write(other);
+			document.write("<br><br>");
+			document.write("<hr>");
+			
+			/*
+			let number2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+			alert(number2.splice(2,4)); //array[3, 4, 5, 6] 
+			document.write(number2); //1,2,7,8,9,10
+			document.write("<br><br>");
+			document.write("<hr>");
+			*/
+			
+			//splice : 위치를 나타내는 인덱스 번호, (삽입:0/삭제:0이외의 숫자/수정:0이외의 숫자후 수정할 내용 입력), 추가나 수정할 데이터
+			
+			/*
+			let number3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+			alert(number3.splice(2,4,'three','four','five','six',"ㅁ","ㄴ","ㅇ")); //array[3, 4, 5, 6] 
+			alert(number3); //array[1,2,three,four,five,six,ㅁ,ㄴ,ㅇ,7,8,9,10] 
+			document.write(number3);
+			
+			
+			//삽입만 하기
+			let ar1 = [1, 2, 3, 4, 5, 6, 7];
+			ar1.splice(2,0,10,11,12); //2번째 요소가 '0'이면 삽입
+			document.write("ar1 = " + ar1 + "<br>");
+			
+			//삭제만 하기
+			let ar2 = [1, 2, 3, 4, 5, 6, 7];
+			ar2.splice(2,3);
+			document.write("ar2 = " + ar2 + "<br>");
+			
+			//삭제후 삽입 하기(수정)
+			let ar3 = [1, 2, 3, 4, 5, 6, 7];
+			ar3.splice(2,3,10,11);
+			document.write("ar3 = " + ar3 + "<br>");
+			*/
+		</script>
+	</body>
+</html>

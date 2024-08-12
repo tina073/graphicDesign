@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 문제-몇일 남았을까? </title>
+	</head>
+
+	<body>
+		<script>
+document.write("<h2>");
+document.write("<font color='blue'>");
+document.write("오늘부터 특정날짜까지 며칠이 남았는지 구하면"+ "<br>");
+document.write("남은 일수는 밀리초(1/1000초)단위로 계산됩니다."+ "<br>");
+document.write("남은일수(밀리초) = 특정 날짜 - 오늘 날짜"+ "<br>");
+document.write("1초 = 1000(msc)"+ "<br>");
+document.write("1분(60초) = 1000 * 60 ----- 60,000(msc)"+ "<br>");
+document.write("1시간(60분) = 1000 * 60 * 60 ----- 3,600,000(msc)"+ "<br>");
+document.write("1일(60분 * 24) = 1000 * 60 * 60 * 24----- 86,400,000(msc)" + "<br>");
+document.write("Math.ceil(남은 일수(밀리초))함수를 이용하여 계산한다." + "<br><hr>"); 
+document.write("</font>");
+document.write("</h2>");
+/*
+오늘 날짜에서 지정한 날짜를 뺀 후 컴퓨터가 인식하는 하루를 계산하여 그 값으로 나눈다.
+해당 결과값이 소수점을 포함한 실수값으로 나오므로 Math.ceil(실수값)을 하면 정수가 나온다.
+*/
+/*
+			1. 오늘 날짜를 생성하여 변수에 넣는다.
+			2. 계산하고자 하는 특정 날짜를 생성해서 변수에 넣는다.
+			3. 날짜를 빼서 날 수를 구한다.
+			4. 그 날 수를 컴퓨터단위의 숫자값으로 변형(계산)한다.
+			5. 계산된 숫자를 컴퓨터가 인식하는 하루로 나눈다.
+			6. 나눈 결과값을 정수만 구해서 표시한다.
+		*/	
+let today = new Date();  // 현재 사용하고 있는 컴퓨터의 날짜와 시간
+// 2021년 2월 24일 14시 59분 00초
+let lastday=new Date(2024,11,25); // 11은 12월에 해당하는 인덱스 번호
+document.write("<h2>");
+let remain = (lastday-today)/(1000 * 60 * 60 * 24);
+document.write(lastday-today+"<br>");
+document.write(remain+"일<br>");
+document.write("오늘부터 " + lastday.getFullYear() + "년 "+ (lastday.getMonth()+1) + "월 " + lastday.getDate() + "일 크리스마스까지는 " + Math.ceil(remain) + "일 남았습니다. 여러분 <font size='50px' color='red'> 미리 </font>크리스마스입니다.");
+document.write("</h2>");
+		</script>
+		<!-- 
+				Math.ceil() : 소수점 첫째 자리에서 무조건 올림해서 정수를 반환
+				
+				getYear( )는 두자리를 반환하다 보니 
+						document.write(  today.getYear( ) + 1900 + "년 ");
+				또는 
+						document.write(  today.getFullYear( ) + "년 ");
+		-->
+
+	</body>
+</html>
+

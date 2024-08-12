@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 달력만들기 </title>
+		<script>
+			//① 8~11행 : 현재 날짜와 현재 달에 1일의 날짜 객체를 생성
+			let date = new Date();
+			let y = date.getFullYear();
+			let m = date.getMonth();
+			let d = date.getDate();
+			
+			//현재 월의 1일의 요일 구하기
+			let theDate = new Date(y, m, 1);
+			let theDay = theDate.getDay();
+			
+			//②18~20행 : 현재 월의 마지막 일을 구하기
+			let last = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];  //1~12월의 마지막 일을 배열로 저장
+			if(y % 4 == 0 && y % 100 != 0 || y % 400 == 0) last[1] = 29;  //현재 연도가 윤년(4년주기(100년 주기는 제외))일 경우 2월의 마지막 날짜는 29가 되어야한다
+			let lastDate = last[m];  //현재 월의 마지막이 몇일인지 구함
+			
+			//③23행 : 현재 월의 달력에 필요한 행의 개수 구하기
+			let row = Math.ceil((theDay + lastDate) / 7);  //결과값의 자리를 올려 정수값 구하기 -->5
+			
+			//④달력 년도/월 표기 및 달력 테이블 생성
+			let cap = "<h1>" + y + "년" + (m + 1) + "월" + "</h1>";
+			let calendar = "<table border='1' width='400' height='400'>";  //문자결합 연산자를 사용해 요일이 나오는 행을 생성
+				calendar += "<caption>" + cap + "</caption>";
+				calendar += "<tr>";
+				calendar += "<th><font color='red'>일</font></th>";
+				calendar += "<th>월</th>";
+				calendar += "<th>화</th>";
+				calendar += "<th>수</th>";
+				calendar += "<th>목</th>";
+				calendar += "<th>금</th>";
+				calendar += "<th><font color='blue'>토</font></th>";
+				calendar += "</tr>";
+			let dNum = 1; //달력에 입력할 날짜 숫자
+			
+			//⑤달력 테이블을 만들기
+			for(let i = 1; i <= row; i++) {  //행 생성
+				calendar += "<tr>";
+				for(let k = 1; k <= 7; k++) {  //열 생성
+					//행이 첫 줄이고 현재 월의 1일의 요일 이전은 모두 빈열로 표기하고 날짜가 마지막 일보다 크면 빈열로 표기됩니다
+					if(i == 1 && k <= theDay || dNum > lastDate) {  
+						calendar += "<td>&nbsp;</td>";
+					} else {
+						calendar += "<td align='center'>" + dNum + "</td>";
+						dNum++;
+					}
+				
+				}
+				calendar += "</tr>";
+			}
+			calendar += "</table>";
+			document.write(calendar);
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>
+

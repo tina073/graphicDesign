@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 무작위 주사위 </title>
+		<style>
+			#ans{ font:30px "맑은 고딕"; }
+		</style>
+	</head>
+	<body>	
+		<div id="ans">
+			images 폴더에 있는 주사위 이미지(dice-1.png ~ dice-6.png)를 무작위로 나타나도록 만드시오.
+		</div>		
+		<script>
+			let num = Math.ceil(Math.random()*6);
+			document.write("<p align='center'><img src='../images/dice-" + num+ ".png' width='150'></p>");
+		</script>	
+	</body>
+</html>
+
+

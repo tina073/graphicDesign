@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 문제-오전 오후 결정-if문 사용-2 </title>
+	</head>
+	<body>
+		<script>
+			today = new Date();
+			document.write("<h1>****** 현재 시간을 24시각제로 표시 ******</h1>");
+			document.write("<h1>지금은 ")
+			document.write( today.getFullYear() + "년 ");
+			document.write( (today.getMonth()+1) + "월 ");
+			document.write( today.getDate() + "일 <br>"); 		
+			
+			document.write( today.getHours() + "시 ");
+			document.write( today.getMinutes() + "분 ");
+			document.write( today.getSeconds() + "초 입니다.</h1>");
+		</script>
+
+	
+
+
+		
+		<!-- 
+		
+			if(today.getHours( )<=12) {
+				document.write( "오전 " + today.getHours( ) + "시 "); 
+			} else {
+				document.write( "오후 " + (today.getHours()-12) + "시 "); 
+			}
+				---- 결과 ----
+				getYear( )는 두자리를 반환하다 보니 
+				
+				document.write(  today.getYear( ) + 1900 + "년 ");
+				또는 
+				document.write(  today.getFullYear( ) + "년 ");
+		-->
+
+	</body>
+</html>
+

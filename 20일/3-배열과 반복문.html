@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 배열과 반복문 </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+		<script>
+			/*
+				배열의 크기
+				.length
+					let arr = [1, 2, 3, 4, 5];
+					alert(arr.length);
+			*/
+			
+			let arr1 = new Array('홍길동', '이길동', '최길동');
+			for(let i=0; i<arr1.length; i++){
+				document.write(arr1[i] + "<br>");
+			}
+			
+			/*
+			// 배열의 진가는 반복문과 결합했을 때 나타난다. 반복문으로 리스트에 담긴 정보를 하나씩 꺼내서 처리 할 수 있기 때문
+				function get_members(){
+				    return ['iron-man', 'thor', 'spider-man'];
+				}
+				members = get_members();
+				// members.length는 배열에 담긴 값의 숫자를 알려준다. 
+				for(i = 0; i < members.length; i++){
+				    // members[i].toUpperCase()는 members[i]에 담긴 문자를 대문자로 변환해준다.
+				    document.write(members[i].toUpperCase());   
+				    document.write('<br />');
+				}			
+			*/
+		</script>
+	</body>
+</html>

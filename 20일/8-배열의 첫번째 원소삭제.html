@@ -1,0 +1,30 @@
+﻿
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 8-배열의 첫번째 원소삭제 </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+		<script>
+			// 배열의 첫번째 원소를 제거하는 방법이다. shift를 사용하면 된다.
+			let arr = ['a', 'b', 'c', 'd', 'e'];
+			document.write(arr);
+			arr.shift(); 
+			document.write("<hr>");
+			document.write(arr);
+			
+			let ar = [0, 1, 2, 3];
+			document.write("ar = " + ar + "<br>");
+			ar.unshift(100, 200);
+			document.write("ar = " + ar + "<br>");
+			ar.unshift(300);
+			document.write("ar = " + ar + "<br>");
+			ar.unshift(); 
+			document.write("ar = " + ar + "<br>");
+		</script>
+	</body>
+</html>

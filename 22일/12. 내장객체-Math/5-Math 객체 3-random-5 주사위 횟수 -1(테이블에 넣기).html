@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>주사위 횟수 문제</title>
+		<style>
+			#ans{ font:30px 맑은고딕; }
+		</style>
+	</head>
+	<body>	
+		<div id="ans">
+			총 25번을 무작위로 주사위를 추출하여 각 번호마다 나온 횟수를 정리하여 나타내시오.
+		</div>
+		<script>
+			let table="<table border='1' width='400' height='400'>";
+			for(row=1; row<=5; row++){
+				table += "<tr>";
+				for(col=1; col<=5; col++){
+					let num = Math.ceil(Math.random()  * 6);
+					table += "<th><img src='../images/dice-" + num + ".png' width='50'></th>";
+				}
+				table += "</tr>";
+			} 
+			table += "</table>";
+			document.write(table);
+		</script>	
+	</body>
+</html>
+
+

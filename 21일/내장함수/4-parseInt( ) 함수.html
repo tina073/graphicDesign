@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 4-parseInt( ) 함수  </title>
+		<script>
+			let str1 = "1000", str2 = "2000";
+			document.write("parseInt 함수를 사용하지 않은 경우<br><br>");
+			document.write(str1 + str2);  //10002000
+			document.write("<br><hr>");  
+			
+			document.write("parseInt 함수를 사용한 경우<br><br>");
+			val = parseInt(str1) + parseInt(str2); //3000
+			document.write(val);  
+			document.write("<br><hr>");  
+			document.write("15.8");    //15
+			document.write("<br><hr>");  
+			
+			let num1, num2, num3;
+			num1 = parseInt("15", 8)  //숫자를 8진수의 형태로 갖고온다. 1:001,5ㅣ101
+			num2 = parseInt("15", 10);  //10진수의 형태로 갖고 온다
+			num3 = parseInt("15", 16);  //16진수의 형태로 갖고 온다 1:0001, 5:0101
+			document.write("1)" + num1 + "<P>");
+			document.write("2)" + num2 + "<P>");
+			document.write("3)" + num3 + "<P>");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Math 객체 4-random-로또번호 추첨기</title>
+		<style>
+			p { font:bold 30px "맑은 고딕"; color:#fff; text-shadow:2px 2px 2px #ccc; border-radius:50%; width:50px; height:50px; box-shadow:2px 2px 2px #ccc; float:left; margin-right:10px; text-align:center; line-height:50px; }
+			p:nth-of-type(7) { margin-left:50px; }
+			.yellow { background-color:yellow; }
+			.orange { background-color:orange; }
+			.pink { background-color:pink; }
+			.gray { background-color:gray; }
+			.red { background-color:red; }
+			span { font:bold 50px "맑은 고딕"; color:#ccc; position:absolute; top:100px; left:370px; }
+		</style>
+	</head>
+	<body>
+		<h1>로또번호 추첨기</h1>	
+		
+		<script>
+			let lotto = []; // 1~45번까지 숫자가 들어갈 배열
+			let choiceNum = []; // 선택된 7개의 번호가 들어갈 배열
+			
+			for(let i=1; i<=45; i++){
+				lotto.push(i);
+			}
+			
+			for(let k=0; k<6; k++){
+				let indexNum = Math.floor(Math.random()*lotto.length); // indexNum : lotto배열에서 뽑을 숫자가 있는 인덱스 번호
+				choiceNum.push(lotto[indexNum]); // lotto배열에서 선택된 숫자가 choiceNum배열에 들어감.
+				lotto.splice(indexNum, 1); //lotto배열에서 선택되어 choiceNum배열에 들어가 숫자를 중복을 피하기 위해 lotto배열에서 제거함.
+			} // lotto번호 추첨 끝
+			choiceNum = choiceNum.sort(function(a, b){
+				return a-b; // 오름차순 : 작은 숫자부터 큰 숫자순으로 나열..
+				// return b-a; 내림차순:큰 숫자부터 작은 숫자 순으로 나열..
+			});
+			
+			indexNum = Math.floor(Math.random()*lotto.length); // 마지막 보너스 번호 숫자의 인덱스 번호
+			//choiceNum.push("+");
+			choiceNum.push(lotto[indexNum]); // 7번째 위치에 보너스 숫자 삽입
+			
+			for(let m=0; m<7; m++){ // 숫자별 색상 넣기
+				
+				if(choiceNum[m]<=10){ // 1~10:노랑색
+					document.write("<p class='yellow'>" + choiceNum[m] + "</p>");
+				}else if(choiceNum[m]>10 && choiceNum[m]<=20){ // 11~20:오렌지색
+					document.write("<p class='orange'>" + choiceNum[m] + "</p>");
+				}else if(choiceNum[m]>20 && choiceNum[m]<=30){ // 21~30:핑크색
+					document.write("<p class='pink'>" + choiceNum[m] + "</p>");
+				}else if(choiceNum[m]>30 && choiceNum[m]<=40){ // 31~40:회색
+					document.write("<p class='gray'>" + choiceNum[m] + "</p>");
+				}else{
+					document.write("<p class='red'>" + choiceNum[m] + "</p>");
+				}				
+			}
+		</script>
+		<span>+</span>
+	</body>
+</html>
+
+

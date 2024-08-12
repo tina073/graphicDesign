@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> String 객체의 선언  </title>
+		
+	</head>
+	<body>
+		
+<script>
+	let t="Hello Thank you good luck to you";
+		document.write("① t.charAt(16) : " + t.charAt(16)," --- 인덱스 16에 저장된 문자를 불러온다. <br />");
+		 document.write("② t.indexOf('you') : " + t.indexOf("you")," --- 문자열 왼쪽에서부터 최초로 발견된 'you'의 인덱스 값을 반환한다.  <br />");
+		 document.write("③ t.indexOf('you',16) : " + t.indexOf("you",16),"<br />");
+		 document.write("④ t.lastIndexOf(you') : " + t.lastIndexOf("you"),"<br />");
+		 document.write("⑤ t.lastIndexOf('you',25) : " + t.lastIndexOf("you",25),"<br />");
+		 document.write("⑥ t.match('luck') : " + t.match("mluck")+" --- 최초로 일치하는 문자를 반환, 만일 찾는 문자가 없으면 null 값을 반환..<br />");
+		 document.write("⑦ t.search('you') : " + t.search("you"),"<br />");
+		 document.write("⑧ t.substr(21,4) : " + t.substr(21,4),"  --- substr(시작 인덱스, 길이) <br />");
+		 document.write("⑨ t.substring(6,13) : " + t.substring(6,13),"  --- substring(시작 인덱스, 끝 인덱스-1) <br />");
+		 document.write("⑩ t.replace('you','me') : " + t.replace("you","me")," --- 문자열에서 왼쪽부터 바굴 문자와 일치하는 문자를 찾아 최초로 찾은 문자를 바꿈. <br />");
+		 document.write("⑪ t.toLowerCase() : " + t.toLowerCase(),"<br />");
+		 document.write("⑫ t.toUpperCase() : " + t.toUpperCase(),"<br />");
+		 document.write("⑬ t.length : " + t.length,"<br />");
+		 document.write("⑭ t.slice(6,14) : " + t.slice(6,14)," --- slice(시작문자 번호, 끝나는 문자 번호-1) <br />");
+		 document.write("⑮ t.slice(16,-7) : " + t.slice(16,-7)," --- slice(시작문자 번호, -번호 ==음수는 뒤에서 부터 자를 번호를 의미) <br />");
+
+	let s=t.split(" ");
+		 document.write("ⓐ " + s[0],"<br />");
+		 document.write("ⓑ " + s[4],"<br />");
+</script>
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

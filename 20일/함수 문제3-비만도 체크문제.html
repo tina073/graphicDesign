@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title> 비만도 체크 </title>
+	<script>
+	/*
+		alert("당신의 비만도를 측정하세요.")
+		alert("우선 당신의 키와 몸무게를 입력받아 표준체중(kg)을 계산하세요.")
+		let gender = prompt("성별을 입력하세요. 남성(1), 여성(2)")
+		let height = prompt("당신의 키(m)는 얼마입니까?")  //160
+		let weight = prompt("당신의 몸무게(kg)는 얼마입니까?")
+		
+		function Average(height, weight) {
+			function gender() {
+				if(gender == 1 || gender == "남성") {
+					let WeightAverage = height * height * 22;  //56.32
+					document.write(WeightAverage);
+				} else if (gender == 2 || gender == "여성"){
+					let WeightAverage = height * height * 21;  //53.76
+					document.write(WeightAverage);
+				}	else {
+					document.write("성별을 잘못 입력 하였습니다.")
+					return;
+				}
+			}
+			
+			let Obesity = weight / gender() * 100
+			document.write(Obesity);
+		}
+		
+		Average();
+		*/
+		let height = prompt("당신의 키(m)는 얼마입니까?");
+		let weight = prompt("당신의 몸무게(kg)는 얼마입니까?");
+		avgWeight(height, weight);
+		
+		function avgWeight(height, weight) {
+			let bimando = parseInt(weight / pyojun(height)*100);  //자신의 체중/표준체중*100
+			let sangte; //비만도 판정 값을 넣을 변수
+			if (bimando < 80) {
+				sangte = "심한 체중 부족";
+			} else if(bimando >= 80 && bimando < 90){
+				sangte = "체중 부족";
+			} else if(bimando >= 90 && bimando < 110){
+				sangte = "정상";
+			} else if(bimando >= 110 && bimando < 120){
+				sangte = "과체중";
+			} else {
+				sangte = "비만";
+			}
+			document.write("당신의 현재 비만도는 " + bimando + "이며, " + sangte + "입니다.")
+		}
+		
+		function pyojun(height) {
+			let weight;  //표준체중을 계산하여 넣을 변수
+			let gender = confirm("당신은 남자입니까?");
+			if (gender == 1) {
+				weight = (height/100)*(height/100)*22;
+			} else {
+				weight = (height/100)*(height/100)*21;
+			}
+			return weight; //pyojun함수를 호출한 곳에 계산된 weight값을 전달한 후 함수 종료
+		}
+		
+		
+		
+	</script>
+	<style>
+	
+	</style>
+	</head>
+	<body>
+
+	</body>
+</html>

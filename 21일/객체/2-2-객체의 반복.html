@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>2 객체 2 </title>
+	</head>
+	<body>
+		<script>
+			var heros = {'슈퍼맨': 10, '배트맨': 6, '아쿠아맨': 80};
+			for(aa in heros) {  //for(변수 in 객체명)
+				document.write("key : " + aa + " / value : " + heros[aa] +"<br>");
+			}
+			
+			
+			/*
+			for 문은 in 뒤어 따라오는 배열의 key 값은 in 앞의 변수 name에 담아서 반복문을 실행. 반복문이 실행될 때 변수 key의 값으로 슈퍼맨, 배트맨, 아쿠아맨이 순차적으로 할당되기 때문에 heros[key]를 통해서 객체의 값을 알아낼 수 있다
+			만약 heros.key로 작성을 하면 undefined가 출력된다. 일반 변수 key는 객체의 value를 지칭하는 'key'가 아니기 때문이다
+			객체에는 객체를 담을수도 있고 함수도 담을 수 있다
+			*/
+		</script>
+	</body>
+</html>

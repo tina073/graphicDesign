@@ -1,0 +1,36 @@
+﻿
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 5-배열의 뒤쪽에 인자추가 </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+		<script>
+		  //.push 는 인자로 전달된 값을 배열의 마지막에 추가하는 명령
+		  let arr = ['a','b','c','d','e'];
+		  
+		  document.write(arr); //배열의 내용을 덤프(해당 요소의 내용을 복사하여 내용을 확인하는 절차)
+		  arr.push('f','g','h');  //push 배열 뒤쪽에 값을 추가하여 저장하기
+		  document.write('<hr>');
+		  document.write(arr);
+		  document.write('<hr>');
+		  
+		  let arr2 = ["개나리","진달래","장미꽃","무궁화"];
+		  
+		  //push 배열에 값 추가하여 저장하기
+		  arr2.push('목련꽃','123','oo');
+		  arr2.push('민들레');
+		  document.write(arr2);
+		  document.write('<hr>');
+		  
+		  //배열의 요소 출력하기
+		  for(let i = 0; i < arr2.length; i++) { //for(let i in arr2)
+			document.write(arr2[i] + "&nbsp;&nbsp;&nbsp;");
+		  }
+		</script>
+	</body>
+</html>

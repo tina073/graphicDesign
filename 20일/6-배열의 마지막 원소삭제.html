@@ -1,0 +1,32 @@
+﻿
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 6-배열의 마지막 원소삭제 </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+			<!--
+				// pop : 배열 끝점의 원소를 배열에서 제거한다.
+				let arr = ['a', 'b', 'c', 'd', 'e'];
+				document.write(arr);
+				arr.pop('d', 'e'); //인덱스 번호 0:a, 1:b, 2:c, 3:d, 4:e ---- pop은 한 번에 하나씩 제거 가능
+				document.write("<br>");
+				document.write(arr);
+			-->
+		<script>
+			let ar = [0, 1, 2, 3];
+			document.write("ar = " + ar + "<br>");
+			ar.push(100, 200);
+			document.write("ar = " + ar + "<br>");
+			ar.push(300);
+			document.write("ar = " + ar + "<br>");
+			ar.pop();  //200
+			ar.pop();  //100
+			document.write("ar = " + ar + "<br>");
+		</script>
+	</body>
+</html>
