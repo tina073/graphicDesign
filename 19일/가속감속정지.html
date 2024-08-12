@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>do while문</title>
+	<style>
+		body { color:red; }
+		span { color:blue; }
+	</style>
+</head>
+<body>
+	<script>
+	/*
+		let speed = 0;
+		let num = prompt("원하는 값을 입력하세요. 가속(1), 감속(2), 정지(3)","1");
+		
+		do {
+			if(num == 1) {
+				speed += 1;
+			} else if(num == 2) {
+				speed -= 1;
+			} else if(num == 3){
+				break;
+			}
+			document.write("속도를")
+		}
+		*/
+		
+		let go = true;  //while문을 끝내기 위해서 false값을 준다
+		let speed = 0;  //속도를 담는 변수
+		
+		document.write("*************************<br>");
+		document.write("가속(1), 감속(2), 정지(3)<br>");
+		document.write("*************************<br>");
+		
+		while(go) {
+			let choice = prompt("원하는 값을 입력하세요. 가속(1), 감속(2), 정지(3)",1);
+			if(choice == "1") {
+				speed++;
+				alert("현재 속도를 " + speed + "로 가속시켰습니다.");
+				document.write("현재 속도를 <span>" + speed + "로 가속</span>시켰습니다.<br>");
+			} else if(choice == "2") {
+				speed--;
+				alert("현재 속도를 " + speed + "로 감속시켰습니다.");
+				document.write("현재 속도를 <span>" + speed + "로 감속</span>시켰습니다.<br>");
+			} else if(choice == "3") {
+				document.write("<span>멈추었습니다.</span>");
+				break;
+			} else {
+				go = false; //프로그램을 종료하기 위해서
+				document.write("<span>잘못 입력하셨습니다. [F5]키를 눌러 다시 실행하세요.</span>");
+			}
+		}
+	</script> 
+</body>
+</html>

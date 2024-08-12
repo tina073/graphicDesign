@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title> 함수 문제 2</title>
+		<script>
+		/*
+			function login(id, pw) {
+				if (id == "mbc") {
+						let usePw = prompt("비밀번호를 입력하세요.")
+						if (pw == "123456") {
+							document.write(id + "님 방문을 환영합니다.");
+						} else {
+							document.write("잘못된 비밀번호입니다.");
+						}
+				} else {
+					document.write("존재하지 않는 아이디입니다.")
+				}
+			}
+			let useId = prompt("아이디를 입력하세요.");
+			login(useId);
+			*/
+				function login(id) {
+				if (id == "mbc") {
+						let usePw = prompt("비밀번호를 입력하세요.")
+						if (usePw == "123456") {
+							document.write(id + "님 방문을 환영합니다.");
+						} else {
+							document.write("잘못된 비밀번호입니다.");
+						}
+				} else {
+					document.write("존재하지 않는 아이디입니다.")
+				}
+			}
+			let useId = prompt("아이디를 입력하세요.");
+			login(useId);
+		</script>
+		<style>
+		
+		</style>
+	</head>
+	<body>
+<!--  
+------- 문제 -------------
+처음에 '아이디'만 입력을 받은 후 
+'아이디'가 틀리면 "존재하지 않는 아이디입니다."라는 메세지 출력 후 끝내는 
+'아이디'가 일치할 경우 '비밀번호'를 입력 받아 처리하여, 
+'아이디'와 '비밀번호'가 모두 일치하면 방문을 축하하는 메세지 출력 후 끝내고
+입력받은 '비밀번호'가 틀린 경우 "잘못된 비밀번호입니다."라는 메세지 출력 후 끝내는 프래그램을 작성하시오.
+-->
+	</body>
+</html>

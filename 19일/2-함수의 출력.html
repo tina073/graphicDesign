@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title> 함수의 출력 </title>
+	<script>
+		function sum(n) {  //형식인자, 형식인수, 매개변수
+			if (n < 0) { //n값이 음수라면
+				return; //함수를 종료
+			}
+			
+			let s = 0;
+			for (let i = 0; i <= n; i++) {
+				s += i //n까지의 누적 합
+			}
+			return s; //함수를 호출한 곳에 변수 s의 값을 전달한 후 함수를 종료
+		} //함수의 종료, 세미콜론이 없다
+		
+		document.write("1~100 = " + sum(100) + "<br>"); //실인자, 실인수
+		document.write("1~-5 = " + sum(-5) + "<br>");
+		
+		function get_member() {
+			return '슈퍼맨';
+			return '배트맨';
+			return '아쿠아맨';
+		}
+		alert(get_member());
+		
+		
+   <!--함수 내에서 사용한 return은 return 뒤에 따라오는 값을 함수의 결과로 반환한다. return은 결과를 반환하는 것 외에 함수를 중지시키는 역할도 한다. 즉, 함수 중간에서 리턴하면 이후의 모든 문장은 실행되지 않는다.중간에서 리턴하는 경우는 주로 에러가 발생한 경우이다.함수에 return 명령이 없거나 리턴값 없이 return 명령을 단독으로 사용하면 이때는 함수가 undefined값을 리턴하는 것으로 가정한다. -->
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

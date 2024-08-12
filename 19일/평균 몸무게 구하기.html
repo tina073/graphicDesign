@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title> 평균 몸무게 구하기 </title>
+	<script>
+	/*
+		alert("몸무게 평균은 당신의 키에서 100을 뺀 후 0.9를 곱하세요.");
+		let yourHeight = prompt("당신의 키는 얼마입니까?");
+		let yourWeight = prompt("당신의 몸무게는 얼마입니까?");
+		
+		function Average(height, weight) {
+			let WeightAverage = (height - 100) * 0.9;
+			if (weight <= WeightAverage) {
+				document.write("평균 몸무게는" + WeightAverage + "입니다.<br>");
+				document.write("평균 몸무게 이하입니다.");
+			} else {
+				document.write("평균 몸무게는" + WeightAverage + "입니다.<br>");
+				document.write("평균 몸무게 초과입니다.");
+			}
+		}
+		
+		Average(yourHeight, yourWeight);
+		*/
+		
+		alert("몸무게 평균은 당신의 키에서 100을 뺀 후 0.9를 곱하세요.");
+		let height = prompt("당신의 키는 얼마입니까?");
+		let weight = prompt("당신의 몸무게는 얼마입니까?");
+		
+		function Average(height, weight) {
+			let WeightAverage = (height - 100) * 0.9;
+			document.write("평균 몸무게는" + WeightAverage + "입니다.<br>");
+			if (weight <= WeightAverage) {
+				document.write("평균 몸무게 이하입니다.");
+			} else {
+				document.write("평균 몸무게 초과입니다.");
+			}
+		}
+		
+		Average(height, weight);
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title> 5-1.함수의 다양한 정의방법2-내부함수(중첩함수) </title>
+	<script>
+		function add(a, b) {
+			return a + b; 
+		}
+	
+		function sum(n) {
+			let s = 0;
+			for (let i = 0; i <= n; i++){
+				s = add(s, i);  //add함수를 호출
+			}
+			return s;
+		}
+		document.write("1~100 = " + sum(100) + "<br>");
+			
+		//위의 내용을 정리한 것
+		function sum2(n) {
+			function add2(a, b) {
+				return a + b; 
+			}
+			let s = 0;
+			for (let i = 0; i <= n; i++){
+				s = add2(s, i);
+			}
+			return s;
+		}
+		document.write("1~100 = " + sum2(100) + "<br>");  // 에러이며 무시된다.
+		document.write("2 + 3 = " + add2(2, 3) + "<br>");// 밖에서는 sum 함수안에 있는 add함수가 보이지 않으며 호출할 수도 없다.
+		/*
+		     
+                                                                                           
+      -- 결과 --
+      1~100 = 5050
+      2 + 3 = NaN
+      
+         --- 내부함수(중첩함수) --- 
+            다른 함수 안에 정의되는 함수.
+            내부 함수의 개수에는 제한이 없다.
+            내부 함수에서 선언된 함수의 이름이 외부 함수에 있어도 충돌이 일어나지 않는다.
+            즉, 지역과 전역간의 명칭이 충돌되지 않으므로 아무런 문제가 없다.
+            내부 함수는 그 함수를 포함한 함수 내부에서만 사용할 수 있다.
+            밖에서는 외부 함수안의 내부 함수를 호출할 수 없다.
+            내부 함수의 본체에서는 자신이 포함된 외부 함수의 모든 지역변수를 자유롭게 참조할 수 있다.
+            그러나, 반대로 외부 함수는 내부 함수의 지역변수를 읽을 수 없다.
+		*/
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

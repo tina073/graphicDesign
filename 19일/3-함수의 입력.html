@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title> 함수의 출력 </title>
+	<script>
+	/*예제02:무한 루프를 돌며 숫자를 입력받고 입력받은 수의 합과 평균값을 화면에 출력하는 기능을sample()라는 함수에 만들어 주세요. 단, 입력 값이 0이면 즉시 실행을 멈춰 주세요. while문을 사용하세요*/
+		function sample() {
+			let sum = 0;
+			let count = 0;
+		
+			while(true) {  //무한루프 시작
+				let value = parseInt(prompt("수 입력",1));
+				if(value == 0) {
+					document.write("총" + count + "번 실행했으며 총 합계는 " + sum + "이고, 평균값은 " + sum/count + "입니다.<br>");
+					document.write("프로그램을 종료합니다.");
+					return; //함수 탈출
+				}
+				sum += value;  //입력 값 더하기. sum = sum + value
+				count++;  //입력 값 출력하기. count = count+1;
+			}
+		}  //함수 선언 종료
+		
+		sample();  //함수 호출
+	</script>
+	<!--
+	Number() : 문자형 숫자를 계산 할 수 있는 숫자형으로 변환.
+					ex> Number("54") -> 54
+							Number("5.4") -> 5.4
+							Number("54px") -> 변환 불가능
+	parseInt() : 문자형 숫자를 계산할 수 있는 숫자형으로 변환
+					ex> parseInt("54") -> 54
+							parseInt("5.4") -> 5
+							parseInt("54px") -> 54(반드시 숫자로 시작하면서 오른쪽으로 진행하다가 처음으로 나오는 문자값 바로 앞의 숫자까지변환)
+				
+	
+	-->
+	</head>
+	<body>
+	</body>
+</html>

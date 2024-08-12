@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>while 02</title>
+</head>
+<body>
+	<script>
+	let upload = 0;
+	
+	while(upload < 1200) {
+		upload += 200;
+		if (upload == 1200) {
+			upload = 1024;
+			document.write(upload + "M 업로드중...<br>")
+			break;
+		} else {
+			document.write(upload + "M 업로드중...<br>")
+		}
+	}
+	
+	document.write("업로드가 완료되었습니다.")
+	</script> 
+</body>
+</html>

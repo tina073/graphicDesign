@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title> 함수의 입력-인자 전달시 실인수는 있고 형식인수가 없는 경우2 </title>
+	<script>
+		function total() { 
+			let s = 0;  //기본적으로 변수s는 숫자형으로 처리하기 위해서 숫자0으로 초기화
+			if (typeof(argument[0]) == 'string') {  //만약 입력받은 데이터가 문자들이라면
+				s = ""; //변수 s를 문자형으로 취급하여 공백("")으로 초기화
+			}
+			for(let i = 0; i < argument.length; i++) {
+				s += argument[i];
+			}
+			return s;
+		}
+		
+		document.write(total(1,2,3) + "<br>");
+		document.write(total("게임은","역시","스타죠") + "<br>");
+		/*
+      --- 결과 ---
+     어차피 + 연산자로 더하므로 숫자나 문자열이나 잘 더해지고 연결된다
+	 그러나 문자열일 경우 누적 변수 s는 0이 아니라 빈 문자열로 초기화 시켜야한다.
+	 인수의 타입을 typeod 연산자로 판별하여 첫번째 인수가 문자열이면 s를 공백으로 초기화한다
+	  */
+	</script>
+	</head>
+	<body>
+	</body>
+</html>
