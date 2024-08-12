@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementsByTagName-문제 </title>
+		<style>
+			img{ width:200px; height:200px; }
+		</style>
+		<script>
+		/*방법1
+			function changeImg() {
+				let imgs = document.getElementsByTagName("img");
+				imgs[0].src = "../images/bg6.jpg";
+				imgs[1].src = "../images/bg7.jpg";
+				imgs[2].src = "../images/bg8.jpg";
+			}
+			*/
+			function changeImg() {
+				let imgs = document.getElementsByTagName("img");
+				
+				for(let i = 0; i < imgs.length; i++) {
+					imgs[i].src = "../images/bg" + (i+6) + ".jpg";
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<input type="button" value="이미지변경" onclick="changeImg()"><br>
+		<img src="../images/bg3.jpg"> <!-- bg6.jpg로 변경 -->
+		<img src="../images/bg4.jpg"> <!-- bg7.jpg로 변경 -->
+		<img src="../images/bg5.jpg"> <!-- bg8.jpg로 변경 -->
+	</body>   
+</html>         
+
+
+

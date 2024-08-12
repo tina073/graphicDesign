@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>2 innerHTML </title>
+	<head>
+	<body>
+	<!--
+		HTML 내용 변경
+			innerHTML의 속성을 이용하여 HTML 요소의 내용을 수정, 출력할 수 있습니다 .
+			document.getElementById(id).innerHTML = 새로운 HTML 내용;
+	-->
+		<p id="p1">Hello World!</p>
+		<div id="demo">123</div>
+		<script>
+			let myElement = document.getElementById("p1");
+			document.getElementById("demo").innerHTML = myElement.innerHTML;
+			document.getElementById("p1").innerText = "<h1>잘 모르시겠지만 바뀌었어요..</h1>";
+			//document.getElementById("p1").innerHTML = "<h1>잘 모르시겠지만 바뀌었어요..</h1>";
+		</script>
+	</body>
+</html>

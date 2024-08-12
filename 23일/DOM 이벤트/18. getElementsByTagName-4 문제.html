@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementsByTagName-4 문제 </title>
+		<script>
+			function nextArirang() {
+				let divs = document.getElementsByTagName("div");
+				divs[0].innerText = "<h1>나를 버리고</h1>";
+				divs[1].innerHTML = "<h1>가시는 님은</h1>";
+				divs[2].innerHTML = "<h1>십리도 못가서 발병난다...</h1>";
+			}
+		</script>
+	<head>
+	<body>
+		<input type="button" value="노래가사바꾸기" onclick="nextArirang()">
+		<div>아리랑 아리랑</div>
+		<div>아라리요</div>
+		<div>아리랑 고개로 넘어간다.</div>
+	<!--
+				--- 결과 화면 ---
+		     <가사 바꾸기 전>                       <가사 바꾼 후>
+				아리랑 아리랑                              나를 버리고
+				아라리요                                    가시는 님은
+				아리랑 고개로 넘어간다.                 십리도 못가서 발병난다...
+	-->      	
+	</body>   
+</html>         

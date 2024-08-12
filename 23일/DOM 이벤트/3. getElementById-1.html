@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementById </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+		<p id="intro">Hello World!</p>
+		<p>This example demonstrates the <b>getElementById</b> method!</p>
+		<p id="demo"></p>
+
+		<script>
+			let myElement = document.getElementById("intro");
+			document.getElementById("demo").innerHTML =
+			"The text from the intro paragraph is " + myElement.innerHTML;
+		</script>
+
+
+
+		
+	<!--
+				--- 결과 화면 ---
+		
+		Hello World!
+		This example demonstrates the getElementById method!
+		The text from the intro paragraph is Hello World!
+		
+
+
+
+
+
+
+		
+		id요소가 발견되면 myElement에 그 값을 반환한다.
+		id 요소가 발견되지 않는 경우엔 myElement은 null이 포함됩니다.
+		
+		ex) 28행의 id명을 intro2로 변경 후 실행한 화면
+			
+				--- 결과 화면 ---
+					Hello World!
+					This example demonstrates the getElementById method!
+				<img src="null.png">	
+	-->
+	</body>
+</html>

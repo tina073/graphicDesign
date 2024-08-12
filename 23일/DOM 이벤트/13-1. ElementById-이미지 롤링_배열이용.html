@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementById-이미지 롤링 문제 </title>
+		<style type="text/css">
+			#gallery{ width:300px; height:200px; }
+		</style>
+		<script>
+			let imgArr = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg"]
+			let imgNum = 0;  //인덱스 번호로 하기 때문에 img1.jpg이 0이 되고 "img7.jpg"이 6이 된다
+			
+			function prevGallery() {
+				imgNum--;
+				if(imgNum < 0) {  
+					imgNum = 6;
+				}
+				imgrolling(imgNum);
+			}
+			function nextGallery() {
+				imgNum++;
+				if(imgNum > 6) {
+					imgNum = 0;
+				}
+				imgrolling(imgNum);
+			}
+			
+			function imgrolling(imgNum) {  //중복 된 코드를 함수로 따로 뺌
+				document.getElementById("gallery").src = "../images" + imgArr[num];
+			}
+		</script>
+	</head>
+	<body>
+		<div id="galleryWrap">
+			<h1>이미지 넘기기</h1>
+			<p>
+				<a href="#prev" onclick="prevGallery();"><img src="../images/left_btn.png" alt="이전 그림"  width="80" height="80" border="0" /></a>
+				<img src="../images/img1.jpg" alt="갤러리 그림"  id="gallery" />
+				<a href="#next" onclick="nextGallery();"><img src="../images/right_btn.png" alt="다음 그림" width="80" height="80" border="0" /></a>
+			</p>
+		</div>
+	</body>
+</html>

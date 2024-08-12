@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementById </title>
+		<script>
+		/*
+			function changeImg() {
+				document.getElementById("img1");
+				if (img)
+			}
+			*/
+			
+			let cnt=0;
+			
+			function changeImg() {
+				cnt++;
+				let img1 = document.getElementById("img1");
+				if(cnt % 2 == 1) {
+					img1.src="../images/event2.jpg"
+				} else {
+					img1.src="../images/event.jpg"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!-- changeImg()함수가 호출이 될 때마다 event.jpg와 event2.jpg 이미지가 번갈아 가면서 바뀌도록 하시오. -->
+		<input type="button" value="이미지바꾸기" onclick="changeImg()"><br>
+		<img src="../images/event.jpg" id="img1"><br>
+	</body>
+</html>
+

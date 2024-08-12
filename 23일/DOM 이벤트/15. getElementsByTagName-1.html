@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+			<title>15 getElementsByTagName </title>
+			<style type="text/css">		
+		</style>
+			<head>
+				<body>
+					<!--
+			태그 이름으로 HTML 요소를 찾기
+			모든 <p> 요소를 찾습니다				
+	-->
+					<p>안녕하세요...</p> <!-- 0 -->
+					<p>저는 두번째 P태그입니다.</p> <!-- 1 -->
+					<p>이 예제는 <b>getElementsByTagName</b> 메소드를 사용합니다.</p> <!-- 2 -->
+					<p id="demo"/></p> <!-- 3 -->
+					<script>
+			let x = document.getElementsByTagName("p");  //ByTagName은 배열로 들어감
+			//Tag는 여러개가 나올 수 있기 때문에 Element에 꼭 s를 붙여야한다
+			document.getElementById("demo").innerHTML = '<h1>이 문단은 (index 0)의 p태그 내용을 넣었습니다. : </h1>' + x[3].innerText;
+		</script>
+					<!--
+				--- 결과 화면 ---
+					안녕하세요...
+					저는 두번째 P태그입니다.
+					이 예제는 getElementsByTagName 메소드를 사용합니다.
+					이 문단은 (index 0)의 p태그 내용을 넣었습니다. : 안녕하세요...
+				
+				x[1]일때
+					안녕하세요...
+					저는 두번째 P태그입니다.
+					이 예제는 getElementsByTagName 메소드를 사용합니다.
+					이 문단은 (index 1)의 p태그 내용을 넣었습니다. : 저는 두번째 P태그입니다.
+					
+				x[2]일때
+					안녕하세요...
+					저는 두번째 P태그입니다.
+					이 예제는 getElementsByTagName 메소드를 사용합니다.
+					이 문단은 (index 2)의 p태그 내용을 넣었습니다. : 이 예제는 getElementsByTagName 메소드를 사용합니다.
+				
+				x[3]일때
+					안녕하세요...
+					저는 두번째 P태그입니다.
+					이 예제는 getElementsByTagName 메소드를 사용합니다.
+					이 문단은 (index 3)의 p태그 내용을 넣었습니다. :
+	-->
+				</body>
+			</html>

@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementsByTagName-6 정답 </title>
+		<style>
+			#news{ width:300px; background:url(../images/pic2.jpg) no-repeat; }
+		</style>
+		<script>
+		
+			let news=["외교부 사드배치 관련회의", "미 경찰총결 범인들", "폭염에도 고속도로 정체", "전선 급류 실종노인"];
+			
+			let indexNum = 0;
+			
+			setInterval(changeNews, 1000)
+			
+			function changeNews() {
+				let div = document.getElementById("news");
+				div.innerHTML = news[indexNum % 4];  //0~3
+				indexNum++;
+			}
+			
+			
+		</script>
+	<head>
+	<body onload="changeNews()"><!-- onload="changeNews()"가 없으면 1초 후 부터 뉴스가 시작됨.... -->
+		<h3>오늘뉴스를 1초에 한번씩 news(div)에 출력되도록 해보세요.... </h3>
+		<div id="news"></div>
+	</body>   
+</html>         

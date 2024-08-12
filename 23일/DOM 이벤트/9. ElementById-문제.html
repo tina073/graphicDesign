@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementById-문제 </title>
+		<style type="text/css">
+			#img1{position:absolute; left:0; top:100px; }<!-- 포지션 앱솔루트를 하지않으면 이동하지 않는다.-->
+		</style>
+		<script>
+		/*
+			function go1() {
+				let document.getElementById("img1")
+				this.style.transform = 
+			}
+			*/
+			let pos = 50;
+			function go1() {
+				let img1 = document.getElementById("img1");
+				img1.style.left = pos + "px";
+				pos += 50;  // pos = pos + 50(누적)
+				console.log(pos)
+			}
+		</script>
+	</head>
+	<body>
+		<h2>버튼을 클릭할 때마다 오른쪽으로 50픽셀씩 이동시키세요.</h2>
+		<input type="button" value="이동하기" onclick="go1()"><br>
+		<img src="../images/dog1.png" id="img1"> 
+	</body>
+</html>

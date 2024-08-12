@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementsByTagName-7 </title>
+		<script>
+		/*
+			let color=["white","yellow","aqua","purple"];
+			let bgcolor = 0;
+			
+			function colorBg() {
+				let body = document.getElementsByTagName("body");
+				body.style.backgroundColor = color[bgcolor];
+				bgcolor++;
+			}
+*/
+			let color=["white","yellow","aqua","purple"];
+			let indexNum = 1;
+			
+			function colorBg() {
+				let bgColor = document.getElementsByTagName("body");
+				bgColor[0].style.backgroundColor = color[indexNum % color.length];
+				indexNum++;
+			}
+		</script>
+	<head>
+	<body>
+		<button onclick="colorBg();">버튼1</button>
+	</body>   
+</html>         
+
+
+
+
+

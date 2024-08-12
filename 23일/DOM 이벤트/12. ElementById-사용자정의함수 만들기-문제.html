@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementById-사용자정의함수 만들기-문제</title>
+		
+		<script>
+		/*
+			function circle() {
+				let r = parseInt(document.getElementById("r").value);
+				let c = radius(r);
+				document.getElementById("result").value = c;
+			}
+			
+			function radius(r) {
+				let rad = r * r * 3.14;
+				return rad;
+			}
+			*/
+			
+			function circle() {
+				let r = parseInt(document.getElementById("r").value);
+				let res = rad(r);  //외부함수 rad를 호출해면서 입력받은 반지름 r을 형식인자로 전달
+				
+				document.getElementById("result").innerHTML = "반지름 값 " + r + "의 원의 넓이 : " + res;
+			}
+			
+			function rad(radius) {
+				let aa = radius * radius * 3.14;
+				return aa;
+			}
+		</script>
+	</head>
+	<body>
+		<h3>
+			반지름 입력받아 사용자 정의함수를 사용해서 <br>
+			원의 넓이를 구하여 result에 출력되도록 하시오.<br>
+			원의 넓이 : 반지름 * 반지름 * 3.14
+		</h3>
+		반지름<input type="text" id="r">
+		<input type="button" value="원의 넓이" onclick="circle()">
+		<br>
+		<div id="result"></div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementById-사용자정의함수 만들기 </title>		
+		<script>
+			/*
+				사용자정의함수 만들기(형식)
+				function 함수명(매개변수, .....){
+					실행문장;
+					...
+					[return 리턴값]
+				}
+			*/			
+	function showSum(){
+		let n1 = parseInt(document.getElementById("num1").value);
+		let n2 = parseInt(document.getElementById("num2").value);
+		let s = sum(n1, n2);
+		document.getElementById("num3").value = s;
+	}
+			
+	function sum(n1, n2){
+		let ss = n1 + n2;
+		return ss;
+	}
+		</script>
+	</head>
+	<body>
+		수1 <input type="text" id="num1"><br>
+		수2 <input type="text" id="num2"><br>
+		<input type="button" value="두수합" onclick="showSum()"><br>
+		결과 <input type="text" id="num3"><br>
+	</body>
+</html>

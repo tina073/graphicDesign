@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>5 attribute-src </title>
+	<head>
+	<body>
+	<!-- 속성(Attribute)의 값 변경
+				HTML 속성 값을 변경하려면 이 구문을 사용합니다 :
+					document.getElementById(id).attribute=new value;
+				아래 예제에서는 <IMG> 요소의 src 속성의 값을 변경. -->
+		<img src="../images/bg20.jpg" id="image" /><br />
+		<img id="demo" />
+		<script>
+			document.getElementById("demo").src = "../images/bg20.jpg";			
+			document.getElementById("image").src = "../images/bg21.jpg";
+		</script>
+			<p>bg20.jpg 하트그림이 bg21.jpg 등불그림으로 바뀌었습니다.</p>
+	</body>
+</html>
+
+

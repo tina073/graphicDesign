@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="uf-8">
+		<title> document.getElementById </title>
+		<script>
+			function showMsg() {
+				let name = document.getElementById("name");
+				alert (name.value + "님 반갑습니다.");
+				name.value = "또 오세요.";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>환영합니다!</h1>
+		<!-- 이름을 입력하고 버튼1을 클릭하면 경고창에 'xxx님 반갑습니다.' 라고 출력되도록 한 후 경고창의 확인버튼을 누르면 text상자에 '또 오세요.'라고 표시되도록 처리하시오. -->
+		이름 <input type="text" id="name" />
+		<input type="button" value="버튼1" onclick="showMsg()">
+	
+	</body>
+</html>
+
+
+
+
+

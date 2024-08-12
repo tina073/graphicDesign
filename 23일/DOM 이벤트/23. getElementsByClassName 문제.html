@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementsByClassName </title>
+		<style>
+			img{ width:200px; height:200px; }
+		</style>
+		<script>
+		/*
+			function change() {
+				let imgText = document.getElementsByClassName("one");  //배열
+				let divs = document.getElementsByClassName("two");
+				for(let i = 0; i < imgText.length; i++) {
+					imgText[i].src = "../images/bg18.jpg";
+					imgText[i].innerText = "클래스를 이용하여 내용이 변경되었습니다.";
+				}
+				for(let k = 0; k < divs.length; k++) {
+					divs[k].innerHTML = "<h1>참! 잘했어요..</h1>";
+				}
+			}
+			*/
+			
+			function change() {
+				let one = document.getElementsByClassName("one");  //배열
+				let two = document.getElementsByClassName("two");
+				
+				one[0].src = "../images/bg18.jpg";
+				one[1].innerHTML = "<h1>클래스를 이용하여 내용이 변경되었습니다.</h1>";
+				two[0].innerHTML = "<h1>참! 잘했어요..</h1>";
+			}
+		</script>
+	<head>
+	<body>
+		<input type="button" value="클래스를 이용한 변경" onclick="change()"><br>
+		<img src="../images/bg12.jpg" class="one"> <!-- bg18.jpg로 변경 -->
+		<p class="one">저는 P태그입니다.</p> <!-- "클래스를 이용하여 내용이 변경되었습니다."로 변경 -->
+		<div class="two">저는 DIV태그입니다.</div> <!-- "참! 잘했어요.."로 h1태그가 적용이 되게 변경 -->
+	</body>   
+</html>         
+
+
+

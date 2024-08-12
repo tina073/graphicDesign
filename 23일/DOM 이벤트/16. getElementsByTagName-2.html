@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>16 getElementsByTagName-2 </title>
+		<style type="text/css">
+		
+		</style>
+	<head>
+	<body>
+		<p>안녕하세요...</p>
+		<div id="main">
+			<p>저는 div안의 첫 번째 P태그입니다.</p>
+			<p>이 예제는 <b>getElementsByTagName</b> 메소드를 사용합니다.</p>
+		</div>
+		<p id="demo"></p>
+
+		<script>
+			let x = document.getElementById("main");
+			let y = x.getElementsByTagName("p");
+			document.getElementById("demo").innerHTML = '이 문단은 (index 0)의 p태그 내용을 넣었습니다. : ' + y[0].innerHTML;
+		</script>
+		
+		
+	<!--
+				--- 결과 화면 ---
+				y[0]일때
+					안녕하세요...
+					저는 두번째 P태그입니다.
+					이 예제는 getElementsByTagName 메소드를 사용합니다.
+					이 문단은 (index 0)의 p태그 내용을 넣었습니다. : 저는 두번째 P태그입니다.
+				
+				y[1]일때
+					안녕하세요...
+					저는 두번째 P태그입니다.
+					이 예제는 getElementsByTagName 메소드를 사용합니다.
+					이 문단은 (index 1)의 p태그 내용을 넣었습니다. : 이 예제는 getElementsByTagName 메소드를 사용합니다.
+					
+				y[2]일때
+					안녕하세요...
+					저는 두번째 P태그입니다.
+					이 예제는 getElementsByTagName 메소드를 사용합니다.
+				
+				y[3]일때
+					안녕하세요...
+					저는 두번째 P태그입니다.
+					이 예제는 getElementsByTagName 메소드를 사용합니다.
+	
+	
+	-->      	
+	</body>   
+</html>         

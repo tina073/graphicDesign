@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> getElementById-문제 </title>
+		<style type="text/css">
+			#box{ background-color:orange; width:400px; height:200px; }
+		</style>
+		<script>
+			function changeCss() {
+				let box = document.getElementById("box");
+				let changeColor = prompt("원하는 색상의 이름을 영문으로 입력하세요.","green");
+				box.style.width = 200 + "px";
+				box.style.height = 100 + "px";
+				box.style.backgroundColor = changeColor
+			}
+		</script>
+	</head>
+	<body>
+		<h2>사용자에게 영문으로 색상이름을 입력받아 div의 색상과 폭-200, 너비-100 픽셀의 크기로 바꾸시오.</h2>
+		<input type="button" onclick="changeCss()" value="css변경하기">
+		<div id="box">
+			Hello
+		</div>
+	</body>
+</html>
