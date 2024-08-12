@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>basic :: animate() method</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #555;
+	color: #000;
+}
+.container .title {
+	margin: 0 0 35px;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #000;
+}
+.container .description {
+	margin-bottom: 40px;
+	line-height: 24px;
+	font-size: 0.875rem;
+}
+.container .description h2 {
+	margin: 0;
+	margin-bottom: 8px;
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: #8ac007;
+}
+.container .gallery {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.container .gallery li {
+	margin-bottom: 30px;
+}
+.container .gallery .button {
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	text-decoration: none;
+	font-size: 0.875rem;
+	color: #000;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.container .gallery .button:first-child {
+	margin-left: 0;
+}
+.container .gallery .button:hover {
+	color: #8ac007;
+}
+.container .gallery img {
+	margin-top: 4px;
+}
+#box1,#box2,#box3,#box4{
+position:absolute;<!-- 이 문장이 없으면 이미지가 이동하지 않는다. -->
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	for(var i=1; i<=4; i++){
+		var startbtn=$("#startbtn"+i);
+		startbtn.click(function(){
+			var num=parseInt($(this).attr("id").substr(-1, 1));
+				//이벤트 대상 참조자의 아이디명에서 마지막(오른쪽, -1) 에서 1글자를 뽑아낸다.
+			$("#box"+num).animate({opacity:0.1, left:"500px"}, 1000)
+				.animate({opacity:0.4, top:0, left:"100px"}, 1000)
+				.slideUp(1000)
+				.slideDown(1000)
+				.animate({left:0}, 1000);
+			return false;
+		});
+	}
+
+	$("#stopbtn1").click(function(){
+		$("#box1").stop(true, true); //stop(stopAll, gotoEnd)
+			//stopbtn1을 누르면, 동작이 되던 box요소가 바로 정지하면서, 동작의 마지막(left:"500px" 또는  left:"100px"등 )으로 보여진다.
+	});
+	$("#stopbtn2").click(function(){
+		$("#box2").stop(true, false);//stopbtn2을 누르면, 동작이 되던 box요소가 바로 정지하면서, 정지된 시점으로 보여진다.
+	});
+	$("#stopbtn3").click(function(){
+		$("#box3").stop(false, true);//stopbtn3을 누르면, 현재 진행되던 애니메이션의 동작의 마지막으로 이동 후, 그 이후의 나머지 애니메이션을 진행한다.
+	});
+	$("#stopbtn4").click(function(){
+		$("#box4").stop(false, false);//.stop()와 같다. stopbtn4을 누르면, 현재 진행되던 애니메이션의 동작의 애니메이션을 무시한 채(정지된 시점으로 보여진다.), 그 이후의 나머지 애니메이션을 진행한다.
+	});
+});
+</script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container">
+	<h1 class="title">basic :: animate() method</h1>
+	<div class="description">
+		<h2>Order Effect</h2>
+		.animate({opacity: "0.1", left: "500"}, 1000)<br>
+		.animate({opacity: "0.4", top: "0",  left: 0, height: "100", width: "100"}, 1000)<br>
+		.slideUp(1000)<br>
+		.slideDown(1000)<br>
+		.animate({left: "0"}, 1000)
+	</div>
+	<ul class="gallery">
+		<li>
+			<a href="#none" class="button" id="startbtn1">Effective start</a><a href="#none"  class="button" id="stopbtn1">stop(true, true)</a>
+			<div id="box1"><img src="images/zoo0.jpg" alt="zoo0" width="294" height="324"></div>
+		</li>
+		<li>
+			<a href="#none" class="button" id="startbtn2">Effective start</a><a href="#none" class="button" id="stopbtn2">stop(true, false)</a>
+			<div id="box2"><img src="images/zoo1.jpg" alt="zoo1" width="294" height="324"></div>
+		</li>
+		<li>
+			<a href="#none" class="button" id="startbtn3">Effective start</a><a href="#none" class="button" id="stopbtn3">stop(false, true)</a>
+			<div id="box3"><img src="images/zoo2.jpg" alt="zoo2" width="294" height="324"></div>
+		</li>
+		<li>
+			<a href="#none" class="button" id="startbtn4">Effective start</a><a href="#none" class="button" id="stopbtn4">stop(false, false)</a>
+			<div id="box4"><img src="images/zoo3.jpg" alt="zoo3" width="294" height="324"></div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate 문제2 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script><!-- 이징가/감속이나 배경색 부드럽게 바뀌는 js. http://blog.jqueryui.com/에서 blog 클릭 후 cdn 복사 -->
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$("#box1").animate({
+						marginLeft:"300px",
+						width:"400px",
+						borderWidth:"15px",
+						opacity:0.3
+					},1000,"easeInBounce");
+				});
+				
+				$("#btn2").click(function(){
+					$("#box1").animate({
+						marginLeft:0,
+						width:"100px",
+						borderWidth:"1px",
+						opacity:1
+					},1000,"easeOutBounce");
+				});
+			});
+		</script>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<button id="btn1">애니메이션1</button>
+		<button id="btn2">애니메이션2</button>
+		<div id="box1" style="width:100px; height:100px; border:1px solid red"></div>
+		<script>
+			
+		</script>
+	</body>
+	<!--
+		animate() 메서드
+
+		animate({'속성':'값', '속성':'값'}, 시간, '가/감속 이징값')
+
+
+-->
+</html>
+
+
+
+
+
+

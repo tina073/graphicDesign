@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> animate 문제 </title>
+		<style type="text/css">
+			#img1{ position:relative; left:0; top:20px; }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$("#img1").animate({left:"1000px"},1000,function(){
+						$("#img1").animate({left:0},500);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3> btn1을 클릭하면 우측으로 1000px 이동한 후 다시 원래의 자리로 되돌아 오는 애니메이트를 완성하세요...</h3>
+		<input type="button" value="이동하기" id="btn1"><br>
+		<img src="../images/dog2.jpg" id="img1">
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

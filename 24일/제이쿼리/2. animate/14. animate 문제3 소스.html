@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate 문제3 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script>
+			$(function(){
+			/*
+				$("#btnL").click(function(){
+					$("#box1").animate({
+						left:"+=-30px"
+					},300,"easeOutBounce");
+				});
+				$("#btnR").click(function(){
+					$("#box1").animate({
+						left:"+=30px"
+					},300,"easeOutBounce");
+				});
+				*/
+				
+				$("#btnL").click(function(){
+					$("#box1").animate({
+						left:"-=30px"
+					},500,"easeOutElastic");
+				});
+				$("#btnR").click(function(){
+					$("#box1").animate({
+						left:"+=30px"
+					},500,"easeOutElastic");
+				});
+			});
+		</script>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<button id="btnL">왼쪽</button>
+		<button id="btnR">오른쪽</button>
+		<br><br><br>
+		<div id="box1" style="width:100px; height:100px; background:green; position:relative;"></div><!-- position:relative;나 position:absolute ;를 주어야만  스크립트에서 지정한 왼쪽 오른쪽으로 이동할 수 있다. -->
+
+		<script>
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+

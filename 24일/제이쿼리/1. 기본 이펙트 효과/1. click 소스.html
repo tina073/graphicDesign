@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> click_doubleclick </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("p").click(function(){
+					$(this).hide();
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p>저를 클릭해보세요... 사라질껍니다.</p>
+		<p>저도 클릭해보세요... 저 또한 사라집니다.</p>
+		<p>나두!</p>
+	<!--
+		$('이벤트를 적용할 대상').click(function(){
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').mouseover(function(){  ---- 전체요소나 하위요소에 왔다갔다하더라도 모두 인식한다.
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').mouseout(function(){
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').mouseenter(function(){    ---- 전체요소에 나왔다들어갔다하면 인식하지만 하위요소에서 왔다갔다 하면 인식하지 못한다.
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').mouseleave(function(){
+			실행문;
+		})
+		===============
+		$('이벤트를 적용할 대상').on('이벤트명', function(){  ---- 동적으로 생성된 요소에 적용하는 방식으로 이렇게 쓴다.
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').on('click', function(){
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').on('mouseenter', function(){
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').on('mouseleave', function(){
+			실행문;
+
+		})
+
+
+		===여러개의 이벤트를 적용하는 방법
+		$('이벤트를 적용할 대상').on({
+			'이벤트명', function(){실행문},
+			'이벤트명', function(){실행문},
+			'이벤트명', function(){실행문}
+		});
+
+		$('이벤트를 적용할 대상').on('이벤트명', function(){
+			실행문;
+		})
+		
+		
+		
+	Mouse Events		Keyboard Events	Form Events		Document/Window Events
+		click					keypress				submit				load
+		dblclick				keydown				change				resize
+		mouseenter			keyup					focus					scroll
+		mouseleave	 								blur					unload
+
+	-->
+	</body>
+</html>

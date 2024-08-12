@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> delay </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		<style>
+			div { width:100px; height:100px; display:none; }
+			#div1 { background-color:black; }
+			#div2 { background-color:green; }
+			#div3 { background-color:blue; }
+			#div4 { background-color:red; }
+			#div5 { background-color:purple; }
+		</style>
+	</head>
+
+	<body>
+		<button>delay(지연)효과를 확인하세요..</button>
+		<br><br>
+
+		<div id="div1"></div><br>
+		<div id="div2"></div><br>
+		<div id="div3"></div><br>
+		<div id="div4"></div><br>
+		<div id="div5"></div><br>
+		<!--
+			delay(지연) : 시작시간을 다르게 처리할 때 사용
+		-->
+	</body>
+	<script>
+			$("button").click(function(){
+				$("#div1").delay().fadeIn();
+				$("#div2").delay(300).fadeIn();
+				$("#div3").delay(600).fadeIn();
+				$("#div4").delay(1000).fadeIn();
+				$("#div5").delay(2000).fadeIn();
+			});
+	</script>
+</html>

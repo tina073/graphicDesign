@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate 6 문제 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+				let originHeight = $("#panel").height();
+				let originWidth = $("#panel").width();
+					$("#panel").animate({height:"50%",opacity:0.5},500,function(){
+						$("#panel").animate({width:"50%",opacity:1},500,function(){
+							$("#panel").animate({height:originHeight,opacity:0.5},500,function(){
+								$("#panel").animate({width:originWidth,opacity:1},500);
+							});
+						});
+					});
+				});
+			});
+		</script>
+		<style>
+			div{ position:absolute; width:100px; 
+				height:100px; background-color:tomato; }
+		</style>
+	</head>
+
+	<body>
+		<button>animate(애니메이트)</button><br><br>
+		<div id="panel">제이쿼리는 재미있어...</div>
+	<!--
+		
+	-->
+	</body>
+</html>

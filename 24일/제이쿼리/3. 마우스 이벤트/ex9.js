@@ -1,0 +1,16 @@
+﻿$(function(){
+				$("#main").on({
+					"mouseenter":function(){
+						$(this).css("background-color","green")
+					},
+					"mouseleave":function(){
+						$(this).css("background-color","yellow")
+					},
+					"click":function(){
+						$("h1").css("color","red")
+					},
+					"dblclick":function(){
+						$("h1").css("transform","translateX(300px)")
+					},
+				});
+			});

@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("#panel").animate({left:"300px"},1000,"easeOutBounce")
+				});
+			});
+		</script>
+		<style>
+			div{ position:absolute; width:100px; 
+				height:100px; background-color:tomato; }
+		</style>
+	</head>
+
+	<body>
+		<button>animate(애니메이트)</button><br><br>
+		<div id="panel">제이쿼리는 재미있어...</div>
+	<!--
+		$(selector).animate({params},speed,callback);
+	-->
+	</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> animate 문제 </title>
+		<style type="text/css">
+			
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn2").click(function(){
+				/*
+					$("#img1").animate({
+						width:"+=50%",
+						height:"+=50%"
+					},500)
+				*/	
+				let wid = parseInt($("#img1").css("width"))*2;
+				let hei = parseInt($("#img1").css("height"))*2;
+				$("#img1").animate({
+					width:wid,
+					height:hei
+				});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>확대버튼을 클릭하면 img1의 크기를 animate를 사용해서 0.5초간 2배로 확대해보세요. </h3>
+		<input type="button" value="2배확대" id="btn2"><br>
+		<img src="../images/dog1.jpg" id="img1">
+	</body>
+</html>
+
+
+
+

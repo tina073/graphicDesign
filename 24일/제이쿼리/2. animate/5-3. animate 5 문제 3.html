@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate 5 문제 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				let flag = 1;
+				$("button").click(function(){
+					if(flag == 1) {
+						$("#panel").animate({left:"300px"},500);
+						flag = 2;
+				} else if(flag == 2) {
+					$("#panel").animate({top:"300px"},500);
+					flag = 3;
+				} else if(flag == 3) {
+					$("#panel").animate({left:"8px"},500);
+					flag = 4;
+				} else {
+					$("#panel").animate({top:"53px"},500);
+					flag = 1;
+				}
+				});
+			});
+		</script>
+		<style>
+			div{ position:absolute; width:100px; 
+				height:100px; background-color:tomato; }
+		</style>
+	</head>
+
+	<body>
+		<button>animate(애니메이트)</button><br><br>
+		<div id="panel">제이쿼리는 재미있어...</div>
+	<!--
+		
+	-->
+	</body>
+</html>

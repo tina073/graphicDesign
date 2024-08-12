@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>드롭다운-제이쿼리 이용</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("ul > li").mouseenter(function(){
+					$(this).children("ul").slideDown(500);
+				});
+				
+				$("ul > li").mouseleave(function(){
+					$(this).children("ul").slideUp(500);
+				});
+			});
+		</script>
+		<style>
+			* { margin:0; padding:0; } 
+			li { list-style:none; } 
+			a { text-decoration:none; }
+			img { border:0; }
+			
+			#dropdown { border:2px solid #363; float:left; } 
+			#dropdown ul{ border:2px solid green; float:left; } 
+			#dropdown li{ width:150px; background-color:#3C0; border-left:2px solid #363; float:left; }
+			#dropdown li a { background-color:#F00; display:block; padding:10px 10px; } 
+			#dropdown li ul { width:150px; position:absolute; display:none; }
+		</style>
+	</head>
+	<body>
+		<div id="dropdown"> 
+			<ul>
+				<li><a href="#" class="button">아이템1</a>
+					<ul>
+						<li><a href="#">서브아이템1</a></li>
+						<li><a href="#">서브아이템2</a></li>
+						<li><a href="#">서브아이템3</a></li>
+					</ul>
+			   </li>
+				<li><a href="#" class="button">아이템2</a>
+					 <ul >
+						<li><a href="#">서브아이템1</a></li>
+						<li><a href="#">서브아이템2</a></li>
+						<li><a href="#">서브아이템3</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="button">아이템3</a>
+					<ul>
+						<li><a href="#">서브아이템1</a></li>
+						<li><a href="#">서브아이템2</a></li>
+						<li><a href="#">서브아이템3</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="button">아이템4</a>
+					<ul>
+						<li><a href="#">서브아이템1</a></li>
+						<li><a href="#">서브아이템2</a></li>
+						<li><a href="#">서브아이템3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

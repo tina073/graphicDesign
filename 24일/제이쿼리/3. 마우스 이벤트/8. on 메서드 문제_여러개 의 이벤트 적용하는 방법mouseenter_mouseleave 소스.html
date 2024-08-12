@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> addClass </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">//라이브러리</script>
+		<script>
+			$(function(){
+				$("#box1").on({
+					"click":function(){ 
+						$("#box1").addClass("boxOn")
+					},
+					/*"click":function(){ $(this).addClass("boxOn")},*/
+					"dblclick":function(){ 
+						$("#box1").removeClass("boxOn")
+					},
+					/*"dblclick":function(){ $(this).removeClass("boxOn")}*/
+					"mouseenter":function(){
+						$(this).css({
+							fontSize:"40px",
+							textAlign:"center",
+							lineHeight:"200px"
+						});
+					},
+					"mouseleave":function(){
+						$(this).css({
+							fontSize:"16px",
+							textAlign:"left",
+							lineHeight:"22px"
+						});
+					},
+				})
+			})
+		</script>
+
+		<style type="text/css">
+			#box1{ width:300px; height:200px; border:2px solid #ff66cc; }
+			.boxOn{ background:#ffccff; }
+		</style>
+	</head>
+
+	<body>
+		<div id="box1">박스1</div>
+	</body>
+
+
+	<!--
+		/*
+Dom 탐색메서드
+
+	.children() : 자식요소
+	.find() : 후손요소
+	.eq(n) : 인덱스 번호 n번째 요소
+	.parent() : 부모요소
+	.parents() : 조상요소
+	.siblings() : 형제요소
+	.next() : 바로뒤에 요소
+	.prev() : 바로앞의 요소
+
+css메서드
+
+	addClass('클래스명') : css에 만들어진 클래스를 적용하는 메서드
+	removeClass('클래스명') : css에 만들어진 클래스를 삭제하는 메서드
+*/
+	-->
+</html>

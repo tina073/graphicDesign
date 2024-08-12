@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> fadeIn </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+		$(function(){
+			$("#btn1").click(function(){
+				$("#div1").fadeIn(1000);
+				alert("콜백함수를 이용하지 않은 페이드 인 효과가 끝났습니다")
+			});
+			
+			$("#btn2").click(function(){
+				$("#div2").fadeOut(1000,function(){
+					alert("콜백함수를 이용한 페이드 아웃 효과가 끝났습니다")
+				});
+			});
+		});
+		</script>
+		<style>
+			div{ width:80px;height:80px; }
+			#div1{ background-color:green; display:none; }
+			#div2{ background-color:red; }
+		</style>
+	</head>
+
+	<body>
+		
+		<button id="btn1">fadeIn(페이드 인)</button>
+		<button id="btn2">fadeOut(페이드 아웃)</button><br><br>
+		<div id="div1"></div><br>
+		<div id="div2"></div>
+	<!--
+		콜백함수 : $("선택자").이벤트(시간, function(){
+							진행할 실행문;
+						});
+	-->
+	</body>
+</html>

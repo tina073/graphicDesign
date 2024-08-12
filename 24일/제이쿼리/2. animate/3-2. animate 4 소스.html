@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate 4 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("#panel").animate({
+						left:"+=50px",
+						height:"+=50px",
+						width:"+=50px"
+					}, 1000, function(){
+					/*
+						let left = $("#panel").css("left");
+						let height = $("#panel").css("width");
+						let width = $("#panel").css("height");
+						alert("현재 폭은 " + width + "이고, 높이는 " + height + "이고, 거리는 " + left + "입니다.");
+					*/
+					let nowLeft = $("#panel").css("left");
+					alert("현재 폭은 " + $(this).width() + "이고, 높이는 " + $(this).height() + "이고, 거리는 " + nowLeft + "입니다.");
+					});//height와 width는 메서드가 있지만 left는 메서드가 없어서 변수를 만들어준다
+				});
+			});
+		</script>
+		<style>
+			div{ position:absolute; width:100px; 
+				height:100px; background-color:tomato; }
+		</style>
+	</head>
+
+	<body>
+		<button>animate(애니메이트)</button><br><br>
+		<div id="panel">제이쿼리는 재미있어...</div>
+	<!--
+		
+	-->
+	</body>
+</html>

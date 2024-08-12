@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> hide_show_toogle </title>
+		<style>
+			p{ width:200px; height:200px; border:3px solid red; line-height:200px; text-align:center; }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#hide").click(function(){
+					/*$("p").hide();*/  //0.3초
+					/*$("p").hide(1000);*/
+					$("p").hide("slow");  //or "fast"
+				});
+				
+				$("#show").click(function(){
+					$("p").show();
+				});
+				
+				$("#toggle").click(function(){
+					$("p").toggle();
+				});
+			});
+		</script>
+		
+	</head>
+
+	<body>
+		<p>들어오지 마세요..</p>
+		<button id="hide">숨기기</button>
+		<button id="show">보이기</button>
+		<button id="toggle">숨기기/보이기</button>
+	<!--
+		$('이벤트를 적용할 대상').click(function(){
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').mouseover(function(){  ---- 전체요소나 하위요소에 왔다갔다하더라도 모두 인식한다.
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').mouseout(function(){
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').mouseenter(function(){    ---- 전체요소에 나왔다들어갔다하면 인식하지만 하위요소에서 왔다갔다 하면 인식하지 못한다.
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').mouseleave(function(){
+			실행문;
+		})
+		===============
+		$('이벤트를 적용할 대상').on('이벤트명', function(){  ---- 동적으로 생성된 요소에 적용하는 방식으로 이렇게 쓴다.
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').on('click', function(){
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').on('mouseenter', function(){
+			실행문;
+		})
+
+		$('이벤트를 적용할 대상').on('mouseleave', function(){
+			실행문;
+
+		})
+
+
+		===여러개의 이벤트를 적용하는 방법
+		$('이벤트를 적용할 대상').on({
+			'이벤트명', function(){실행문},
+			'이벤트명', function(){실행문},
+			'이벤트명', function(){실행문}
+		});
+
+		$('이벤트를 적용할 대상').on('이벤트명', function(){
+			실행문;
+		})
+		
+		
+		
+	Mouse Events		Keyboard Events	Form Events	Document/Window Events
+	click				keypress			submit		load
+	dblclick			keydown			change		resize
+	mouseenter		keyup			focus		scroll
+	mouseleave	 					blur			unload
+
+	-->
+	</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> slideDown </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("#panel").slideDown(1000);
+				})
+			});
+		</script>
+		<style>
+			div{ width:300px; height:300px; display:none;
+				background-color:green; color:#fff;
+				text-align:center; line-height:300px; }
+		</style>
+	</head>
+
+	<body>
+		<button>slideDown(슬라이드 다운)</button><br><br>
+		<div id="panel">제이쿼리는 재미있어...</div>
+	<!--
+		
+	-->
+	</body>
+</html>

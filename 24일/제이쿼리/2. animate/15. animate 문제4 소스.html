@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate 문제4 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script><!-- 이징가/감속이나 배경색 부드럽게 바뀌는 js -->
+
+
+
+		<style type="text/css">
+			#box1{ border-radius:10px; border:2px solid green; width:100px; height:100px; margin-bottom:10px; }
+			#box2{ overflow:hidden; width:320px; height:150px; border:5px solid green; margin-bottom:10px;}
+			#box2 img{ position:relative; top:-120px;  }
+			#box3{ width:300px; height:150px; overflow:hidden; border:5px solid green; }
+			#box3 h2{ font-size:50px; position:relative; top:200px; }  /* top:200px;에 의해서 TEXT글자가 밑에 내려가 안보임. */
+		</style>
+	</head>
+
+	<body>
+		<div id="box1"></div><br><br>
+		<div id="box2"><img src="../images/child.jpg"></div><br><br>
+		<div id="box3"><h2>TEXT</h2></div>
+
+		<script>
+			$("#box1").mouseenter(function(){
+				$(this).animate({borderRadius:"50px"},500)  //50px대신 50%를 사용하면 크기가 변화해도 자동 변경
+			});
+			$("#box1").mouseleave(function(){
+				$(this).animate({borderRadius:"10px"},500)
+			});
+			
+			$("#box2 img").mouseenter(function(){
+				$(this).animate({top:0},500)
+			});
+			$("#box2 img").mouseleave(function(){
+				$(this).animate({top:"-120px"},500)
+			});
+			
+			$("#box3").mouseenter(function(){
+				$("h2").animate({top:"-50px"},500)
+			});
+			$("#box3").mouseleave(function(){
+				$("h2").animate({top:"200px"},500)
+			});
+		</script>
+	</body>
+	<!--
+animate() 메서드
+
+animate({'속성':'값', '속성':'값'}, 시간, '가/감속 이징값')
+
+
+-->
+</html>
+
+
+
+

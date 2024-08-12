@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> easing </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<!-- 이징 가/감속이나 배경색 부드럽게 바뀌는 js. http://blog.jqueryui.com/에서 blog 클릭 후 cdn 복사 -->
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("#panel").animate(1000,"easeOutElastic")
+				});
+			});
+		</script>
+		<style>
+			div{ width:300px; height:300px; display:none;
+				background-color:green; color:#fff;
+				text-align:center; line-height:300px; }
+		</style>
+	</head>
+
+	<body>
+		<button>slideDown(슬라이드 다운)</button><br><br>
+		<div id="panel">제이쿼리는 재미있어...</div>
+	<!--
+		
+	-->
+	</body>
+</html>

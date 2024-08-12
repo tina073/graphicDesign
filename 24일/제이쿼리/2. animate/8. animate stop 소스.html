@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate stop </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+		<script>
+			$(function(){
+				$(".nostop li").hover(
+					function(){
+						$(this).animate({width:"300px"},500, "easeOutBounce");
+					},
+					function(){
+						$(this).animate({width:"80px"},500, "easeOutBounce");
+					}
+				);
+			
+				$(".stop li").hover(
+					function(){
+						$(this).stop().animate({width:"300px"},500, "easeOutBounce");
+					},
+					function(){
+						$(this).stop().animate({width:"80px"},500, "easeOutBounce");
+					}
+				);
+			});
+		</script>
+		<style type="text/css">
+			div { font: 12px black; margin: 40px 0 10px 0; }
+			li{ width:80px; height:40px; 
+				background:tomato; margin-bottom:10px; }
+			.stop li{ background:skyblue; }
+		</style>
+	</head>
+
+	<body>
+		<div>기존 이벤트에 대한 처리가 안되어 있는 경우</div>
+		<ul class="nostop">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		<div>기존 이벤트에 대한 처리가 되어 있는 경우</div>
+		<ul class="stop">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		<div>
+			각 항목에 마우스를 올려놓기만 했을 때는 차이가 드러나지 않는다.<br/><br/>
+			마우스를 위아래로 여러차례 빠르게 움직여보면 기존 애니메이션 이벤트에 대한 
+			처리를 해준 것과 해주지 않은 차이가 드러난다.
+		</div>
+	<!--
+		.stop() : 현재 진행중인 애니메이트만 중지하고 다음 애니메이트는 계속 진행
+		.stop(true) : 스탑된 그 시점에서 모든 애니메이트 중지
+	-->
+	</body>
+</html>

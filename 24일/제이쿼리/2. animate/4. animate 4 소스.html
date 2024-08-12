@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> animate 4 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+			/*
+				let flag = 1;  //스위치 값으로 1을 주고 1이 아닌 값을 반대의 상황으로 처리
+				$("button").click(function(){
+					if(flag == 1){
+						$("#panel").animate({width:0}, 1000);
+						flag = 0;  //다음 버튼을 눌렀울 때 반대 상황을 처리할 수 있도록 함
+					} else {
+						$("#panel").animate({width:"100px"}, 1000);
+						flag = 1;
+					}
+				});
+				*/
+				$("button").click(function(){
+					$("#panel").animate({
+						width:"toggle"  //height:""slideToggle"
+					}, 1000);
+				});
+				
+			});
+			
+		</script>
+		<style>
+			div{ position:absolute; width:100px; 
+				height:100px; background-color:tomato; }
+		</style>
+	</head>
+
+	<body>
+		<button>animate(애니메이트)</button><br><br>
+		<div id="panel">제이쿼리는 재미있어...</div>
+	<!--
+		
+	-->
+	</body>
+</html>

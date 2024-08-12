@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> fadeIn </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("#div1").fadeIn(6000);
+					$("#div2").fadeIn(500);
+					$("#div3").fadeIn(3000);
+				})
+			});
+		</script>
+		<style>
+			div{ width:80px; height:80px; display:none; }
+			#div1{ background-color:green; }
+			#div2{ background-color:red; }
+			#div3{ background-color:blue; }
+		</style>
+	</head>
+
+	<body>
+		<p>fadeIn(페이드 인) : 서서히 나타나는 효과</p>
+		<button>fadeIn(페이드 인)</button><br><br>
+		<div id="div1"></div><br>
+		<div id="div2"></div><br>
+		<div id="div3"></div>
+	<!--
+		
+	-->
+	</body>
+</html>

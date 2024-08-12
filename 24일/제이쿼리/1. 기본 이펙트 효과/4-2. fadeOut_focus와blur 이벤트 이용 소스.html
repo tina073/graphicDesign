@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>focus와 blur 효과</title>
+  <style>
+		span { display:none; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body> 
+	<p><input type="text"> <span>아이디를 입력중입니다.</span></p>
+	<p><input type="password"> <span>비밀번호를 입력중입니다.</span></p>
+	<script>
+		$("input").focus(function(){
+			$(this).next("span").fadeIn(1000);
+		});
+		
+		$("input").blur(function(){
+			$(this).next("span").fadeOut(1000);
+		});
+	</script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> animate 문제 </title>
+		<style type="text/css">
+			img { width:300px; height:300px; }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script></script>
+		<script type="text/javascript">
+			$(function(){
+			/*
+				$("img").mouseenter(function(){
+					$(this).animate({borderRadius:"40px",opacity:0.5});
+				})
+				$("img").mouseleave(function(){
+					$(this).animate({borderRadius:0,opacity:1});
+				});
+				*/
+				
+				$("#poster img").hover(
+					function() {  //마우스 올렸을 때
+						$(this).animate({
+							borderRadius:"40px",
+							opacity:0.5
+						},500);
+					},
+					function() { //마우스 내렸을 때
+						$(this).animate({
+							borderRadius:0,
+							opacity:1
+						},500);
+					}
+				);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="poster">
+			<img src="../images/bg2_500.jpg">
+			<img src="../images/bg3_500.jpg">
+			<img src="../images/bg4_500.jpg">
+			<img src="../images/bg5_500.jpg">
+		</div>
+	</body>
+</html>
+
+
+
+
