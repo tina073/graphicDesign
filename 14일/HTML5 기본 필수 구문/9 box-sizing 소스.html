@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>box-sizing</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<style>
+			*{ margin:0; padding:0; }
+			
+			div { width:300px; height:300px; float:left; margin:10px; color:#fff; font:bold 25px arial; text-shadow:2px 2px 2px #000; background:lightblue; }
+			div:nth-child(1) {  }
+			
+		</style>
+	</head>
+	<body>
+
+		<div>박스1</div>
+		<div>박스2</div>
+		<div>박스3</div>
+
+<!--
+	기존의 웹 코딩시 특정 블록 요소에 넓이 값과 높이값을 설정할 때, 해당 요소에서는 그에 해당되는 padding, border값을 뺀 후 설정을 하는 어려움이 있었다.
+	예를 들어 콘텐츠의 크기가 100px로 설정이 되어야 하는 상황에서 border값이 1xp이 들어가고 안쪽 여백인 padding이 10px씩이 들어간다면 콘텐츠의 크기는 100xp에서 폭과 높이의 값을 각각 22px씩 뺀 78px의 크기로 설정해야 한다.
+	이러한 불편함을 해소하기 위해 CSS3에서는 box-sizing:border-box;라는 새로운 속성이 추가되어 이제는 굳이  padding, border값을 빼주지 않아도 브라우저가 알아서 해당 수치를 제외한 넓이값과 높이값을 계산해준다.
+	
+	box-sizing:border-box;
+-->
+	</body>
+</html>

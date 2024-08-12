@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta  charset="utf-8" />
+		<title> 기본틀 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<form>
+			********* HTML5에 추가된 폼 종류 ************<br><br>
+			검색 : <input type="search" name="search" value="" title="일부 브라우저에서는 입력 폼의 모양이 검색창처럼 표시된다."><br>
+			메일 : <input type="email" name="email" value="yabosu@dreamwiz.com" title="최소한의 이메일 서식이 충족되지 않으면 송신할 수 없다. &#13; 모바일 OS에 따라서 조금 다르기는 하지만 입력할 때 &#13; 키보드에 @와 .com 자판이 나타난다."><br>
+			URL : <input type="url" name="url" value="http://www.naver.com" title="최소한의 URL 서식이 충족되지 않으면 송신할 수 없다."><br>
+			전화번호 : <input type="tel" name="tel" value="010-9465-4088" title="입력할 수 있는 값에 제한이 없으나 모바일 OS에서는 &#13; 입력할 때 숫자 입력 모드로 바뀐다."><br>
+			수치입력 : <input type="number" name="number" value="1" title="입력할 수 있는 값이 숫자로 한정된다. &#13; 대응 브라우저에서는 상하 화살표로 수치를 입력할 수 있게 된다."><br>
+			달력 : <input type="date" name="date" value="2017-01-01" title="입력할 수 있는 값이 날짜 서식(YYYY-MM-DD)만 된다. &#13; 대응 브라우저에서는 달력이 표시된다."><br>
+			시간 : <input type="time" name="time" value="12:00" title="입력할 수 있는 값이 시간 서식(00:00)만 된다. &#13; 대응 브라우저에서는 상하 화살표로 시간을 입력할 수 있게 된다."><br>
+			일정범위내의 수치입력 : <input type="range" name="range" title="대응 브라우저에서는 슬라이더 형식의 UI로 &#13; 대략의 수치를 입력할 수 있게 한다."><br>
+			색상 : <input type="color" name="color" title="대응 브라우저에서는 RGB 컬러패널에서 &#13; 색상 코드를 선택할 수 있게 한다."><br><br>
+			
+			********* HTML5에 추가된 폼 속성 ************<br><br>
+			입력커서 표시 속성 : <input type="text" name="first" autofocus title="autofocus(입력커서 표시)는 화면을 열었을 때 &#13; 폼의 원하는 요소에 마우스 커서가 &#13; 자동적으로 표시되게 하는 기능으로 &#13; 페이지 안에서 1군데만 적용가능하다."><br>
+			자동완성기능 제어 속성 : <input type="text" name="id" autocomplete="off" title="autocomplete(자동완성)은 첫 글자를 입력하면 &#13; 과거에 입력했었던 문자열이 자동으로 표시되는 기능이다. &#13; 기본값은 'on' 이지만 autocomplete='off'로 &#13; 하면 기능을 해제할 수 있다. "><br>
+			<input type="submit" value="보내기"><br><br>
+			힌트 표시 속성 : <input type="text" name="mail" size="20" placeholder="이메일을 입력하세요." title="placeholder(힌트 표시)는 입력 폼안에 입력해야할 내용이나 &#13; 정보를 알려주는 기능으로 클릭시 해당 정보는 사라진다."><br>
+			필수 입력 속성 : <input type="text" name="id" size="20" required placeholder="아이디를 입력하세요." title="required(필수 입력)은 해당 항목이 선택되지 않거나 &#13; 내용이 채워지지 않으면 오류메시지가 나온다."><br>
+			<input type="text" name="addr" size="30" placeholder="주소를 입력하세요."><br>
+			<input type="submit" value="보내기"><br><br>
+			min속성 / max속성 / step속성 : <input type="number" name="num" min="1" max="20" step="2" value="1"><br>
+		</form>
+	</body>
+</html>

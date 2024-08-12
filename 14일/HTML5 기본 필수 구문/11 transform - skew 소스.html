@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>transform : skew</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<style>
+			*{ margin:0; padding:0; }
+			
+			div { width:100px; height:100px; float:left; margin:30px; border:1px solid #000; color:#000; font:bold 25px arial; }
+			div p { width:100%; height:100%; background:blue; opacity:0.3; }
+			div p.red { width:100%; height:100%; background:red; opacity:0.3; }
+			
+		</style>
+	</head>
+	<body>
+
+		<div><p>1</p></div>
+		<div><p>2</p></div>
+		<div><p>3</p></div>
+		<div><p>4</p></div>
+		<div><p>5</p></div>
+		<div><p>6</p></div>
+		<div><p>7</p></div>
+		<div><p>8</p></div>
+		<hr>
+		
+		<div><p class="red">9</p></div>
+		<div><p class="red">10</p></div>
+		<div><p class="red">11</p></div>
+		<div><p class="red">12</p></div>
+		<div><p class="red">13</p></div>
+		<div><p class="red">14</p></div>
+		<div><p class="red">15</p></div>
+		<div><p class="red">16</p></div>
+		
+
+<!--
+	포토샵의 기능과 비슷한 변형 속성(transform)
+	
+	▶ skew : 현재 요소의 각도 값을 기준으로 x축 또는 y축으로 해당 요소를 원하는 각도만큼 기울인다.
+			x축으로 기울이기 - transform : skewX(각도);
+			y축으로 기울이기 - transform : skewY(각도);
+			x, y축으로 동시 기울이기 - transform : skew(x축 각도, y축 각도);
+	
+			각도를 나타내는 단위는 degree의 약자인 deg를 쓴다.
+			수치값을 마이너스(-)로 설정하면 반대 방향으로 기울어진다.
+-->
+	</body>
+</html>

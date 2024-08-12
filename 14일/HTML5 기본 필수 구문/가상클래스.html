@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>video 태그</title>
+		<style>
+			*{ margin:0; padding:0;}
+			li { font-size:20px; font-weight:bold; }
+			
+			li:first-child {color:blue; }
+			li:nth-child(1) {color:orange; }
+			ul li:nth-child(2) {color:red; }
+			ul li:nth-child(3) {color:green; }
+			ol li:nth-child(4) {color:lightblue; }
+			ul li:last-child {color:gray; }
+			
+			li:last-child {color:teal; }
+			
+			h1:first-child {color:tomato; }
+			h1:nth-child(2) {color:yellow; }
+			/* h1은 부모인 body를 기준으로 'ol'요소 다음인 두번째 요소이다. 그래서 :nth-child(1) 또는 first-child가 아닌 :nth-child(2)fh 해야 글자색이 적용된디. */
+		</style>
+	</head>
+	<body>
+	<ol>
+         <li>슈퍼맨</li>
+         <li>배트맨</li>
+         <li>아이언맨</li>
+         <li>스파이더맨</li>
+         <li>플래시맨</li>
+      </ol>
+      <h1>영웅들</h1>
+      <ul>
+         <li>슈퍼맨</li>
+         <li>배트맨</li>
+         <li>아이언맨</li>
+         <li>스파이더맨</li>
+         <li>플래시맨</li>
+      </ul>
+
+<!--
+   기존에 같은 형식의 HTML 태그가 쭉 나열된 경우 특정 태그만 선택하기 위해서는 해당 태그에 ID나 CLASS명을 부여하였으나 CSS3에서 제공하는 nth-child선택자, 그리고 first-child, last-child를 이용하면 편리한다.
+   지정된 부모가 기준이 된다. 지정된 부모가 없으면 body가 기준. ul, ol 의 li는 지정된 부모가 없으면 해당 li를 감싸는 ul, ol 이 기준이 된다. 
+-->
+	</body>
+</html>

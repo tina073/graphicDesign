@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>video 태그</title>
+		<style>
+			*{ margin:0; padding:0;}
+			
+			video { display:block; width:800px; margin:50px auto; border:20px solid lightgreen; }
+		</style>
+	</head>
+	<body>
+		<video autoplay muted loop poster="video/seagull.jpg" id="videoBg">
+			<source src="video/seagull.webm" type="video/webm">
+			<source src="video/seagull.mp4" type="video/mp4">
+			<source src="video/seagull.ogg" type="video/ogg">
+		</video>
+		
+		<!--
+   <video>
+      <source src="동영상 파일 경로" type="동영상 파일 타입"/>
+   </video>
+   video는 display:block;을 해야만 margin에 의해 가운데 정렬이 됨.
+   preload : 해당 동영상을 재생 전 미리 불러오기
+   autoplay : 비디오를 자동 재생
+   muted : 음소거. controls를 이용하여 클릭 후 동영상을 실행할수도 있으나 autoplay를 이용하여 자동 재생 시키고 싶을 때 반드시 muted 명령을 사용해야 동영상이 실행된다.
+   loop : 비디오를 무한 반복
+   controls : 비디오의 컨트롤 패널을 생성
+-->
+	</body>
+</html>
