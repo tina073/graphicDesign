@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>음료수 기본 입력 소스</title>
+		<style type="text/css">
+		/*	* {margin:0;padding:0;}
+		li{list-style-type:none;}
+		img,fieldset{border:0;}
+		table{border-collapse:collapse;}
+		table,th,td{border:1px solid #000;}
+		body{font:12px "Arial"; background:url(img/bg_grid.gif);}
+		------- reset.css ------- */
+		#wrapper {
+			width:1000px;
+			margin:0 auto;
+			outline:1px solid red;
+		}
+			#header {
+				padding:10px 0;
+			}
+			
+			#container {
+				/*overflow:hidden;(오류가 날수 있으니 :after 가상요소 사용)*/
+			}
+			#container:after {
+				content:"";
+				display:block;
+				clear:both;
+			}
+				.content {
+					width:760px;
+					float:left;
+					outline: 1px solid green;
+				}
+					.content h2 {
+						margin:10px 0;
+						color: #007776;
+					}
+					.content p {
+						text-align:justify;
+						line-height:130%;
+					}
+					/* .blueberry {우선순위가 낮아지기 때문에 부모요소를 적어준다}*/
+					.content p.blueberry {
+						background:#007776 url(img/background_01.gif) no-repeat 0 center; /*좌우는 움직일 필요 없으니 left자리에 0을 넣는다*/
+						padding:20px 20px 20px 70px;
+						margin:10px 50px;
+						border:3px dashed #fff;
+						color:#fff;
+					}
+					.jlist {}
+					.jlist li {
+						margin-left:20px;
+						padding-bottom:10px;
+					}
+					.jlist li a {
+						color:#000;
+						text-decoration:none;
+					}
+					
+				.aside {
+					width:200px;
+					float:right;
+					outline:1px solid green;
+					background:url(img/cocktail.gif) repeat-x;
+				}
+					.aside h2 {
+						padding:10px;
+						text-align:center;
+					}
+						dt {
+							color:#f00;
+							font-weight:bold;
+							text-align:center;
+							padding:103px 0 10px;
+						}
+						.lemon {
+							background:url(img/yellow.gif) no-repeat center top;
+						}
+						.chai {
+							background:url(img/chai.gif) no-repeat center top;
+						}
+						.black {
+							background:url(img/black.gif) no-repeat center top;
+						}
+						dd {
+							font-size:10px;
+							text-align:center;
+						}
+			#footer {
+				padding:20px;
+				text-align:center;
+				margin-top:10px;
+				background:#007776;
+			}
+				address {
+					font-style:normal;
+					color:#fff;
+					font-weight:bold;
+				}
+		</style>
+	</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<h1><a href="#"><img src="img/logo.gif" alt="cosmo farmer 2.0 Your online guide toapartment farming" /></a></h1>
+	</div>
+	<div id="container">
+		<div class="content">
+			<h2>Welcome to the Head First Lounge</h2>
+			<p>The Head First Lounge is, no doubt, the biggest trendsetter in Webville. Stop in to sample the eclectic offering of elixirs, teas, and coffees, or, stay a bit longer and enjoy the multicultural culinary menu that combines a harmony of taste, texture, and color with the best in fresh and healthy ingredients. </p>
+			<p>During your stay at the lounge, you'll enjoy a smooth mixture of ambient and mystic sounds, filling the lounge and adding an extra dimension to your dining experience. The decor surrounds you with the relaxing sentiments of sights from eras past. And, don't forget, the lounge offers free wireless access to the Internet, so bring your laptop</p>
+			<p class="blueberry">Our guarantee: at the lounge, we're committed to providing you, our guest, with an exceptional experience every time you visit. Whether you're just stopping by to check in on email over an elixir, or are here for an out-of-the-ordinary dinner, you'll find our knowledgeable service staff pay attention to every detail. If you're not fully satisfied, have a Blueberry Bliss Elixir on us.</p>
+			<p>But that's not all; at night, join us in the backroom as our resident DJ spins a choice selection of trance and drum&amp;bass beats across our spacious tiki-themed dance floor. Or just hang out in one of our comfy white vinyl booths at the dance bar. You can have your elixirs delivered from the main lounge right to the dance floor. If you've had enough of the beat, just head back to the lounge area to relax. And, no matter where you find yourself in the lounge, you'll always be connected with our wireless Internet access.</p>
+			<p>Now that you've experienced the lounge virtually, isn't it time to check us out for real? We're located right in the heart of Webville, and we've created somedetailed directions to get you here in record time. No reservations necessary; come and join us anytime. </p>
+			<h2>What's playing at the Lounge</h2>
+			<p>We're frequently asked about the music we play at the lounge, and no wonder, it's great stuff. Just for you, we keep a list here on the site, updated weekly. Enjoy. </p>
+			<ul class="jlist">
+				<li><a href="#">Buddha Bar, <strong>Claude Challe</strong> </a></li>
+				<li><a href="#">When It Falls, Zero 7 </a></li>
+				<li><a href="#">Earth 7,L.T.J. <strong>Bukem</strong> </a></li>
+				<li><a href="#">Le Roi Est Mort, Vive Le Roi!,<strong>Engima</strong></a></li>
+				<li><a href="#">Music for Airports,<strong>Brian Eno</strong></a></li>
+			</ul>
+		</div>
+		<div class="aside">
+			<h2>Weekly Elixir Specials</h2>
+			<dl>
+				<dt class="lemon">Lemon Breeze</dt>
+				<dd>he ultimate healthy drink, this elixir combines herbal botanicals, minerals, and vitamins with a twist of lemon into a smooth citrus wonder that will keep your immune system going all day and all night. </dd>
+				<dt class="chai">Chai Chiller</dt>
+				<dd>Not your traditional chai, this elixir mixes mate with chai spices and adds an extra chocolate kick for a caffeinated taste sensation on ice.</dd>
+				<dt class="black">Black Brain Brew</dt>
+				<dd>Not your traditional chai, this elixir mixes mate with chai spices and adds an extra chocolate kick for a caffeinated taste sensation on ice.</dd>
+			</dl>
+			<p class="join">Join us any evening for these and all our other wonderful <a href="#">elixirs</a></p>
+		</div>
+	</div>
+	<div id="footer">
+		<address> &copy; 2005, Head First Lounge All trademarks and registered trademarks appearing on this site are the property of their respective owners.</address>
+	</div>
+</div>
+</body>
+</html>
+
+
+

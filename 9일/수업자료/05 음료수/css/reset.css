@@ -1,0 +1,9 @@
+﻿@charset "utf-8";
+
+* { margin:0; padding:0; }
+li { list-style:none; }
+img { vertical-align:middle; border:none; }
+address, em { font-style:normal; }
+a { color:#000; text-decoration:none; }
+a:hover { text-decoration:underline; }
+body{font:12px "Arial"; background:url(../img/bg_grid.gif);}

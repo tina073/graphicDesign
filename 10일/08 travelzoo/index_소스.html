@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+	<title> Travelzoo </title>
+		<style type="text/css">
+			* {margin:0;padding:0;}
+			li{list-style-type:none;}
+			img, fieldset{border:0;}
+			img { vertical-align:middle; }
+			a { text-decoration:none; }
+		/*   reset.css end    	  */
+		body { font:12px arial; }
+			#wrapper {
+				width:780px;
+				margin:0 auto; 
+			}
+			
+				#header { border-bottom:3px solid blue; }
+					.top { 
+						background-color:#eee; 
+						overflow:hidden; /*util1, util2의 플롯을 해제*/
+					}
+					.top ul { padding:10px; }
+					.top ul li { display:inline; }
+					.util1 { float:left; }
+					.util2 { float:right; }
+					#header h1 { padding-top:10px; } /*hn태그는 자주 사용하기 때문에 부모요소 달아주기*/
+					.expert { font-style:italic; }
+				
+				#container {}
+					#container h2 { padding:10px 0; }
+					.sel {
+						margin:10px 0;
+						border:1px solid #aaa;
+						background-color:#eee;
+						padding:5px;
+						
+					}
+						legend { display:none; }
+						input { vertical-align:middle; } /*버튼을 글씨와 중앙정렬하기 위함, bottom을 주기도 함*/
+						
+					.earth {
+						border:1px solid #ccc;
+						background-color:#eee; 
+						padding:10px;
+						float:left;
+						width:228px;
+						
+					}	
+					.earth h3 { border-bottom:1px solid #aaa; }
+					dl { padding:10px 0; }
+						dt {
+							float:left; /*글씨들을 옆으로 올리기 위한 플롯 */
+							margin-right:10px;
+						}
+						dd a { display:block; } /* a를 블록구조로 변경해서 dt 아래로 쌓기 위함*/
+					.region { margin-top:20px; }
+					
+					.america { margin:0 10px; }
+					.fly { clear:both; text-align:center; } /* .earth에 있는 플롯을 해제 */
+					
+				#footer {}
+					.pd5 { padding:5px 0; border-top:1px solid #aaa; }
+					.airfare { background-color:#eee; }
+					#footer li { display:inline; }
+						#footer li a { display:inline; }
+						#footer li a:hover { text-decoration:underline; }
+					.edition h4 { font-weight:normal; color:#00f; }
+					.edition h4, .pd5 ul, address { display:inline; }
+					address { color:#aaa; font-style:normal; }
+		</style>
+	</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div class="top">
+			<ul class="util1">
+				<li><a href="#">Home</a> | </li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+			<ul class="util2">
+				<li><a href="#">Careers</a> | </li>
+				<li><a href="#">Help</a> | </li>
+				<li><a href="#">Investor Relations</a></li>
+			</ul>
+		</div><!-- top -->
+		<h1><a href="index.html">
+				<img src="images/logo.gif" alt="travelzoo" /></a>
+		</h1>
+		<p class="expert">The Deal Experts. Over 21 million sunscribers Worldwide.</p>
+	</div><!-- header -->
+
+	<div id="container">
+		<h2>Select Your Site</h2>
+		<p>Please select the site that you would like to visit:</p>
+		<form class="sel" action="">
+			<fieldset>
+				<legend>select site</legend>
+				<input type="checkbox" name="" value="" id="selSite" />
+				<label for="selSite">Make this selection my default Travelzoo site and skip this page in the future.</label>
+			</fieldset>
+		</form>
+		<div class="earth asia">
+			<h3>Asia Pacific</h3>
+			<dl>
+				<dt><img src="images/a.jpg" alt="Austrailia" /></dt>
+				<dd>Austrailia
+						<a href="http://www.travelzoo.com.au">
+						www.travelzoo.com.au</a></dd>
+			</dl>
+			<dl>
+				<dt><img src="images/ca.jpg" alt="China" /></dt>
+				<dd>China
+						<a href="http://cn.travelzoo.com">
+						cn.travelzoo.com</a></dd>
+			</dl>
+			<dl>
+				<dt><img src="images/hong.jpg" alt="Hong Kong SAR" /></dt>
+				<dd>Hong Kong SAR
+						<a href="http://www.travelzoo.com.hk">
+						www.travelzoo.com.hk</a></dd>
+			</dl>
+			<dl>
+				<dt><img src="images/j.jpg" alt="Japan" /></dt>
+				<dd>Japan
+						<a href="http://www.travelzoo.co.jp">
+						www.travelzoo.co.jp</a></dd>
+			</dl>
+			<p class="region">Taiwan region</p>
+		</div><!-- asia -->
+		<div class="earth america">
+			<h3>Americas</h3>
+			<dl>
+				<dt><img src="images/canada.jpg" alt="Canada" /></dt>
+				<dd>Canada
+						<a href="http://www.travelzoo.ca">
+						www.travelzoo.ca</a></dd>
+			</dl>
+			<dl>
+				<dt><img src="images/usa.jpg" alt="U.S.A." /></dt>
+				<dd>U.S.A.
+						<a href="http://www.travelzoo.com">
+						www.travelzoo.com</a></dd>
+			</dl>
+		</div>
+		<div class="earth europe">
+			<h3>Europe</h3>
+			<dl>
+				<dt><img src="images/france.jpg" alt="France" /></dt>
+				<dd>France
+						<a href="http://www.travelzoo.fr">
+						www.travelzoo.fr</a></dd>
+			</dl>
+			<dl>
+				<dt><img src="images/germany.jpg" alt="Germany" /></dt>
+				<dd>Germany
+						<a href="http://www.travelzoo.de">
+						www.travelzoo.de</a></dd>
+			</dl>
+			<dl>
+				<dt><img src="images/spain.jpg" alt="Spain" /></dt>
+				<dd>Spain
+						<a href="http://www.travelzoo.es">
+						www.travelzoo.es</a></dd>
+			</dl>
+			<dl>
+				<dt><img src="images/united.jpg" alt="United Kingdom" /></dt>
+				<dd>United Kingdom
+						<a href="http://www.travelzoo.co.uk">
+						www.travelzoo.co.uk</a></dd>
+			</dl>
+		</div>
+
+		<p class="fly">
+			...and our new airfare
+			<a href="#">fly.com</a>
+			<img src="images/fly.gif" alt="fly.com" />
+		</p>
+	</div><!-- container -->
+
+	<div id="footer">
+		<ul class="airfare pd5">
+			<li><a href="#">Airfare</a> | </li>
+			<li><a href="#">Hotels</a> | </li>
+			<li><a href="#">Car Rentals</a> | </li>
+			<li><a href="#">Cruises</a> | </li>
+			<li><a href="#">Vacations</a> | </li>
+			<li><a href="#">Entertainment</a> | </li>
+			<li><a href="#">Last Minute</a> | </li>
+			<li><a href="#">Flight Search</a> | </li>
+			<li><a href="#">Hotel Search</a> | </li>
+			<li><a href="#">Top 20</a> | </li>
+			<li><a href="#">Newsflash</a> | </li>
+			<li><a href="#">Fly.com</a></li>
+		</ul>
+		<div class="edition pd5">
+			<h4>Travelzoo Edition :</h4>
+			<ul>
+				<li><a href="#">Australia</a> | </li>
+				<li><a href="#">Canada</a> | </li>
+				<li><a href="#">China</a> | </li>
+				<li><a href="#">France</a> | </li>
+				<li><a href="#">Germany</a> | </li>
+				<li><a href="#">Hong Kong SAR</a> | </li>
+				<li><a href="#">Japan</a> | </li>
+				<li><a href="#">Spain</a> | </li>
+				<li><a href="#">Taiwan Region</a> | </li>
+				<li><a href="#">U.S.A.</a> | </li>
+				<li><a href="#">United Kingdom</a></li>
+			</ul>
+		</div><!-- editions -->
+		<div class="addr pd5">
+			<ul>
+				<li><a href="#">Advertise with Us</a> | </li>
+				<li><a href="#">Press</a> | </li>
+				<li><a href="#">Site Map</a> | </li>
+				<li><a href="#">FeedsFeeds <img class="feed" src="images/feed.gif" alt="feeds" /></a> | </li>
+				<li><a href="#">Privacy Policy</a> | </li>
+				<li><a href="#">Disclaimer</a></li>
+			</ul>
+			<address>&copy;2010 Travelzoo Inc. - All Rights Reserved.</address>
+		</div><!-- addr -->
+	</div><!-- footer -->
+
+</div>
+</body>
+</html>

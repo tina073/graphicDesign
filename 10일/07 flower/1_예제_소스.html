@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />	
+		<link rel="shortcut icon" href="images/spider.ico" />
+		<style type="text/css">		
+			* { margin:0; padding:0; }
+			li { list-style-type:none; }
+			img, fieldset { border:none; }
+			address,em { font-style:normal; }
+			
+			#wrap { width:800px; margin:0 auto; padding-top:200px; position:relative; }
+				h1, h2 { font-family:times; }
+				h1 { background:green; font-style:italic; color:lightyellow; font-weight:normal; padding:5px 0 5px 5px; }
+				ul {}
+				 li { height:200px; padding-left:200px; background:pink; }
+				 li.tulip { background:#ffd228 url(images/1-1_bg.jpg) no-repeat 10px 10px; }
+				 li.lily { background:pink url(images/1-2_bg.jpg) no-repeat 10px 10px; }
+				 li.pear { background:#52e252 url(images/1-3_bg.jpg) no-repeat 10px 10px; }
+				 li.sun { background:#1e82ff url(images/1-4_bg.jpg) no-repeat 10px 10px; }
+				 
+					li img, li span { position:absolute; left:0; top:0; }
+				li.lily img { left:200px; }
+				li.pear img { left:400px; }
+				li.sun img { left:600px; }
+				li span { border:1px solid #999; border-radius:5px; box-shadow:2px 2px 2px #000; background:lightyellow; padding: 2px 5px; }
+				li.tulip span { left:-40px; top:150px; }
+				li.lily span { left:240px; top:100px; }
+				li.pear span { left:450px; top:50px; }
+				li.sun span { left:770px; top:25px; }
+				
+				li h2 { padding:10px 0; color:brown; font-weight:nomal; font-style:italic;  }
+				li p { padding:5px 0; margin-right:10px; }
+				li p.line { border-bottom:1px solid black; }
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<h1>Flowers in my garden</h1>
+			<ul class="flower">
+				<li class="tulip">
+					<h2>Purple Tulip</h2>
+					<img src="images/1-1.png" alt="Tulip" />
+					<span>10.00&pound;</span>
+					<p class="line">The tulip is the national flower of Iran and Turkey, and tulip motifs feature prominently in Persian and Turkish folk arts.</p>
+					<p>The European name for the flower comes from the Persian word for turban, a origin probably originating in the common Turkish custom of wearing flowers in the folds of the turban.</p>
+				</li>
+				
+				<li class="lily">
+					<h2>Lily</h2>
+					<img src="images/1-2.png" alt="Lily" />
+					<span>15.00&pound;</span>
+					<p class="line">Martagons appreciate some shade, and are quite decorative in the woodland garden.</p>
+					<p>Along with the earliest of the asiatics, blooms another entirely different group called the martagons, or martagons hansonii hybrids. These are tall lilies with many little down-facing flowers and whorled leaves.</p>
+				</li>
+				
+				<li class="pear">
+					<h2>Pear blossom</h2>
+					<img src="images/1-3.png" alt="Pear blossom" />
+					<span>20.00&pound;</span>
+					<p class="line">Pears are native to temperate regions of the Old World, from western Europe and north Africa east right across Asia.</p>
+					<p>The flowers are white, rarely tinted yellow or pink, 2-4 cm diameter, and have five petals. Like that of the related apple, the pear fruit is a pome, in most wild species 1-4 cm diameter.</p>
+				</li>
+				
+				<li class="sun">
+					<h2>Sunflower</h2>
+					<img src="images/1-4.png" alt="Sunflower" />
+					<span>30.00&pound;</span>
+					<p class="line">While the vibrant, strong sunflower is a recognized worldwide for its beauty, it is also an important source of food.</p>
+					<p>Sunflower oil is a valued and healthy vegetable oil and sunflower seeds are enjoyed as a healthy, tasty snack and nutritious ingredient to many foods.</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

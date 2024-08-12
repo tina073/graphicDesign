@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<title> xhtml의 기본 문서구조 </title>
+		<style>
+			* { margin:0; padding:0;}
+			img,fieldset { border:0; }
+			body { font:12px times; background:#b5a78a; padding:10px; }
+				#header { background:#675c48; }
+				#container { width:100% padding:10px 0; /*overflow:hidden;*/}
+				#container:after { content:""; display:block; clear:both;}
+					.content { width:49%; float:left; background:#f0e5d1 url(images/background.gif); }
+						h2, p { padding:10px; }
+						h2 { color:#bb0101; }
+						a { color:#bb0101; border-bottom:1px dashed #bb0101; }
+					.aside { width:50%; float:right; background:#f0e5d1 url(images/background.gif); text-align:center; }
+						dd { padding-bottom:5px; }
+				#footer { padding:30px; background:#68574d; text-align:center; color:#fff; font-size:14px; font-weight:bold; }
+					address { font-style:normal; }
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header"> 
+				<h1><img src="images/header.gif" alt="스타버즈 커피"/></h1>
+			</div><!-- header -->
+
+			<div id="container">		
+				<div class="content">
+					<h2>QUALITY COFFEE, QUALITY CAFFEINE</h2>
+					<p>At Starbuzz Coffee, we are dedicated to filling all your caffeine needs through our quality coffees and teas. Sure, we want you to have a great cup of coffee and a great coffee experience as well, but we're the only company that actively monitors and optimizes caffeine levels. So stop by and fill your cup, or order online with our new Bean Machine online order form, and get that quality Starbuzz coffee that you know will meet your caffeine standards. </p>
+
+					<p>And, did we mention caffeine? We've just started funding the guys doing all the wonderful research at the <a href="#">Caffeine Buzz.</a> If you want the latest on coffee and other caffeine products, stop by and pay them a visit. </p>
+					
+					<h2>OUR STORY </h2>
+					<p>"A man, a plan, a coffee bean". Okay, that doesn't make a palindrome, but it resulted in a damn good cup of coffee. Starbuzz's CEO is that man, and you already know his plan: a Starbuzz on every corner. </p>
+					<p>In only a few years he's executed that plan and today you can enjoy Starbuzz just about anywhere. And, of course, the big news this year is that Starbuzz teamed up with Head First readers to create Starbuzz's Web presence, which is growing rapidly and helping to meet the caffeine needs of a whole new set of customers. </p>
+					
+					<h2>STARBUZZ COFFEE BEVERAGES </h2>
+					<p>We've got a variety of caffeinated beverages to choose from at Starbuzz, including our House BlendMocha Cafe Latte,Chai Tea, and a favorite of our customers, Chai Tea. </p>
+					<p>We also offer a variety of coffee beans, whole or ground, for you to take home with you. Order your coffee today using our online Bean Machine, and take the Starbuzz Coffee experience home. </p>			
+				</div><!-- content -->
+				
+				<div class="aside">
+					<img class="coffee" src="images/bag.gif "alt="Starbuzzcoffee"/>
+					
+					<h2>ORDER ONLINE with the BEAN MACHINE</h2>
+					<dl>
+						<dd><a href="#">FAST</a></dd>
+						<dd><a href="#">FRESH</a></dd>
+						<dd><a href="#">TO YOUR DOOR</a></dd>
+					</dl>
+					<p>Why wait? You can order all our fine coffees right from the Internet with our new, automated Bean Machine. How does it work? Just click on the Bean Machine link, enter your order, and behind the scenes, your coffee is roasted, ground (if you want), packaged, and shipped to your door.</p>
+				</div><!-- aside -->
+			</div><!-- container -->	
+
+			<div id="footer">
+				<address>&copy; 2005, Starbuzzcoffee<br/><br/>	All trademarks and registered trademarks appearing on this site are the property of their respective owners.
+				</address>
+			</div><!-- footer -->
+		</div><!-- wrap -->
+	</body>
+</html>

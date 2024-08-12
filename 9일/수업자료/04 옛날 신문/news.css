@@ -1,0 +1,60 @@
+﻿@charset "uft-8";
+
+* {margin:0;padding:0;}
+li{list-style-type:none;}
+img,fieldset{border:0;}
+table{border-collapse:collapse;}
+table,th,td{border:1px solid #000;}
+a { text-decoration:none; color:#000; }
+/* ------- reset.css ------- */
+body { background:url(images/bg_grid.gi); color:#555; font-size:16px; }
+
+	#wrapper {
+		width:950px;
+		margin:0 auto;
+	}
+	
+	#container {}
+		.sidemenu {
+			width:200px;
+			float:left;
+			position:relative;
+		}
+			
+			.all { position:absolute; right:0; top:10px; }
+			.lnb { 
+				clear:both; 
+				border-top:1px solid #ccc;
+				padding-top:40px;
+			}
+				.lnb li {
+					font-size:14px;
+					float:left;
+				}
+				.lnb a img { 
+					width:60px; 
+					height:60px; 
+					float:left;
+					margin:0 5px 40px 0;
+				}
+				.lnb a span { font-weight:bold; }
+				.lnb a:hover { color:red; }
+				.lnb a:hover img { border:2px solid red; }
+		.content {
+			margin-left:220px;
+			line-height:160%;
+		}
+			.content h2 {
+				margin:50px 0 5px;
+				color:#2664c2;
+				font-size:20px;
+			}
+			.content p { text-align:justify; }
+				.fRight {
+					margin-left:20px; 
+					float:right;
+				}
+				.fLeft { 
+					float:left;
+					margin-right:20px;
+				}
