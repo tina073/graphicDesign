@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> append_prepend vs after_before 차이점 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$(".super").before("<strong><font color='red'>저스티스리그</font></strong>");
+				});
+				
+				$("#btn2").click(function(){
+					$(".iron").after("<strong><font color='red'>저스티스리그</font></strong>");
+				});
+				
+				$("#btn3").click(function(){
+					$("#super").prepend("<strong><font color='red'>저스티스리그</font></strong>");
+				});
+				
+				$("#btn4").click(function(){
+					$("#iron").append("<strong><font color='red'>저스티스리그</font></strong>");
+				});
+			});
+		</script>
+		
+	</head>
+
+	<body>	
+		<p class="super">슈퍼맨</p>
+		<p class="iron">아이언맨</p>
+
+		<button id="btn1"> before를 확인하세요 </button>
+		<button id="btn2"> after를 확인하세요 </button>
+		<hr>
+		
+		<p id="super">슈퍼맨</p>
+		<p id="iron">아이언맨</p>
+		<button id="btn3"> prepend를 확인하세요 </button>
+		<button id="btn4"> append를 확인하세요 </button>
+		
+		<!--
+			after, before : 선택된요소에 형제관계가 되고 
+			append, prepend : 선택요소에 자식이 된다.
+		-->
+	</body>
+</html>

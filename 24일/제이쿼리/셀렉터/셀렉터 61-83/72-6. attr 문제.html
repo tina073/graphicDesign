@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta  charset="utf-8" />
+		<title>일정한 시간 후 value값 추출하기</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				setInterval(function(){
+					let hero = $("option:selected").val();
+					alert(hero);
+				},4000);
+			});
+		</script>
+	</head>
+	<body>
+	<h1>4초에 한 번씩 선택한 영웅이 경고창에 나타게 하시오.</h1>
+		<select>
+			<option>슈퍼맨</option>
+			<option>배트맨</option>
+			<option>아쿠아맨</option>
+			<option>원더우먼</option>
+			<option>플래시맨</option>
+		</select>
+	</body>
+</html>

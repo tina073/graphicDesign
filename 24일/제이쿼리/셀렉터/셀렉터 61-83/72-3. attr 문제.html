@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>명령어2</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <style>
+		   ul,ol,li { list-style: none;}
+	    </style>
+		<script>
+		/*
+			$(function(){
+				$("button").click(function(){
+					let imgIndexNum = ["../images/mov1.jpg", "../images/mov2.jpg", "../images/mov3.jpg", "../images/mov4.jpg"]
+					$("img").attr("src", imgIndexNum)
+				});
+			});
+			*/
+			$(function(){
+				$("button").click(function(){
+					let dataSrc = $(this).attr("data-src");
+					$("img").attr("src", dataSrc);
+				});
+				
+				$("a").click(function(e){
+					e.preventDefault();  //return false와 같은 역할 
+					let aHref = $(this).attr("href");
+					$("img").attr("src", aHref);
+					//return false;  //a의 href를 무시해서 넘어가지 않고 이미지만 변경
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button data-src="../images/mov1.jpg">영화1</button>
+		<button data-src="../images/mov2.jpg">영화2</button>
+		<button data-src="../images/mov3.jpg">영화3</button>
+		<button data-src="../images/mov4.jpg">영화4</button>
+		    <ul class="mov mov1">
+			   <li><a href="../images/mov1.jpg">영화1</a></li>
+			   <li><a href="../images/mov2.jpg">영화2</a></li>
+			   <li><a href="../images/mov3.jpg">영화3</a></li>
+			   <li><a href="../images/mov4.jpg">영화4</a></li>
+			   <!--
+			   <li><a href="#" da="../images/mov1.jpg">영화1</a></li>
+			   <li><a href="#" da="../images/mov2.jpg">영화2</a></li>
+			   <li><a href="#" da="../images/mov3.jpg">영화3</a></li>
+			   <li><a href="#" da="../images/mov4.jpg">영화4</a></li>
+			   -->
+		    </ul>
+		    <p><img src="../images/mov1.jpg" alt=""></p>
+	</body>
+</html>
+

@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> append_prepend </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					//$("p").prepend("<strong>우리들의 히어로</strong>")
+					$("p").append("<strong>우리들의 히어로</strong>")
+				});
+				$("#btn2").click(function(){
+					$("li").prepend("<strong>히어로 팀</strong>")
+					//$("li").append("<strong>히어로 팀</strong>")
+				});
+			});
+		</script>
+		
+	</head>
+
+	<body>	
+		<p>슈퍼맨</p>
+		<p>아이언맨</p>
+
+		<ul>
+			<li>저스티스 리그</li>
+			<li>어벤저스</li>
+		</ul>
+
+		<button id="btn1"> 확인하세요 </button>
+		<button id="btn2"> 확인하세요 </button>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

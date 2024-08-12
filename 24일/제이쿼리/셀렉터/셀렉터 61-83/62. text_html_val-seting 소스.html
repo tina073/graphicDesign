@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8"> 
+		<title> text_html_val-seting</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$("#test1").text("아이언맨, 헐크");
+				});
+				
+				$("#btn2").click(function(){
+					$("#test2").html("<strong>슈퍼맨, 배트맨</strong>");
+				});
+				
+				$("#btn3").click(function(){
+					$("#test3").val("울트라맨");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p id="test1">우리는 어벤저스입니다.</p>
+		<p id="test2">우리는 저스티스리그입니다.</p>
+		<p>나는 지구방위대 : <input type="text" id="test3" value="외롭지 않아"></p>
+		
+		<button id="btn1">Set Text</button>
+		<button id="btn2">Set HTML</button>
+		<button id="btn3">Set Value</button>
+
+
+	<!--
+		text() - 선택한 요소의 내용을 가져오거나 수정합니다.
+		html() - 선택한 요소의 내용(그 속에 포함되어 있는 HTML까지)을 가져오거나 수정합니다.
+		val() - 폼 필드의 값을 가져오거나 수정합니다.
+	-->
+
+	</body>
+</html>

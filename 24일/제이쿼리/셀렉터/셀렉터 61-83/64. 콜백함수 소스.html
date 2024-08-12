@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 콜백함수 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$("#div1").hide(1000, function(){
+						alert("hide 명령이 모두 실행되었습니다.")
+					});
+				});
+				
+				$("#btn2").click(function(){
+					$("#div2").hide(10000);
+						alert("hide 명령이 모두 실행되었습니다.");
+				});
+			});
+		</script>
+		
+	</head>
+
+	<body>	
+		<div id="div1" style="height:200px; width:300px; border:1px solid black; background-color:yellow; margin-bottom:30px; text-align:center;">
+			<h2>어벤저스</h2>
+			<p>아이언맨</p>
+			<p>헐크</p>
+		</div>
+		
+		<div id="div2" style="height:200px; width:300px; border:1px solid black; background-color:yellow; text-align:center;">
+			<h2>저스티스 리그</h2>
+			<p>슈퍼맨</p>
+			<p>배트맨</p>
+		</div>
+		<br>
+		<button id="btn1"> 콜백함수 사용 </button>
+		<button id="btn2"> 콜백함수 미사용 </button>
+		
+		<!--
+			콜백함수 : 프로그래머가 입력한 소스 순서대로 처리되도록 하게하는 함수
+			$("선택자").이벤트(속도, function(){
+				실행문;
+			});
+			속도 - fast, slow, 1/1000의 숫자
+			
+			현재 적용하려는 효과(hide, show, fade, slide, animate, stop, toggle 등....)가 100% 완료된 후 실행되도록 한다.
+			콜백함수를 사용하지 않을 경우에는 효과(effect)가 완료되지 않은채로 스크립트가 실행되는 오류를 발생할 수 있다.
+		-->
+	</body>
+</html>

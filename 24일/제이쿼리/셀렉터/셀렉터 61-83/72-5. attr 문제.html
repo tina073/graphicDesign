@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta  charset="utf-8" />
+		<title>each문을 활용한 선택된 value값 추출하기</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#button").click(function(){
+					$("input[name=chk]:checked").each(function(){
+						alert($(this).val());
+					});
+				});
+			});
+		</script>
+		</head>
+		<body>
+			<input type="checkbox" value="1 슈퍼맨" id="chk1" name="chk" checked>누굴까요?
+			<input type="checkbox" value="2 배트맨" id="chk2" name="chk">누굴까요?
+			<input type="checkbox" value="3 아쿠아맨" id="chk3" name="chk">누굴까요?
+			<input type="checkbox" value="4 스파이더맨" id="chk4" name="chk">누굴까요?
+			<input type="button" value="선택된 value값 추출하기" id="button" name="ok" />
+		</body>
+</html>

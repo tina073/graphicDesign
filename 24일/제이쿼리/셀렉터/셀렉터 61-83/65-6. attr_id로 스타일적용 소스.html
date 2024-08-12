@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>attr로 id 적용시키기</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("img").click(function(){
+					$(this).attr("id", "dogSize");
+				});
+				$("img").dblclick(function(){
+					$(this).removeAttr("id");
+				});
+			});
+		</script>
+		<style>
+			#dogSize { width:500px; height:500px; border:5px solid red; }
+		</style>
+	</head>
+	<body>
+		<img src="../images/dog1.jpg" />
+	</body>
+</html>

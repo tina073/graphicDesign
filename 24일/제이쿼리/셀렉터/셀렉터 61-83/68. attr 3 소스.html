@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> attr 3 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>		
+			$(function(){
+				$("button").click(function(){
+					alert("너비 : " + $("img").attr("width") + ", 높이 : " + $("img").attr("height"));
+					$("img").attr({width:"500px", height:"400px"});
+				});
+			});
+		</script>
+		<style>
+			
+		</style>
+	</head>
+		
+	<body>
+		<img src="../images/child.jpg" alt="미래소년코난" title="저는 명탐정 코난이 아닙니다." width="320" height="290"/>
+		<div></div>
+		<button> 위 그림의 변경된 크기를 확인하세요. </button>
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--
+		학생들에게 변경된 크기를 이미지아래에 나타내도록 문제를 낼것...
+		정답은 attr 4 정답.html
+		
+		.attr() : 선택자에 의해 선택된 요소들 중에서 제일 처음 요소의 속성값을 가지고 오는 함수.
+				.attr() 함수는 속성값을 가져오지 못하면 undefinded를 반환합니다. 
+		
+			.attr( 속성명 )
+			.attr( 속성명, 값 )
+			.attr({ 속성명:값, 속성명:값, 속성명:값, ... })
+			.attr( 속성명, function(ins, attr) )
+				index(ins) - 셋팅되어 있는 요소의 인덱스번호
+				currentvalue(arrt) - 현재 선택한 요소의 선택된 속성값을 가져온다.
+		-->
+	</body>
+</html>

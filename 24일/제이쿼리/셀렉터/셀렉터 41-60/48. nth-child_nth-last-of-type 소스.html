@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> nth-child(숫자), nth-child(숫자n), nth-last-of-type(숫자) </title>
+		<style>
+
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("li:nth-child(2)").css({color:"red", border:"2px solid red"});
+					//$("li:nth-child(3n)").css({color:"red", border:"2px solid red"});  //n에는 0부터 차례대로 대입됨(0,3,6,9)
+					//$("li:nth-child(2n+1)").css({color:"red", border:"2px solid red"}); 
+					//$("li:nth-child(3n-1)").css({color:"red", border:"2px solid red"}); 
+					//$("li:nth-last-of-type(2)").css({color:"red", border:"2px solid red"}); 
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p>어벤저스</p>
+		<ul>
+			<li>아이언맨</li>
+			<li>토르</li>
+			<li>캡틴 아메리카</li>
+			<li>헐크</li>
+			<li>블랙팬서</li>
+		</ul>
+
+		<p>저스티스 리그</p>
+		<ul>
+			<li>슈퍼맨</li>
+			<li>배트맨</li>
+			<li>플래시맨</li>
+			<li>아쿠아맨</li>
+		</ul>
+		<button> 확인하세요 </button>
+	</body>
+
+<!-- 
+	$("요소선택:nth-child(3)") : 지정한 요소 중 3번째 요소만 
+	$("요소선택:nth-child(2n)") : 지정한 요수 중 2의 배수 번째 요소만 
+	$("요소선택:nth-last-of-type(2)") : 지정한 요수 중 마지막에서 2번째 요소만
+ -->
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> attr 5 문제 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>		
+			$(function(){
+				$("#conan").click(function(){
+					$("h3+img").attr({src:"../images/child.jpg", title:"저는"});
+					let tit = $("img").attr("title");
+					$("div").text(tit);
+				});
+				
+				$("#dog1").click(function(){
+					$("img:nth-child(2)").attr({src:"../images/dog1.jpg", title:"어라"});
+					let tit = $("img").attr("title");
+					$("div").text(tit);
+				});
+				
+				$("#dog2").click(function(){
+					$("div").prev().attr({src:"../images/dog2.jpg", title:"뭘봐"});
+					let tit = $("img").attr("title");
+					$("div").text(tit);
+				});
+			});
+		</script>
+		<style>
+			
+		</style>
+	</head>
+		
+	<body>
+		<h3>아래의 내용을 기본으로 결과 화면처럼 버튼을 추가하고 각 버튼을 눌렀을때 이미지가 변하면서 이미지아래에 해당 title이 나오도록 만드시오. </h3>
+		
+		<img src="../images/child.jpg" alt="미래소년코난" title="저는 명탐정 코난이 아니라구요. ㅠ.ㅠ" width="320" height="290">
+		<div></div>
+		<button id="conan"> 코난 </button>
+		<button id="dog1"> 강아지1 </button>
+		<button id="dog2"> 강아지2 </button>
+		
+		<h2>결과화면</h2>
+		<img src="../images/tit1.png" />
+		<img src="../images/tit2.png" />
+		<img src="../images/tit3.png" />
+		<!--
+		.attr() : 선택자에 의해 선택된 요소들 중에서 제일 처음 요소의 속성값을 가지고 오는 함수.
+				.attr() 함수는 속성값을 가져오지 못하면 undefinded를 반환합니다. 
+		
+			.attr( 속성명 )
+			.attr( 속성명, 값 )
+			.attr({ 속성명:값, 속성명:값, 속성명:값, ... })
+			.attr( 속성명, function(ins, attr) )
+				index(ins) - 셋팅되어 있는 요소의 인덱스번호
+				currentvalue(arrt) - 현재 선택한 요소의 선택된 속성값을 가져온다.
+		-->
+	</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> each </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("li").each(function(aa){
+						alert((aa+1) + "번째 위치 li의 글자 '" + $(this).text() +"'의 수는" + $(this).text().length + "개 입니다.")
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<button> 글자수를 확인하세요.. </button>
+		<ul>
+			<li>저스티스 리그</li>
+			<li>어벤저스</li>
+			<li>지구방위대!</li>
+		</ul>
+		
+		
+		<!--
+			$(selector).each(function())
+			$(selector).each(function(index,element)) : index - 선택자의 인덱스 위치값 , element - 현재 요소 또는 그 값.
+			
+			<script>
+				$.each( [ "a", "b", "c" ], function( i, value ){
+					alert( "Index #" + i + ": " + value );
+				});
+			</script>
+			
+			------------------
+			
+			<body>
+				<div>
+				    <span>첫번째</span>
+				    <span>두번째</span>
+				    <span>세번째</span>
+				</div>
+				
+				<script>
+					$('div').find('span').each(function(a, e){
+					    alert($(this).text());
+					});
+				</script>
+			</body>
+		-->
+	</body>
+</html>

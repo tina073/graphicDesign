@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> after_before </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$(".super").after("<strong>저스티스리그</strong>")
+				})
+				
+				$("#btn2").click(function(){
+					$(".iron").after("<strong>저스티스리그</strong>")
+				})
+			})
+		</script>
+		
+	</head>
+
+	<body>	
+		<p class="super">슈퍼맨</p>
+		<p class="iron">아이언맨</p>
+
+		<button id="btn1"> before를 확인하세요 </button>
+		<button id="btn2"> after를 확인하세요 </button>
+		
+		<!--
+		-->
+	</body>
+</html>

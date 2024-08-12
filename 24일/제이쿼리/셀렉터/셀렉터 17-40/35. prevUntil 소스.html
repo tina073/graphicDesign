@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> prevUntil </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#flash").prevUntil(".wonder").css({border:"2px solid red", color:"red"});			
+				//$(".wonder").prevUntil("#flash").css({border:"2px solid red", color:"red"});
+				//.wonder부터 위쪽으로 #flash까지의 형제요소들
+				//$(".aa").prevUntil(".wonder").css({border:"2px solid red", color:"red"});
+				//.aa부터 위쪽으로 .wonder까지의 형제요소들은 없으므로 아무것도 선택이 되지 않는다
+				//$("#flash").prevUntil(".wonder",".aa").css({border:"2px solid red", color:"red"});
+				//.aa부터 위쪽으로 .wonder까지의 형제요소 중 클래스가 aa인 요소들만
+			});
+		</script>
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid lightgrey;
+			    color: lightgrey;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+	</head>
+	<body id="wrapper">
+			<div> 우리들의 히어로들
+				<ul> 저스티스 리그
+					<li> 슈퍼맨 </li>
+					<li> 배트맨 </li>
+					<li class="wonder" style="color:red; "> 원더우먼 </li>
+					<li class="aa"> 그린랜턴 </li>
+					<li> 사이보그 </li>
+					<li id="flash"><span style="color:red; "> 플래시맨 </span></li>
+				</ul>
+			</div>
+	</body>
+</html>

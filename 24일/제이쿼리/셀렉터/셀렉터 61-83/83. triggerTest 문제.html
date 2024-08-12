@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+  <style>
+    .reverse {background:black;color:white}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(function() {
+		$("h1").click(function(){
+			//$(this).text($(this).text() + "*")
+			$(this).append("*");
+		});
+		setInterval(function(){
+			//$("h1").last().append("*");
+			$("h1").last().trigger("click");
+		},1000)
+    });
+  </script>
+</head>
+<body>
+  <h1>Start1 : </h1>
+  <h1>Start2 : </h1>
+  <h1>Start3 : </h1>
+  <h1>Start4 : </h1>
+  <h1>Start5 : </h1>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> first, last</title>
+		<style>
+			
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				&("button").click(function(){
+					$("p:first").css({color:"red", border:"2px solid red"});
+					//$("li:first").css({color:"red", border:"2px solid red"});
+					//$("ol li:first").css({color:"red", border:"2px solid red"});
+					//$("ul li:first").css({color:"red", border:"2px solid red"});
+					//$("p:last").css({color:"red", border:"2px solid red"});
+					//$("li:last").css({color:"red", border:"2px solid red"});
+					//$("ol li:last").css({color:"red", border:"2px solid red"});
+					//$("ul li:last").css({color:"red", border:"2px solid red"});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p>어벤저스</p>
+		<ul>
+			<li>아이언맨</li>
+			<li>토르</li>
+			<li>캡틴 아메리카</li>
+			<li>헐크</li>
+		</ul>
+		<p>저스티스 리그</p>
+		<ol>
+			<li>슈퍼맨</li>
+			<li>배트맨</li>
+			<li>플래시맨</li>
+			<li>아쿠아맨</li>
+		</ol>
+		<button>first(last) : 본문 중 처음(마지막)으로 나오는 요소</button>
+	</body>
+
+<!--
+	$("요소선택:first") 또는 $("요소선택").first()
+	$("요소선택:last") 또는 $("요소선택").last()
+  -->
+</html>
+
+
+
+
+

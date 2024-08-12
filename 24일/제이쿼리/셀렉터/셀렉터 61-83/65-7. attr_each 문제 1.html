@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> each 문제 1 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+					/*
+					let indexNum = ["../images/bg5_500.jpg", "../images/child.jpg", "../images/dog1.jpg", "../images/dog2.jpg"];
+					$("img").each(function(index){
+						if(index < indexNum.length) {
+							$(this).attr("src",indexNum[index])
+						}
+						*/
+
+					let imgs = ["bg_500.jpg", "child.jpg", "dog1.jpg", "dog2.jpg"];
+						$("div img").each(function(indexNum){
+							//$(this).attr("src", "../images/aa" + (indexNum+1) + ".jpg")
+							$(this).attr("src", "../images/" + imgs[indexNum])
+						})
+					
+					});
+					
+				});
+			});
+		</script>
+		<style>
+			img{ width:200px; height:200px; }
+		</style>
+	</head>
+	<body>
+		<h2> 문제 1. button을 클릭하면 div의 img를 변경해 보세요... </h2>
+		<input type="button" value="이미지변경" id="btn">
+		<div>
+			<img src="../images/bg1_500.jpg">
+			<img src="../images/bg2_500.jpg">
+			<img src="../images/bg3_500.jpg">
+			<img src="../images/bg4_500.jpg">
+		</div>
+	</body>
+</html>
+
+        .attr("src", 배열변수명[인덱스번호])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

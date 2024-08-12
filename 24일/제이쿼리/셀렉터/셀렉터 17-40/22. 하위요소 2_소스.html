@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 하위요소 2 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid lightgrey;
+			    color: lightgrey;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+		<script>
+			$(function(){
+				$("div span").css("background-color","yellow");
+			});
+		</script>
+	</head>
+	<body id="wrapper">
+		<h2> div가 포함하고 있는 span요소의 배경색을 노랑색으로 만드세요. </h2>
+		<div style="border:1px solid black;padding:10px;">
+			<p> 저는 div의 자식요소 p입니다. </p>
+			<span> 저는 div의 자식요소이자 p의 형제요소인 span입니다. </span>
+		</div>
+		<span> 저는 body의 자식요소이자 div의 형제요소인 span입니다. </span>
+		
+		<div style="border:1px solid black;padding:10px;">
+			<p>저도  div의 자식요소 p입니다. <span> 여기부터 p의 자식요소 span입니다. </span></p>
+		</div>
+		<em> 모양은 기울어져 있어도 뜻은 똑바로 전달하는 em요소입니다. </em>
+		<span> 저도 body의 자식요소이자 div의 형제요소인 span입니다. </span>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> first-child, last-child </title>
+		<style>
+
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					//$("p:first-child").css({color:"red", border:"2px solid red"});
+					//$("div p:first-child").css({color:"red", border:"2px solid red"});
+					//$("p:last-child").css({color:"red", border:"2px solid red"});
+					$("div p:last-child").css({color:"red", border:"2px solid red"});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p> 본문의 첫번째 P요소 </p>
+		<div style="border:1px solid;">
+			<p> DIV의 첫번째 P요소 </p>
+			<p> DIV의 두번째이자 마지막 P요소 </p>
+			<span> DIV의 입장에서 마지막 자식요소-span </span>
+		</div><br>
+
+		<div style="border:1px solid;">
+			<span>  DIV의 입장에서 첫번째 자식요소-span </span>
+			<p> DIV의 첫번째 P요소. 하지만 DIV의 입장에서 두번째 자식요소 </p>
+			<p> DIV의 두번째 P요소. 하지만 DIV의 입장에서 마지막 자식요소</p>
+		</div>
+
+		<p> 본문의 마지막 P요소</p>
+		<span>본문의 마지막 span요소 </span>
+		<br><br>
+		<button>first-child(last-child) : 모든 부모를 기준으로 그 자식요소 중 반드시 처음(마지막)으로 나오는 요소</button>
+	</body>
+
+<!-- 
+	$("요소선택:first-child") : 
+	$("요소선택:last-child")
+ -->
+</html>
+
+
+
+
+
+
+

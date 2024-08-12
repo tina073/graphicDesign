@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title> 선택자 문제 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- 라이브러리 -->
+
+		<script>
+			$(function(){
+			//모든 li를 파란색 테두리선을 적용하세요.(children)
+				$("ul").children("li").css("border","1px solid blue");
+			//아이언맨만 글자색 빨간색, 글자크기 30픽셀을 적용하세요.(first-child)
+				$("#gnb li:first-child").css({
+					color:"#f00",
+					fontSize:"30px"
+				});
+			//헐크를 배경색 녹색, 글자크기 50픽셀을 적용하세요.(eq)
+				$("li:eq(5)").css({
+					backgroundColor:"#0f0",
+					fontSize:"50px"
+				});
+				/*같음
+				$("li").eq(5).css({
+					backgroundColor:"#0f0",
+					fontSize:"50px"
+				});
+				*/
+			//모든 li요소중 홀수번째 요소만 검은색 5픽셀 두께의 점선테두리를 적용하세요.(odd)
+				$("li:odd").css({
+					border:"5px dotted #000",
+					boxSizing:"border-box"
+					});
+			//모든 li요소중 짝수번째 요소만 빨간색 5픽셀 두께의 파선테두리를 적용하세요.(even)
+				$("li:even").css({
+					border:"5px dashed #f00",
+					boxSizing:"border-box"
+					});
+			//슈퍼맨의 글자크기를 25픽셀로 만드세요.(first)
+				$("div:first").css("font-size", "25px");
+			//배트맨에게 밑줄을 적용하세요.(prev)
+				$("p").prev(".element2").css("text-decoration", "underline");
+				/*
+				$("p.element2").prev().css("text-decoration", "underline");
+				*/
+			//플래시맨에게 노란 배경색과 글자색 검정색을 적용하세요.(next)
+				$("div").next("p").css({
+					backgroundColor:"#ff0",
+					color:"#000"
+				});
+				/*
+				$("div.element2").next().css({
+					backgroundColor:"#ff0",
+					color:"#000"
+				});
+				*/
+			//원더우먼을 정가운데 정렬하세요.(first-of-type)
+				$(".box:first-of-type").css({
+					textAlign:"center",
+					lineHeight:"200px"
+				});
+				/*
+				$("div p:first-of-type").css({
+					textAlign:"center",
+					lineHeight:"200px"
+				});
+				*/
+			//사이보그에게 배경그림(eva.jpg), 3픽셀 두께의 검은 이중선을 적용하세요.(nth-child)
+				$(".box:nth-child(2)").css({
+					border:"3px double #000",
+					backgroundImage:"url('../images/eva.jpg')",
+					backgroundRepeat:"no-repeat",
+					backgroundSize:"cover"
+				});
+				/*
+				$("div p:nth-child(2)").css({
+					border:"3px double #000",
+					backgroundImage:"url('../images/eva.jpg')",
+					backgroundRepeat:"no-repeat",
+					backgroundSize:"cover"
+				});
+				*/
+			//그린랜턴만 검은색 배경에 글자색 흰색으로 만드세요.(last)
+				$(".box:last").css({
+					backgroundColor:"#000",
+					color:"#fff"
+				});
+				/*
+				$("p:last").css({
+					backgroundColor:"#000",
+					color:"#fff"
+				});
+				*/
+});
+		</script>
+		<style>
+			*{ margin:0; padding:0; }
+			li{ list-style:none; }
+			#element1{ width:100px; height:100px; line-height:100px; 
+						text-align:center; background:#f00; color:#fff; }
+			.element2{ width:200px; height:200px; line-height:200px; 
+						background:#f0f; color:#fff; 
+						text-align:center; margin:20px; }
+			#gnb{ overflow:hidden; }
+			#gnb li{ float:left; width:300px; height:300px; line-height:100px; 
+					text-align:center; background:#ccc; margin:10px; }
+			.button{ display:block; width:300px; height:50px; 
+					line-height:50px; text-align:center; 
+					margin:auto; background:#333; color:#fff; }
+			.box{width:200px; height:200px; 
+								background:red; margin:10px;}
+		</style>
+	</head>
+	<body>
+		<a class="button">a.button</a>
+		<ul>
+			<li>어벤저스</li>
+		</ul>
+		<ul id="gnb">
+			<li>아이언맨</li>
+			<li>토르</li>
+			<li>캡틴 아메리카</li>
+			<li>블랙위도우</li>
+			<li>헐크<li>
+			<li>스파이더맨</li>
+			<li>비전</li>
+			<li>앤트맨</li>
+		</ul>
+		<div id="element1">슈퍼맨</div>
+		<div class="element2">배트맨</div>
+		<p class="element2">플래시맨</p>
+		<div>
+			<p class="box">원더우먼</p>
+			<p class="box">사이보그</p>
+			<p class="box">그린랜턴</p>
+		</div>
+<!--
+   $("요소선택:eq(인덱스번호)") 또는 $("요소선택).eq(인덱스번호) : 선택한 요소 중 지정한 인덱스가 참조하는 요소만 선택. 
+	
+	페이지 전체에서 해당 요소를 전부 찾아 0번부터 순차적으로 번호를 지정.
+	
+	$("요소선택:lt(인덱스번호)") : 선택한 요소 중 지정한 인덱스보다 작은 인덱스를 참조하는 요소만 선택
+	$("요소선택:gt(인덱스번호)") : 선택한 요소 중 지정한 인덱스보다 
+-->
+</body>
+</html>

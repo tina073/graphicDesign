@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> eq(숫자), lt(숫자), gt(숫자) </title>
+		<style>
+
+		</style>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("li").eq(1).css({color:"red", border:"2px solid red"});
+					//$("li:eq(5)").css({color:"red", border:"2px solid red"});
+					//$("li:lt(5)").css({color:"red", border:"2px solid red"});
+					//$("li:gt(5)").css({color:"red", border:"2px solid red"});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p>어벤저스</p>
+		<ul id="aven">
+			<li>아이언맨</li>
+			<li>토르</li>
+			<li>캡틴 아메리카</li>
+			<li>헐크</li>
+		</ul>
+
+		<p>저스티스 리그</p>
+		<ul id="just">
+			<li>슈퍼맨</li>
+			<li>배트맨</li>
+			<li>플래시맨</li>
+			<li>아쿠아맨</li>
+		</ul>
+		
+		<p> 지구 방위대 </p>
+		<ul>
+			<li>울트라맨</li>
+		</ul>
+		<button> 확인하세요 </button>
+	</body>
+
+<!-- 
+	$("요소선택:eq(인덱스번호)") 또는 $("요소선택).eq(인덱스번호) : 선택한 요소 중 지정한 인덱스가 참조하는 요소만 선택. 
+	
+	페이지 전체에서 해당 요소를 전부 찾아 0번부터 순차적으로 번호를 지정.
+	
+	$("요소선택:lt(인덱스번호)") : 선택한 요소 중 지정한 인덱스보다 작은 인덱스를 참조하는 요소만 선택
+	$("요소선택:gt(인덱스번호)") : 선택한 요소 중 지정한 인덱스보다 
+	
+	:eq(index) 함수는 그리 좋은 사용 방법이 아닙니다. 
+.eq(index) 라고 사용하시는 것이 더 좋습니다. 
+ 
+이유는 
+:eq(index) 함수는 index 값에 음수가 들어왔을 때 아무런 값도 반환하지 않기 때문입니다. 
+또한 변수를 사용할 수 없습니다.
+하지만 .eq(index)는 변수사용이 가능합니다.
+ 
+예를 들어, 
+$('li').eq(-1)를 하면 li 요소 중 마지막 값을 찾아 주지만 
+$('li:eq(-1)') 는 어떤 값도 찾아 주지 않습니다.
+ 
+var n=0;
+ 
+$('li').eq(n) -- 첫번째 요소가 지정된다.
+$('li:eq(n)') -- 아무런 변화가 없다.
+ -->
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+	<title>nth-child(가상클래스) 문제</title>
+	<style>
+		* { margin:0; padding:0; }
+		ul { list-style:none; width:480px; }
+		#nth li { width:100px; height:100px; background:#f1779e; margin:10px; float:left; border-radius:50px; box-sizing:border-box;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("li:nth-child(4n+2)").css({
+				backgroundImage:"url(../images/img1.jpg)",
+				backgroundRepeat:"no-repeat",
+				backgroundPosition:"center center",
+				backgroundSize:"cover"
+			});
+			$("li:nth-child(4n+3)").css("background-color","orange");
+			$("li:nth-child(4n+4)").css({
+				backgroundImage:"url(../images/keroro.jpg)",
+				backgroundRepeat:"no-repeat",
+				backgroundPosition:"center center",
+				backgroundSize:"cover",
+				border:"1px solid #000"
+			});
+		});
+	</script>
+	</head>
+
+	<body>
+		<ul id="nth">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		</div>
+	</body>
+</html>

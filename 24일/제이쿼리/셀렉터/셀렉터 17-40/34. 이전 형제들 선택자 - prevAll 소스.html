@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 이전 형제들 선택자 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("h2").prevAll().css({border:"2px solid red", color:"red"});
+				//$("#flash").prevAll().css({border:"2px solid red", color:"red"});
+				//$("h2").nextAll().css({border:"2px solid red", color:"red"});
+				//$("#flash").nextAll().css({border:"2px solid red", color:"red"});
+			});
+		</script>
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid lightgrey;
+			    color: lightgrey;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+	</head>
+	<body id="wrapper">
+		<div> 우리들의 히어로들
+			<p> 슈퍼맨 </p>
+			<span> 배트맨 </span>
+			<h2 id="flash"> 플래시맨 </h2>
+			<h3> 아쿠아맨 </h3>
+			<p> 원더우먼 </p>
+			<h2> 그린 랜턴</h2>
+		</div>
+	</body>
+</html>

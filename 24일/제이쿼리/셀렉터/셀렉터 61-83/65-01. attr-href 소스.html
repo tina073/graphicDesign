@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn1").click(function(){
+					$("#box").html("<h1>Hello jQuery!!!!</h1>");
+				});
+				
+				$("#btn2").click(function(){
+					alert($("#box").html());
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="html넣기" id="btn1">
+		<input type="button" value="html읽어오기" id="btn2">
+		<div id="box"></div>
+	</body>
+</html>
+
+
+
+

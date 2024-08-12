@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+			$("button").click(function(){
+					$("img").attr("src", $(this).attr("data-n"));
+				});
+				/*
+           $("a").click(function(){
+				let changeHref = $(this).attr("href");
+				let changeAlt = $(this).attr("alt")
+				$("img").attr("src", changeHref);
+				$("span").text(changeAlt);
+				return false
+		   });
+		   */
+		   $("a").click(function(){
+				$("img").attr("src", $(this).attr("href"));
+				$("span").text($(this).attr("alt"));
+				return false
+		   });
+        });
+    </script>
+</head>
+<body>
+<button data-n="../images/mov1.jpg">영화1</button>
+<button data-n="../images/mov2.jpg">영화2</button>
+<button data-n="../images/mov3.jpg">영화3</button>
+<button data-n="../images/mov4.jpg">영화4</button>
+    <ul class="mov mov1">
+        <li><a href="../images/mov1.jpg" alt="배트맨 vs 슈퍼맨">영화1</a></li>
+        <li><a href="../images/mov2.jpg" alt="쥬토피아">영화2</a></li>
+        <li><a href="../images/mov3.jpg" alt="글로이데이">영화3</a></li>
+        <li><a href="../images/mov4.jpg" alt="부활">영화4</a></li>
+    </ul>
+    <p><img src="../images/mov1.jpg" alt="배트맨 vs 슈퍼맨"><span>배트맨 vs 슈퍼맨</span></p>
+</body>
+</html>

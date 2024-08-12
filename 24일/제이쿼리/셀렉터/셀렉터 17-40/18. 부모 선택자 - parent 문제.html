@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 부모 선택자 - parent 문제 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid lightgrey;
+			    color: lightgrey;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+		<script>
+			$(function(){
+				$("ol, #aa").parent().css({
+					backgroundColor:"yellow",
+					border:"2px solid red"
+				});
+			});
+		</script>
+	</head>
+	<body id="wrapper">
+	<h3>각각 아래의 ol과 아이디 aa의 부모요소에게 노란 배경색과 2픽셀짜리 붉은 실선, 그리고 밑줄을 적용시키시오. </h3>
+		<h1>내용</h1>
+			<ul>
+				<li> first </li>
+				<li> second </li>	
+				<li> third </li>
+				<li> fourth
+					<ol> 
+						<li id="par"> <b>fifth</b> </li>
+						<li> sixth </li>
+						<li> seventh </li>
+					</ol>
+				</li>
+			</ul>
+			
+			<div id="div">스팬 조부모
+				<p id="aa">스팬부모
+					<span>스팬내용</span>
+				</p>
+			</div>
+		
+	<!--
+		
+	-->
+	</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> removeClass </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#add").click(function(){
+					$("#earth").addClass("add4 add1 add5 add6 add8 add3 add7 add2");
+					$("h1, h2, p").addClass("add2");
+					//$("span").addClass("add1");
+					$("div").addClass("open");
+				});
+				
+				$("span").click(function(){
+					$("div").removeClass();  //.open가 제거
+					/*
+					$("#earth, h1, h2, p").removeClass("add4 add1 add5 add6 add8 add3 add7 add2");
+					$("*").removeClass("add4 add1 add5 add6 add8 add3 add7 add2");
+					$("*").removeClass();
+					*/
+				});
+				
+				$("#remove").click(function(){
+					$("*").removeClass();
+				});
+			});
+		</script>
+		<style>
+			.add1 { font-weight: bold; font-size: xx-large; }
+			.add2 { color: blue; }
+			.add3 { color:red; }
+			.add4 { text-decoration:underline; }
+			.add5 { font-family:"궁서"; }
+			.add6 { font-style:italic; }
+			.add7 { color:green; }
+			.add8 { text-decoration:none; }
+			div { width:200px; border:1px solid red; }
+			.open { width:800px; }
+		</style>
+	</head>
+
+	<body>
+		<h1> 저스티스 리그 </h1>
+		<p> 슈퍼맨 </p>
+		
+		<h2> 어벤저스 </h2>
+		<p> 아이언맨</p>
+
+		<div id="earth"> 지구방위대도 잊지마세요. </div>
+		<span> 울트라맨 </span>
+		<br>
+
+		<button id="add"> 속성추가 </button>
+		<button id="remove"> 속성제거 </button>
+		
+		<!--
+			addClass()
+			removeClass()
+			toggleClass()
+		-->
+	</body>
+</html>

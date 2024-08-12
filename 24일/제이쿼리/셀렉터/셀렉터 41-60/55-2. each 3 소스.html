@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn1").click(function(){
+					let change = ["나를 버리고 가시는 님은", "십리도 못가서", "발병난다"];
+					
+					$("p").each(function(indexNum){
+						$(this).text(change[indexNum]);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2> button을 클릭하면 아래 가사를 변경해 보세요... </h2>
+		<input type="button" value="next" id="btn1">
+		<p>아리랑 아리랑</p>
+		<p>아라리요~</p>
+		<p>아리랑 고개로 넘어간다.</p>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

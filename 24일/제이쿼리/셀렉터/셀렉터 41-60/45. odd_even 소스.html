@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> odd(홀수), even(짝수) </title>
+		<style>
+			
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("ul li:even").css({color:"red", border:"2px solid red"})
+					//$("p:even").css({color:"red", border:"2px solid red"})
+					//$("p:odd").css({color:"red", border:"2px solid red"})
+					//$("li:odd").css({color:"red", border:"2px solid red"})  //ul, ol의 모든 li를 모아서 일렬로 세운 후 홀수를 골라냄
+				})
+			});
+		</script>
+	</head>
+
+	<body>
+		<p>어벤저스</p>
+		<ul>
+			<li>아이언맨</li>
+			<li>토르</li>
+			<li>캡틴 아메리카</li>
+			<li>그린헐크</li>
+			<li>레드헐크</li>
+		</ul>
+
+		<p>저스티스 리그</p>
+		<ol>
+			<li>슈퍼맨</li>
+			<li>배트맨</li>
+			<li>플래시맨</li>
+			<li>아쿠아맨</li>
+		</ol>
+
+		<button>even(odd) : 본문 중 짝수(홀수)로 나오는 요소(인덱스 번호 : 0, 1, 2, 3, 4, ...)</button>
+	</body>
+
+<!-- 
+	$("요소선택:even") : 
+	$("요소선택:odd")
+ -->
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 직계 하위요소 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<style>
+			li{ padding:10px; }
+		</style>
+		<script>
+			$(function(){
+				$(".test > li").css("border","4px double red")
+			});
+		</script>
+	</head>
+	<body id="wrapper">
+		<h2>test클래스의 직접적인 li자식요소만 붉은 이중선(4px)테두리를 만드시오.</h2>
+		<ul class="test"> 저스티스 리그
+			<li> 슈퍼맨</li>
+			<li> 배트맨
+				<ul>
+					<li> 로빈 </li>
+				</ul>
+			</li>
+			<li> 원더우먼 </li>
+		</ul>
+	</body>
+</html>

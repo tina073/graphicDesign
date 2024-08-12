@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> addClass 문제 2</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+		/*
+			$(function(){
+				$("button").click(function(){
+					$("*").removeClass();
+					$("#earth").addClass("add1 add3");
+				});
+			});
+			*/
+			$(function(){
+				$("button").click(function(){
+					$("#earth").removeClass();
+					$("#earth").addClass("add1 add3");
+				});
+			});
+		</script>
+		<style>
+			.add1 { font-weight: bold; font-size: xx-large; }
+			.add2 { color: blue; }
+			.add3 { color:red; }
+			.add4 { text-decoration:underline; }
+			.add5 { font-family:"궁서"; }
+			.add6 { font-style:italic; }
+			.add7 { color:green; }
+			.add8 { text-decoration:none; }
+		</style>
+	</head>
+
+	<body>
+		<h3> div요소에 적용된 스타일을 삭제한 후 글자를 빨갛고 진하게, 
+			그리고 글자 크기를 사이즈 6에 해당하는 xx-large로 크기를 조절하시오.</h3>
+			<hr>
+		<h1> 저스티스 리그 </h1>
+		<p> 슈퍼맨 </p>
+		
+		<h2> 어벤저스 </h2>
+		<p> 아이언맨</p>
+
+		<div id="earth" class="add5 add7"> 지구방위대도 잊지마세요. </div>
+		<span> 울트라맨 </span>
+		<br>
+
+		<button> 확인하세요 </button>
+		
+		<!--
+			addClass()
+			removeClass()
+			toggleClass()
+		-->
+	</body>
+</html>

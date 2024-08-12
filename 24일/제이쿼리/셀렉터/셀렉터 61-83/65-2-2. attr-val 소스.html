@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title> attr val </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+		/*
+			$(function(){
+				$("#btn1").click(function(){
+					alert($("btn2").val(function(){
+						$("btn2").attr("value","button2");
+					}));
+				});
+			});
+			*/
+			$(function(){
+				$("#btn1").click(function(){
+					let val = $("#btn2").val();
+					alert(val);
+					$("#btn2").val("button2");;
+					alert($("#btn2").val());
+				});
+				
+				$("#btn2").click(function(){
+					$("#btn2").val("버튼2");
+				});
+				
+				$("#btn3").click(function(){
+					$("#img1").attr("src", "../images/dog2.jpg");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="버튼1" id="btn1">
+		<input type="button" value="버튼2" id="btn2">
+		<input type="button" value="이미지변경" id="btn3"><br>
+		<img src="../
+		images/dog1.jpg" id="img1">
+	</body>
+</html>
+
+
+
+

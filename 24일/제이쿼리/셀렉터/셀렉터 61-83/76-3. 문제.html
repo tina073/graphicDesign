@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Document</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script>
+		/*
+			$(function(){
+				let orignName = $(this).text();
+			    $("a").mouseover(function(){
+					$("img").attr("src",$(this).attr("href"));
+					let name = $(this).attr("alt");
+					$(this).parent("li").text(name);
+				});
+				
+				$("a").mouseout(function(){
+					
+				});
+			});
+			*/
+			$(function(){
+				let imsi;  //임시변수(a요소의 원본이 들어있음)
+				
+			    $(".mov a").mouseover(function(){
+					$("img").attr("src",$(this).attr("href"));
+					imsi = $(this).text();  //a요소의 내용을 임시변수 imsi에 넣고 보존
+					$(this).text($(this).attr("alt"));  //마우스 올린 a의 요소를 alt의 내용으로 변경
+				});
+				
+				$(".mov a").mouseout(function(){
+					$(this).text(imsi);  //임시변수에 들어있는 내용을 a요소에 넣는다
+				});
+				
+				$(".mov a").click(function(){
+					return false; //링크기능 해제
+				});
+			});
+	    </script>
+	</head>
+	<body>
+		 <ul class="mov">
+		    <li><a href="../images/mov1.jpg" alt="배트맨 vs 슈퍼맨" >영화1</a></li>
+		    <li><a href="../images/mov2.jpg" alt="쥬토피아">영화2</a></li>
+		    <li><a href="../images/mov3.jpg" alt="글로리데이" >영화3</a></li>
+		    <li><a href="../images/mov4.jpg" alt="부활" >영화4</a></li>
+		    <li><a href="../images/mov5.jpg" alt="귀향" >영화5</a></li>
+		</ul>  
+          
+		<p><img src="../images/mov1.jpg" alt="영화1"></p>       
+	</body>
+	</html>

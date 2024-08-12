@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>  </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("li").each(function(aa){
+						alert(aa + ":" + $(this).text());
+						//console.log(aa + ":" + $(this).text());
+						//.text() : .innerText()
+					});
+					//aa는 each문에 의해서 반복될 요소(li)를 하나씩 불러오면서 불려온 해당 li의 인덱스 번호를 담을 변수명이다. 사용자가 원하는 변수명을 입력
+				});
+			});
+		</script>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<button>버튼</button>
+		<ul>
+			<li>리스트1</li>
+			<li>리스트2</li>
+			<li>리스트3</li>
+		</ul>
+	</body>
+</html>

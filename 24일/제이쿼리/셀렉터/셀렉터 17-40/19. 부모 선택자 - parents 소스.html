@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 부모 선택자 - parents 소스 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("span").parents().css({
+					color:"#f00",
+					border:"2px solid red"
+				});
+			});
+		</script>
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid lightgrey;
+			    color: lightgrey;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+	</head>
+	<body id="wrapper">body (span의 고조부모요소)
+		<!--<h2>span의 모든 조상들을 빨간색 테두리와 빨간색 글자로 바꿈.</h2>-->
+		<div style="width:500px;">div (span의 증조부모요소)
+			<ul>ul (span의 조부모요소)
+				<li>li (span의 부모요소)
+					<span>span</span>
+				</li>
+			</ul>
+		</div>
+	<!--
+		parents()는 위로 모든 조상을 의미하므로 가장 바깥쪽. 즉, body문을 감싸고 있는 최상위 객체인
+		html도 포함이 되어 효과가 적용이 된다.
+	-->
+	</body>
+</html>

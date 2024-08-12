@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>event</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <style>
+		   * { margin: 0;padding: 0;}
+		   ul,ol,li { list-style: none;}
+		   img { vertical-align: middle; border: none}
+		   a { text-decoration: none}
+		   .mov{}
+		   .mov li{ width: 123px; padding: 5px; border: 1px solid #ddd; float: left; margin: 10px; height: 200px; position: relative;}
+		   .txt1 { display: block; width: 123px; height: 100px; position: absolute; z-index: 100; top:5px; left: :5px; background-color: rgba(0,0,0,0.4); text-align: center; font-size: 12px; color:yellow; font-weight:bold; }
+	    </style>
+	    <script>
+		/*
+			$(function(){
+				$(".mov a").mouseover(function(){
+					$(this).siblings("span").addClass("txt1");
+					$(this).siblings("span").text($(this).attr("alt"));
+				});
+				
+				$(".mov a").mouseout(function(){
+					$(this).siblings("span").removeClass("txt1");
+				});
+			});
+			*/
+			$(function(){
+				$(".mov li").mouseenter(function(){
+					$(this).append("<span>" + $(this).find("img").attr("alt") + "<br> 더보기</span>");
+					$("span").addClass("txt1");
+				});
+				$(".mov li").mouseleave(function(){
+					$("span").remove();
+				});
+			});
+	    </script>
+	</head>
+	<body>
+	    <ul class="mov">
+		   <li><a href="#"><img src="../images/mov1.jpg" alt="배트맨앤슈퍼맨"></a><span>더보기</span></li>
+		   <li><a href="#"><img src="../images/mov2.jpg" alt="주토피아"></a><span>더보기</span></li>
+		   <li><a href="#"><img src="../images/mov3.jpg" alt="글로리아"></a><span>더보기</span></li>
+		   <li><a href="#"><img src="../images/mov4.jpg" alt="부활"></a><span>더보기</span></li>
+		   <li><a href="#"><img src="../images/mov5.jpg" alt="귀향"></a><span>더보기</span></li>
+	    </ul>
+	</body>
+</html>
+
+
+
+
+
+
+
+

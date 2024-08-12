@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> filter("필터요소") </title>
+		<style>
+
+		</style>
+		<script src="../jquery-1.12.4.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("li").filter(".cape, #woman").css({
+					"color":"red",
+					"border":"2px solid red"
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p>어벤저스</p>
+		<ul id="aven">
+			<li>아이언맨</li>
+			<li class="cape">토르</li>
+			<li>캡틴 아메리카</li>
+			<li>헐크</li>
+			<ol>
+				<li class="cape">비전</li>
+			</ol>
+		</ul>
+
+		<p>저스티스 리그</p>
+		<ul id="just">
+			<li class="cape">슈퍼맨</li>
+			<li class="cape">배트맨</li>
+			<li>플래시맨</li>
+			<li>아쿠아맨</li>
+			<li id="woman">원더우먼</li>
+		</ul>
+		
+		<p> 지구 방위대 </p>
+		<ul>
+			<li>울트라맨</li>
+		</ul>
+		<button> 확인하세요 </button>
+	</body>
+
+<!-- 
+	$("요소선택").filter("필터요소") : 선택한 요소 중 한번 더 지정한 요소만 선택
+ -->
+</html>
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> only-child, slice(숫자) </title>
+		<style>
+
+		</style>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("li").slice(1).css({color:"red", border:"2px solid red"});
+					//$("#aven").slice(2).css({color:"red", border:"2px solid red"});
+					//$("#just li").slice(3).css({color:"red", border:"2px solid red"});
+					$("li:only-child").css({color:"red", border:"2px solid red"});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p>어벤저스</p>
+		<ul id="aven">
+			<li>아이언맨</li>
+			<li>토르</li>
+			<li>캡틴 아메리카</li>
+			<li>헐크</li>
+		</ul>
+
+		<p>저스티스 리그</p>
+		<ul id="just">
+			<li>슈퍼맨</li>
+			<li>배트맨</li>
+			<li>플래시맨</li>
+			<li>아쿠아맨</li>
+		</ul>
+		
+		<p> 지구 방위대 </p>
+		<ul>
+			<li>울트라맨</li>
+		</ul>
+		<button> 확인하세요 </button>
+	</body>
+
+<!-- 
+	$("요소선택:only-child") : 지정한 요소가 오직 한 개만 존재하는 요소만 선택
+	$("요소선택:slice(2)") : 지정한 요소 중 2번째 요소부터 마지막 요소까지 
+	
+	인덱스 번호 0번부터
+ -->
+</html>
+
+
+
+
+
+
+

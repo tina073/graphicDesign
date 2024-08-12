@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> add() 2 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("p").add($("h3").next()).css("backgroundColor","yellow");
+				//$("p").add($("h4").prev()).css("backgroundColor","yellow");
+				//$("p").add(document.getElementsByTagName("span")[1]).css("backgroundColor","yellow");
+			});
+		</script>
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid lightgrey;
+			    color: lightgrey;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+	</head>
+	<body id="wrapper">
+		<div> 우리들의 히어로들
+			<h1> DC 코믹스 </h1>
+			<p> 슈퍼맨 </p>
+			<span> 배트맨 </span>
+			<h2 id="flash"> 플래시맨 </h2>
+			<h3> 아쿠아맨 </h3>
+			<span> 원더우먼 </span>
+			<h4> 그린 랜턴</h4>
+		</div>
+	</body>
+</html>

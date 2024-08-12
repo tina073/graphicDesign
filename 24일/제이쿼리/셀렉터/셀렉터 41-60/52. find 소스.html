@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> find </title>
+		<style>
+			#wrapper div * {
+			    display: block;
+			    border: 2px solid lightgrey;
+			    color: lightgrey;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+		<script src="../jquery-1.12.4.min.js"></script>
+		<script>
+			$(function(){
+				$("button").click(function(){
+					$("ul").find("span").css({
+						color:"red",
+						border:"2px solid red"
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body id="wrapper">body-증조부
+		<div style="width:500px;">div-할아버지
+			<ul>ul-부모
+				<li id="first">li-자식
+					<span>span-손자
+						<span>span-증손자
+							<span>span-고손자</span>
+						</span>
+					</span>
+				</li>
+				
+				<li id="second">li-자식
+					<span>span손자</span>
+				</li>
+			</ul>
+		</div>
+		<button> 확인하세요 </button>
+	</body>
+
+<!-- 
+	$("요소선택").find("필터요소") : 선택한 요소 중 한번 더 지정한 하위요소만 선택
+	
+	filter : 지정한 요소중에 또 다시 조건(요소명)에 해당하는 요소만
+			선택   ex) li중에서 .cape인 요소만
+	
+	find : 지정한 부모요소에서 하위요소중 지정한 요소 모두를
+			선택   ex) ul요소의 하위요소중에서  span인 요소만
+	
+ -->
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>attr-val 문제 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn1").click(function(){
+					let num1 = parseInt($("#num1").val());
+					let num2 = $("#num2").val();
+					let num3 = num1 + parseInt(num2);
+					$("num3").val(num3);
+				});
+			});
+		/*
+			$(function(){
+				$("#btn1").click(function(){
+					let num1 = parseInt($("#num1").attr("value"));
+					let num2 = parseInt($("#num2").attr("value"));
+					let num3 = num1 + num2;
+					$("num3").val(num3);
+				});
+			});	*/
+			/*
+			폼 요소의 값(value)을 가지고 오는 두 가지 방법
+			1.$("선택자").val();  //$("선택자").val("수정할 값");
+			2.$("선택자").attr("value");  //$("선택자").attr("속성명", "수정할 값");
+				-$("선택자").attr("value")에 의해서 value값을 가지고 올 수는 있으나 그 값은 새롭게 입력된 값을 가지고 오지는 못한다. 즉, 이미 body문에 있는 해당 태그의 입력된 value값만 읽어 올 수 있다. 만약 body문에 있는 해당 태그의  value속성이 쓰여있지 않다묜 입력된 value값을 가지고 올 수 없으므로 NaN이 나온다
+			*/
+		</script>
+	</head>
+	<body>
+		<h3>두수를 입력받아 더하기를 하는 프로그램을 완성하세요...(parseInt)</h3>
+		<input type="text" id="num1" size="5">+
+		<input type="text" id="num2" size="5">=
+		<input type="text" id="num3" size="5"><br>
+		<input type="button" value="두수합" id="btn1"><br><br><br>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

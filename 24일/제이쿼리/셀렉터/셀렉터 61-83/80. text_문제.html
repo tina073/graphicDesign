@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> title_html_val </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("li").click(function(){
+					let txt = $(this).text();
+					$("div").text(txt);
+					$("div").css("background-color",txt)
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>text()를 이용하여 div의 배경색을 바꾸세요... </p>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>purple</li>
+			<li>gray</li>
+		</ul>
+		
+		<div style="width:400px; height:400px; margin:50px; border:3px solid black; font-size:50px; color:#fff;"></div>
+
+	<!--
+		text() - 선택한 요소의 내용을 가져오거나 수정합니다.
+		html() - 선택한 요소의 내용(그 속에 포함되어 있는 HTML까지)을 가져오거나 수정합니다.
+		val() - 폼 필드의 값을 가져오거나 수정합니다.
+	-->
+
+	</body>
+</html>

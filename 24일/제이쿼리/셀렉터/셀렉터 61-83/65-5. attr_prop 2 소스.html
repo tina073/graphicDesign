@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#etc").prop("disabled",true)
+				$("#chk2").click.(function(){
+					if($("#etc").prop("checked") == true) {
+						$("#etc").prop("disabled",false)
+					} else {
+						$("#etc").prop("disabled",true)
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 체크박스가 체크되면 etc가 활성화되고 체크해제되면 비활성화 되도록 해보세요. -->  
+		기타사항 <input type="checkbox" value="기타사항" id="chk2"> <!-- disabled="disabled" -->
+		<input type="text" id="etc" size="50">
+	</body>
+</html>
+
+
+
+

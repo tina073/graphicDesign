@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>초침만들기</title>
+<style>
+    .sec { margin:200px; width:1px; height:100px; background-color:red;}  
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+/*
+   $(function(){
+		let today = new Date();
+		let hours = today.getHours();
+		let minutes = today.getMinutes();
+		let seconds = today.getSeconds();
+		$("#nowTime").text(hours + "시" + minutes + "분" + seconds + "초");
+	
+		let angle = 0;
+		setInterval(function(){
+			angle += 6;
+			$(".sec").css({
+				transformOrigin:"center bottom",
+				transform:"rotate(" + angle + "deg)"
+			})
+		},1000);
+   });
+ */
+ 
+	$(function(){
+		setInterval(function(){
+			let today = new Date();
+			let nowTime = document.getElementById("nowTime");
+			nowTime.innerHTML = today.toLocaleString();
+			
+			let nowSec = today.getSeconds();
+			nowSec = nowSec * 6;
+			
+			$(".sec").css({
+				transformOrigin:"center bottom",
+				transform:"rotate(" + nowSec + "deg)"
+			})
+		},1000);
+   });
+</script>
+</head>
+<body>
+	<h2>현재시간 : <span id="nowTime"></span></h1>
+    <div class="sec"></div>
+</body>
+</html>
+
+
+
+
+
+
+

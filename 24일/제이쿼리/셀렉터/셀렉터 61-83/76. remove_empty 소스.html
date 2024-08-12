@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> remove_empty </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$("#div1").remove();
+				});
+				
+				$("#btn2").click(function(){
+					$("#div2").empty();
+				});
+			});
+		</script>
+		
+	</head>
+
+	<body>	
+		<div id="div1" style="height:200px; width:300px; border:1px solid black; background-color:yellow; margin-bottom:30px; text-align:center;">
+			<h2>어벤저스</h2>
+			<p>아이언맨</p>
+			<p>헐크</p>
+		</div>
+		
+		<div id="div2" style="height:200px; width:300px; border:1px solid black; background-color:yellow; text-align:center;">
+			<h2>저스티스 리그</h2>
+			<p>슈퍼맨</p>
+			<p>배트맨</p>
+		</div>
+		<br>
+		<button id="btn1"> remove로 확인하세요 </button>
+		<button id="btn2"> empty로 확인하세요 </button>
+		
+		<!--
+			remove() - 선택한 모든 요소(하위 자식요소 포함)를 삭제한다.
+			empty() - 선택한 요소의 자식요소만 삭제한다.
+		-->
+	</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>addClass/removeClass 문제</title>
+		<style>
+			div { width:140px; border:2px solid #9CF; padding :10px 20px; 	text-align:center; line-height:20px; font-weight:bold; }
+			.change{ background-color:#9CF; color:#FFF;	}
+			.click{ background-color:#090; color:#FFF; font-size:1.4em; }
+		</style>
+		<script src=
+			"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+		/*
+			$(function(){
+				 $("div").mouseover(function(){
+					$("div").addClass("change");
+				 });
+				 
+				 $("div").mouseout(function(){
+					$("div").removeClass();
+				 });
+				 
+				 $("div").mousedown(function(){
+					$("div").addClass("click");
+				 });
+				 
+				 $("div").mouseup(function(){
+					$("div").removeClass();
+				 });
+			});
+			*/
+			/*방법1
+			$(function(){
+				 $("div").mouseover(function(){
+					$(this).addClass("change");
+				 });
+				 
+				 $("div").mouseout(function(){
+					$(this).removeClass("change");
+				 });
+			});
+			*/
+			$(function(){
+				$("div").hover(
+					function(){
+					   $(this).addClass("change");
+					}, 
+					function(){
+					   $(this).removeClass("change");
+					}
+				);
+				
+				$("div").mousedown(function(){
+					$(this).addClass("click");
+				});
+				 
+				$("div").mouseup(function(){
+					$(this).removeClass("click");
+				});	
+			});
+		</script>
+	</head>
+	<body>
+		<h3>div에 마우스를 올리면(mouseover) change클래스를 적용하고<br>
+      내리면(mouseout) 원래대로 돌아오게 할것....<br>
+      div를 마우스로 누르면(mousedown) click클래스를 적용하고 <br>마우스에서 손을 떼면(mouseup) 원래대로 돌아오게 할것....
+      </h3>
+      <div>버튼입니다</div>
+      <!--
+      마우스 클릭 : click
+      마우스 올렸을 때 : mouseenter, mouseover
+      마우스 내렸을 때 : mouseleave, mouseout
+      마우스 눌렀을 때 : mousedown
+      마우스 손을 떼었을 때 : mouseup
+      마우스 올렸을 때/내렸을 때 : hover
+         $("선택자").hover(
+            function(){
+               실행문
+            }, // 마우스 올렸을 때
+            function(){
+               실행문
+            }  // 마우스 내렸을 때
+         );
+      
+      -->
+	</body>
+</html>

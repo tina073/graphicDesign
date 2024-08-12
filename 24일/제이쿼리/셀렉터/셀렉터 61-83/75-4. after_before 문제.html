@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> after_before </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$("ul li:first").before("<li>정의의 용사</li>")
+				});
+				
+				$("#btn2").click(function(){
+					$("ul li:last").after("<li>고고씽</li>")
+				});
+				
+				$("#btn3").click(function(){
+					/*$(".hero li:first").before("<li>저스티스 리그</li>")*/
+					$(".hero").prepend("<li>저스티스 리그</li>")
+				});
+				
+				$("#btn4").click(function(){
+					/*$(".hero li:last").after("<li>어벤저스</li>")*/
+					$(".hero").append("<li>어벤저스</li>")
+				});
+			});
+		</script>
+		
+	</head>
+
+	<body>	
+		<ul>
+			<li>저스티스 리그</li>
+			<li>어벤저스</li>
+		</ul>
+		
+		<ol class="hero">
+			<li>슈퍼맨</li>
+			<li>아쿠아맨</li>
+		</ol>
+		
+		<h3>
+			'어벤저스'의 동생요소로 "고고씽"을 추가<br />
+			'저스티스 리그'의 형님요소로 "정의의 용사"를 추가<br />
+			<br />
+			클래스 hero의 첫 번째 자식으로 "저스티스 리그"를 추가<br />
+			클래스 hero의 마지막 자식으로 "어벤저스"를 추가
+		</h3>
+		
+		<button id="btn1">"정의의 용사"를 추가세요</button>
+		<button id="btn2">"고고씽"을 추가하세요</button> <br />
+		<button id="btn3">"저스티스 리그"를 추가 </button>
+		<button id="btn4"> "어벤저스"를 추가 </button>
+	</body>
+</html>

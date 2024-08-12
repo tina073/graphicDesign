@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 형제 선택자 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#robin").siblings().css("border","4px solid red");
+			});
+		</script>
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid black;
+			    color: black;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+	</head>
+	<body id="wrapper">
+		<ul> 저스티스 리그
+			<li> 슈퍼맨 </li>
+			<li> 원더우먼 </li>	
+			<li> 플래시맨 </li>
+			<li> 배트맨
+				<ol> 배트맨 협력자들
+					<li> 배트걸 </li>
+					<li id="robin"> 로빈 </li>
+					<li> 알프레드 </li>
+					<li> 짐 고든 </li>
+					<li> 루시어스 폭스 </li>
+				</ol>
+			</li>
+		</ul>
+	</body>
+</html>

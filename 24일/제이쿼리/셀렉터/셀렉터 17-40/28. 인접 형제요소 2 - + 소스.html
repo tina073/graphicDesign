@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 인접 형제요소 2 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("ul + div").css("background-color", "yellow");
+				//$("ul ~ div").css("background-color", "yellow");
+				//$("ul + p").css("background-color", "yellow");
+				//$("ul + p").css("background-color", "yellow");
+			});
+		</script>
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid black;
+			    color: black;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+	</head>
+	<body id="wrapper">
+		<ul>
+			<li>List item</li>
+		</ul>
+
+		<div> div 요소 AAA </div>
+		<p> p 요소 BBB </p>
+		<div> div 요소 CCC </div>
+
+		<ul>
+			<li>List item</li>
+		</ul>
+
+		<div> div 요소 DDD </div>
+		<p> p 요소 EEE </p>
+		<div> div 요소 FFF </div>
+	</body>
+</html>

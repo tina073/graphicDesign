@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>attr_radio</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4x/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".myimgs").click(function(){
+					let changeImg = $(this).val();
+					$("#img1").attr("src","../images/" + changeImg)
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>문제 1. 라디오 버튼을 클릭하면 해당 이미지로 변하도록</h3>
+		<input type="radio" value="bg1_500.jpg" name="imgs" checked="checked" class="myimgs">원피스
+		<input type="radio" value="bg2_500.jpg" name="imgs" class="myimgs">바람의 검심
+		<input type="radio" value="bg3_500.jpg" name="imgs" class="myimgs">에반게리온
+		<input type="radio" value="bg5_500.jpg" name="imgs" class="myimgs">블리치
+		<br><br>
+		<img src="../images/bg1_500.jpg" id="img1" style="width:500px; height:300px;">
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

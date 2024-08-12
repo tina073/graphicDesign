@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom명령어</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+		$(".gnb li:first a").text("profile"); //첫 번재 li의 내용이 menu1에서 profile로 변경
+		$(".gnb li:last a").html("<em>SITEMAP</<em>>"); //마지막 li의 내용이 menu5에서 기울어진 SITEMAP로 변경
+		$(".gnb").prepend("<li><a href='#'>HOME</a></li>");//첫 번째 li 요소 앞에 HOME 추가
+		$(".gnb").append("<li><a href='#'>END</a></li>");//맨 마지막 li 요소 아래쪽에 END추가
+		$(".gnb li:eq(2)").before("<li><a href='#'>SNS</a></li>");//세번째 li요소 앞에 sns가 추가되어 기존의 li들이 하나씩 뒤로 밀려남
+		$(".gnb li:last").after("<li><a href='#'>protfolio</a></li>");//마지막에 추가
+		$(".gnb li:first").appendTo(".gnb") //home 이 가장 마지막으로 이동
+		$(".gnb li:eq(7)").prependTo(".gnb") //protfolio가 가장 앞으로 이동
+         
+		$(".gnb li:eq(3)").insertAfter(".gnb li:last");//맨 마지막li(end)다음으로 4번째 li(menu2)를 이동
+		$(".gnb li:eq(3)").insertBefore(".gnb li:first");//맨 처음 li(protfolio)앞으로 4번째 li(menu3)을 이동
+		$(".gnb").before("<h3>DOM 명령어</h3>");//gnb의 형 요소를 추가
+		$("h3").after("<p>추가, 이동, 복사 명령 알아보기</p>");//gnb의 형 요소를 추가
+		$("p").replaceWith("<h4>추가, 이동 명령</h4>");
+		
+		
+		  /*
+		  append() : 각 요소별로 마지막 자식 요소를 추가, 이동, 복사해주는 함수, 
+			만약 .append('<li><a href="#">END</a></li>') 와 같이 컨텐츠가 있다면 추가.
+			      .append('<h2>') 와 같이 선택자만 있다면  
+					단일개라면 이동,
+					복수개라면 첫번째 요소는 이동후 두번째 요소부터는 복사가 된다.
+		
+		prepend, appendTo, prependTo, after, before 다 같다.
+		
+		after() 와 .insertAfter() 함수는 동일한 기능을 합니다. 중요한 차이점은 내용과 대상의 위치 차이에 있습니다. A.after(B)라면 A 뒤에 B를 추가하는 것이고 A.insertAfter(B)는 B 뒤에 A를 추가하는 겁니다.  이동도 가능...
+		  
+	*/
+        })
+    
+    </script>
+</head>
+<body>
+<ul class="gnb">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+    <li><a href="#">menu5</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 이전 형제들 선택자 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				//$(".aa").parentsUntil("div").css({color:"red", border:"2px solid red"});
+				//$(".aa").parentsUntil("ul").css({color:"red", border:"2px solid red"});  //선택되는 요소가 없다
+				//$(".aa").parentsUntil("#hero").css({color:"red", border:"2px solid red"});
+				//$("li").parentsUntil("div").css({color:"red", border:"2px solid red"});
+				//$("span").parentsUntil("#hero").css({color:"red", border:"2px solid red"});
+				//$("#flash").parentsUntil("#vs").css({color:"red", border:"2px solid red"});
+				$("#flash").parentsUntil("#hero").css({color:"red", border:"2px solid red"});
+			});
+		</script>
+		<style>
+			#wrapper * {
+			    display: block;
+			    border: 2px solid black;
+			    color: lightgrey;
+			    padding: 5px;
+			    margin: 15px;
+			}
+		</style>
+	</head>
+	<body id="wrapper">
+		<div id="hero"> 우리들의 히어로들
+			<div id="vs"> 마블 vs DC 코믹스 
+				<ul> 어벤져스
+					<li> 아이언맨 </li>
+					<li> 헐크 </li>
+					<li class="aa"> 토르 </li>
+					<li> 캡틴 아메리카 </li>
+				</ul>
+				<ul> 저스티스 리그
+					<li> 슈퍼맨 </li>
+					<li class="aa"> 배트맨 </li>
+					<li id="flash"><span> 플래시맨 </span></li>
+					<li> 원더우먼 </li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
