@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>변수가 무엇인지?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+		$(function(){  //$(document).ready(function(){});을 선언한 것과 같다
+			let bgColor = "yellow";
+			let txtColor = "red";
+			
+			$("h1").css({
+				backgroundColor:bgColor,
+				color:txtColor
+			});
+			/*
+			let aa = 100;
+			let bb = 200;
+			let cc;
+			
+			cc = aa + bb;
+			aa = 50;
+			cc = bb - aa;
+			document.write(cc);
+			*/
+		});
+		
+/*
+            변수란? 하나의 데이타 그릇이라고 보면 됩니다.
+            변수를 사용하면 소스코드를 줄일수가 있으며, 한번 지정된 변수명만으로도
+            다른공식에 활용할 수가 있습니다.
+            형식 : var 변수명 ="데이타";
+                   var 변수명 ="";      //빈그릇이라고 보면 됩니다.
+            */
+    </script>
+    <style>
+        h1 {
+            background-color: blue;
+            width: 500px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>header-1</h1>
+
+</body>
+</html>

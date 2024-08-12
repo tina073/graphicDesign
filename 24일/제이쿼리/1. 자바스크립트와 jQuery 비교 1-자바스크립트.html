@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 자바스크립트와 jQuery 비교-자바스크립트 </title>
+		   <script type="text/javascript">
+			  function addEvent(target, eventType, eventHandler, useCapture) {
+				 if (target.addEventListener) { // W3C DOM
+					target.addEventListener(eventType,eventHandler,useCapture?useCapture:false);
+				 } else if (target.attachEvent) {  // IE DOM
+					var r = target.attachEvent("on"+eventType, eventHandler);
+				 }
+			  }
+	 
+		
+			  function clickHandler(event) {
+				 var nav = document.getElementById('navigation');
+				 for(var i = 0; i < nav.childNodes.length; i++) {
+					var child = nav.childNodes[i];
+					if(child.nodeType==3){
+						continue;
+					}
+					    
+					child.className = '';
+				 }
+				 event.target.className = 'selected';
+			  }
+	  
+			  addEvent(window, 'load', function(eventObj) {
+				 var nav = document.getElementById('navigation');
+				 for(var i = 0; i < nav.childNodes.length; i++) {
+					var child = nav.childNodes[i];
+					if(child.nodeType==3)
+					    continue;
+					addEvent(child, 'click', clickHandler);
+				 }
+			  })
+		   </script>
+		   <style type="text/css">
+			  #navigation li {
+				 list-style:none;
+				 float:left;
+				 padding:5px;
+			  }
+			  #navigation {
+				 cursor:pointer;
+			  }
+			  #navigation .selected {
+				 background-color:red;
+				 color:white;
+			  }
+			</style>
+	</head>
+
+	<body>
+		<!--
+			제이쿼리 -  모질라 사의 자바스크립트 개발자였던 존 레식이 창시
+						자바스크립트를 이용해 만든 라이브러리 언어
+						자바스크립트로 만들어진 다양한 함수들의 집합
+						jQuery를 이용하면 순수한 자바스크립트로 코딩하는 것 보다 10배 이상 생산성을 높일 수 있습니다.
+			
+			
+			자바스크립트와 jQuery 비교
+		-->
+		<ul id="navigation">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>javascript</li>
+			<li class="selected">jQuery</li>
+			<li>PHP</li>
+			<li>mysql</li>
+		</ul>
+	</body>
+</html>

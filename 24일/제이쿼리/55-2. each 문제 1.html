@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> each 문제 1 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function(){
+	var num = 1; //num은 그림의 중간에 있는 숫자값
+	$("#btn").click(function(){
+	/*
+		var imgs = ["images/aa1.jpg","images/aa2.jpg","images/aa3.jpg","images/aa4.jpg"];
+		$("div img").each(function(qqq){  /// qqq는 인덱스번호 0부터 시작
+			$(this).attr("src",imgs[qqq]);
+		});
+		
+		var imgs = ["aa1.jpg","aa2.jpg","aa3.jpg","aa4.jpg"];
+		$("div img").each(function(qqq){  /// qqq는 인덱스번호 0부터 시작
+			$(this).attr("src","images/" + imgs[qqq]);
+		});
+		
+		//var imgs = ["aa1.jpg","aa2.jpg","aa3.jpg","aa4.jpg"];
+		$("div img").each(function(qqq){  /// qqq는 인덱스번호 0부터 시작
+			$(this).attr("src","images/aa" + (qqq+1) + ".jpg");
+		});
+		*/
+		$("div img").each(function(){  
+			$(this).attr("src","images/aa" + num++ + ".jpg");
+		});
+		if (num>=4) num=1;
+	});
+});			
+		</script>
+		<style>
+			img{ width:200px; height:200px; }
+		</style>
+	</head>
+	<body>
+		<h2> 문제 1. button을 클릭하면 div의 img를 변경해 보세요... </h2>
+		<input type="button" value="이미지변경" id="btn">
+		<div>
+			<img src="images/bg1_500.jpg">
+			<img src="images/bg2_500.jpg">
+			<img src="images/bg3_500.jpg">
+			<img src="images/bg4_500.jpg">
+		</div>
+	</body>
+</html>
+		
+        .attr("src", 배열변수명[인덱스번호])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

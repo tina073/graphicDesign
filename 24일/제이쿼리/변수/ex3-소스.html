@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+		/*
+            //시작구문
+			$('h1').css({
+				backgroundColor: 'blue',
+				fontSize: '30px',
+				color:"white"
+			});
+		
+			//h1마우스오버
+		
+			$('h1').on('mouseover', function () {
+				$('h1').css({
+					backgroundColor: 'yellow',
+					textAlign:'center',
+					color:"red"
+				});
+		
+			});
+			$("h1").mouseout(function(){
+				$(this).css({
+					backgroundColor: 'blue',
+					textAlign:'left',
+					color:"white"
+				});
+			});
+			*/
+            //마지막구문
+				let original = {
+					backgroundColor: 'blue',
+					fontSize: '30px',
+					color:"white"
+				}
+				
+				let over = {
+					backgroundColor: 'yellow',
+					textAlign:'center',
+					color:"red"
+				}
+				
+				let out = {
+					backgroundColor: 'blue',
+					textAlign:'left',
+					color:"white"
+				}
+				
+				$("h1").css(original);
+				$("h1").mouseover(function(){
+					$("h1").css(over);
+				});
+				$("h1").mouseout(function(){
+					$("h1").css(out);
+				});
+            //변수에 데이터를 저장하는 방법
+            // var 변수명 ={데이터명1:'데이터1',데이터명2:'데이터2',데이터명3:'데이터3'}
+
+
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <h1>오늘날씨가 어떠세요?</h1>
+
+</body>
+</html>

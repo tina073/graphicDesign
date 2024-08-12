@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> jQuery의 시작 2 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$('#sample1').hide();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="sample1">이 div를 지우고 싶다！</div>
+		
+		
+		
+		
+		<!--
+			--- 결과 화면 ---
+				
+				원래 의도는 HTML의 로딩과 동시에 div가 사라지기 때문에 웹 페이지에는 아무것도 표시되지
+				않는 것이었지만 화면에는 내용이 그대로 표시된다.
+				
+				기본적으로 javascript는 읽혀지자마자 실행된다.
+				브라우저는 읽혀진 부분부터 순서대로 1행씩 처리해 나가기 때문에 
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+				<script>
+					$('#sample1').hide();
+				이 부분을 일고 실행했을때 그 아래에 있는 내용들은 아직 로딩되어 읽혀지지 않은 상태라
+				아직까지는 body문에 있는
+					
+					<div id="sample1">이 div를 지우고 싶다！</div>
+				
+				내용이 존재하지 않아 아무 일도 생기지 않는다.
+				
+				만약 스크립트 문을 div문 아래쪽에 적은 후 실행한다면 div문은 보이지 않게 된다.
+				
+				물론 실행의 순서에 의해 스크립트문을 아래쪽에 놓는 경우도 있지만 
+				head문에 스크립트문을 놓고 제대로 된 실행문이 작동하기 위해서는 페이지의 로딩이
+				완료된 후 스크립트문이 실행되도록 만들면 된다.
+				
+					$(function(){
+						$("#sample1').hide();
+					});
+				또는
+					$(document).ready(function(){
+						$("#sample1').hide();
+					});
+				으로 입력하면 되는데 
+				$(function(){})나 $(document).ready(function(){})는 웹페이지의 로딩이 완료한 다음 안에
+				쓰여진 스크립트문의 코드를 실행하라는 의미이다. 즉, 스크립트의 실행을 예약 상태로 만들어
+				주는 명령어다.
+				
+				또는 .js파일을 따로 만들어 그 안에 스크립트문을 작성한 다음
+				head문 사이에 연결하는 방법도 있다.
+				이때 조심할 것은 반드시 
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+				<script src="js/test.js"></script>
+				처럼 입력을 해야 한다는 점이다.
+		-->
+	</body>
+</html>

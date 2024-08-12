@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+			let aa = { backgroundColor:"rgba(0, 0, 255, .5)"}
+			
+			$(".box").css(aa);
+		});
+    </script>
+</head>
+<body>
+	<h2>투명도 50%의 파란 배경색을 적용하되 해당 내영을 변수를 활용하여 적용시킨다</h2>
+    <div class="box"></div>
+
+</body>
+</html>

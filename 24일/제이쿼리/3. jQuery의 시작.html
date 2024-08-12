@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> jQuery의 시작 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="div1">클릭하세요...</div>
+		<!-- 
+		제이쿼리를 사용할 때는 $(달러 표시)라는 기호로 반드시 시작한다.
+		
+			예) $('#sample').hide();
+			<기본>
+			$('선택자').메서드;
+			$('선택자').속성;
+		
+		에서 맨 앞의 $표시는 jQuery를 나타낸다.
+		$( )로 HTML의 요소를 jQuery 객체화하는 부분에서 jQuery의 모든것이 시작된다.
+		
+		jQuery는 $( )로 감싼 부분에 가져오고 싶은 요소를 나타내는 셀렉터를 지정함으로써 원하는
+		요소를 취득해 올 수 있다.
+		
+		id가 sample인 요소를 원했으므로 #sample 이라는 셀렉터를 작성하고 있다.
+		그리고 이 셀렉터에게 무엇인가 하기위한 기능을 적기 위해 뒤에 점(.)을 붙이고 hide라는 
+		기능을 호출하였다.
+		-->
+		
+		<script>
+		/*
+			var div = document.getElementById('div1');
+			if(div.addEventListener){
+				div.addEventListener('click', test, false);
+			} else if(div.attachEvent){
+				div.attachEvent('onclick', test);
+			}
+			
+			function test(){
+				alert('클릭되었습니다.');
+			}
+			*/
+		</script>
+		
+		
+		<script>
+			$('#div1').click(function(){
+				alert("클릭되었습니다");
+			});
+		</script>
+		
+	</body>
+</html>
