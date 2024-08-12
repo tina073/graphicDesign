@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>18.강아지 이동하기</title>
+</head>
+<body>
+	<img src="../images/dog1.png" id="dog" alt="강아지 이미지">
+	<script>
+	/*
+		let moveX = prompt("강아지가 움직일 x좌표 값을 입력해주세요.(0~900)")
+
+		if(moveX >= 0 || moveX <=900 && moveY >= 0 || moveY <= 900) {
+			document.write("강아지가 처음 위치에서 왼쪽으로 " + moveX + "px과 아래쪽으로 " + moveY + "px 위치로 이동하였습니다.")
+		} else {
+			document.write("값을 잘못 입력했습니다.")
+		}
+	*/
+		let moveX = prompt("강아지가 움직일 x좌표 값을 입력해주세요.(0~900)")
+		if(moveX >= 0 && moveX <= 900){
+			let moveY = prompt("강아지가 움직일 y좌표 값을 입력해주세요.(0~900)")
+			if(moveY >= 0 && moveY <= 900) {
+				document.write("강아지가 처음 위치에서 왼쪽으로 " + moveX + "px과 아래쪽으로 " + moveY + "px 위치로 이동하였습니다.")
+			} else {
+			document.write("값을 잘못 입력했습니다.")
+			}
+		} else {
+			document.write("값을 잘못 입력했습니다.")
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>15.계절선택</title>
+	<style>
+		body { background:url(../images/bg10.gif); }
+	</style>
+</head>
+<body>
+	<script>
+		let question = prompt("어느 계절을 좋아하세요.(봄:1,여름:2,가을:3,겨울:4)",1);
+		let season;
+		let engSeason;
+		/*
+			if(question == 1) {
+				season = "봄";
+				engSeason = "spring";
+			} else if(question == 2) {
+				season = "여름";
+				engSeason = "summer";
+			} else if(question == 3) {
+				season = "가을";
+				engSeason = "fall";
+			} else if(question == 4) {
+				season = "겨울";
+				engSeason = "winter";
+			} else {
+				alert("번호를 잘못 눌렀습니다.");
+				alert("F5를 누른 후 번호를 다시 눌러주세요.");
+			}
+		
+			document.write("<h2>" + season + "을 좋아하시는군요.</h2>");
+			document.write("<img src='../images/" + engSeason + ".png'>");
+		*/
+			if(question >= 1 && question <= 4) {
+				if(question == 1) {
+					season = "봄";
+					engSeason = "spring";
+				} else if(question == 2) {
+					season = "여름";
+					engSeason = "summer";
+				} else if(question == 3) {
+					season = "가을";
+					engSeason = "fall";
+				} else if(question == 4) {
+					season = "겨울";
+					engSeason = "winter";
+				}
+				document.write("<h2>" + season + "을 좋아하시는군요.</h2>");
+				document.write("<img src='../images/" + engSeason + ".png'>");
+			} else {
+				alert("번호를 잘못 눌렀습니다.");
+				alert("F5를 누른 후 번호를 다시 눌러주세요.");
+			}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>if문</title>
+</head>
+<body>
+	<script>
+		let num = prompt("숫자 하나를 입력하세요",7);
+		//prompt는 사용자에게 지정된 데이터를 입력받을 때 쓰는 내부함수, 사용자가 숫자값을 입력할 때는 자동적으로 문자형 숫자값으로 전달이 된다. --> 7 -->"7"
+		//prompt("입력할 데이터를 표시.",기본값);
+		
+		if (num % 2 ==0) { //%는 나머지를 구함
+			document.write(num + "는(은) 짝수입니다.");
+		} else {
+			document.write(num + "는(은) 홀수입니다.");
+		}
+	</script>
+</body>
+</html>

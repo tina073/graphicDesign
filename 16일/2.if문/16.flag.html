@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>16.계절선택3(변수활용, )</title>
+	<style>
+		body { background:url(../images/bg10.gif); }
+	</style>
+</head>
+<body>
+	<script>
+		let question = prompt("어느 계절을 좋아하세요.(봄:1,여름:2,가을:3,겨울:4)",1);
+		let season;
+		let engSeason;
+		let flag=1; //만약 잘못된 값을 입력할 경우 경고창을 띄운 후 프로그램을 종료할 수 있도록 처리하는 스위치(플래그)
+
+			if(question == 1) {
+				season = "봄";
+				engSeason = "spring";
+			} else if(question == 2) {
+				season = "여름";
+				engSeason = "summer";
+			} else if(question == 3) {
+				season = "가을";
+				engSeason = "fall";
+			} else if(question == 4) {
+				season = "겨울";
+				engSeason = "winter";
+			} else {
+				flag = 0;
+			}
+			
+			if(flag == 0) {
+				alert("번호를 잘못 눌렀습니다.");
+				alert("F5를 누른 후 번호를 다시 눌러주세요.");
+			} else {
+				document.write("<h2>" + season + "을 좋아하시는군요.</h2>");
+				document.write("<img src='../images/" + engSeason + ".png'>");
+			}
+		
+	</script>
+</body>
+</html>

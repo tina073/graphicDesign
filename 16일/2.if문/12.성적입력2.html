@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>12.성적입력2</title>
+	<style>
+		h1 { color:red; }
+	</style>
+</head>
+<body>
+	<script>
+	/*
+		let grade = prompt("당신의 점수를 입력해주세요.");
+		if(grade >= 90 && grade <= 100) {
+			document.write("<h1>A학점</h1>");
+			document.write("당신의 성적은 " + grade + "점                                                                                                    입니다.");
+		} else if(grade >= 80 && grade <= 89) {
+			document.write("<h1>B학점</h1>");
+			document.write("당신의 성적은 " + grade + "점 입니다.");
+		} else if(grade >= 70 && grade <= 79) {
+			document.write("<h1>C학점</h1>");
+			document.write("당신의 성적은 " + grade + "점 입니다.");
+		} else if(grade >= 60 && grade <= 69) {
+			document.write("<h1>D학점</h1>");
+			document.write("당신의 성적은 " + grade + "점 입니다.");
+		} else if(grade >= 0 && grade <= 59) {
+			document.write("<h1>F학점</h1>");
+			document.write("당신의 성적은 " + grade + "점 입니다.");
+		} else {
+			document.write("점수를 잘못 입력했습니다. F5를 눌러 다시 입력하세요.");
+		}
+		*/
+		
+		/*
+		let grade = prompt("당신의 점수를 입력해주세요.");
+		if(grade >= 90 && grade <= 100) {
+			document.write("<h1>A학점</h1>");
+		} else if(grade >= 80 && grade <= 89) {
+			document.write("<h1>B학점</h1>");
+		} else if(grade >= 70 && grade <= 79) {
+			document.write("<h1>C학점</h1>");
+		} else if(grade >= 60 && grade <= 69) {
+			document.write("<h1>D학점</h1>");
+		} else if(grade >= 0 && grade <= 59) {
+			document.write("<h1>F학점</h1>");
+		} else {
+			document.write("점수를 잘못 입력했습니다. F5를 눌러 다시 입력하세요.");
+		}
+		
+		if (grade >= 0 && grade <= 100) {
+		document.write("당신의 성적은 " + grade + "점 입니다.");
+		}
+		*/
+		
+		/*다중if문*/
+		let grade = prompt("당신의 점수를 입력해주세요.");
+		if (grade >= 0 && grade <= 100) {
+			if(grade >= 90 && grade <= 100) {
+				document.write("<h1>A학점</h1>");
+			} else if(grade >= 80 && grade <= 89) {
+				document.write("<h1>B학점</h1>");
+			} else if(grade >= 70 && grade <= 79) {
+				document.write("<h1>C학점</h1>");
+			} else if(grade >= 60 && grade <= 69) {
+				document.write("<h1>D학점</h1>");
+			} else if(grade >= 0 && grade <= 59) {
+				document.write("<h1>F학점</h1>");
+			}
+			document.write("당신의 성적은 " + grade + "점 입니다.");
+		} else {
+			document.write("점수를 잘못 입력했습니다. F5를 눌러 다시 입력하세요.");
+		}
+	</script>
+</body>
+</html>
