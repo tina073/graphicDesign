@@ -1,0 +1,135 @@
+﻿@charset "utf-8";
+* { margin:0; padding:0; }
+a { text-decoration:none; color:#999; }
+li { list-style:none; }
+
+@media all and (max-width:799px) {
+	#wrapper { width:90%; margin:0 auto;}
+	#header {}
+		.logoImage { display:none; }
+		.logoText {
+			background-color:#eee;
+			width:100%;
+			height:100px;
+			line-height:100px;
+			text-align:center;
+		}
+			.logoText a { color:#a2d2dd; }
+	#container {}
+		#trigger {
+			display:block;
+			font:bold 20px arial;
+			border-bottom:1px solid #000;
+			padding:5px 0;
+		}
+		.menu {}
+			.menu li { padding:5px 0; }
+		.content { 
+			text-align:justify; 
+			line-height:160%;
+		}
+		.content h2 { padding:5px 0; }
+	#footer {
+		margin:10px 0;
+		height:80px;
+		line-height:80px;
+		background-color:#aaa;
+		text-align:center;
+	}
+		address { 
+			color:#fff; 
+			font-size:14px;
+			font-style:normal;
+		}
+}
+
+@media all and (min-width:800px) and (max-width:1199px) {
+	#wrapper { width:75%; height:100%; margin:0 auto;}
+	#header {}
+		.logoImage { 
+			background-color:#eee;
+			width:100%;
+		}
+		.logoText { display:none; }
+			.logoText a { color:#a2d2dd; }
+	#container {}
+		#trigger {
+			display:none;
+		}
+		.menu { 
+			width:30%; 
+			float:left; 
+		}
+			.menu li { 
+			padding:5px 0;
+			text-align:center;
+			}
+			.menu li:hover { border-bottom:1px solid #000; }
+			.menu li:hover a { 
+				color:#000; 
+				font-weight:bold;
+			}
+		.content { 
+			width:70%; 
+			float:right; 
+			text-align:justify;
+			line-height:160%;
+			margin:15px 0;
+		}
+		.content h2, .content p.pan { margin-bottom:10px; }
+	#footer {
+		clear:both;
+		height:80px;
+		line-height:80px;
+		background-color:#aaa;
+		text-align:center;
+	}
+		address { 
+			color:#fff; 
+			font-size:14px;
+			font-style:normal;
+		}
+}
+	
+@media all and (min-width:1200px) {
+	#wrapper { width:1200px; height:100%; margin:0 auto;}
+	#header {}
+		.logoImage { 
+			background-color:#eee;
+			width:100%;
+		}
+		.logoText { display:none; }
+			.logoText a { color:#a2d2dd; }
+	#container {}
+		#trigger {
+			display:none;
+		}
+		.menu { }
+			.menu li { 
+				float:right; 
+				padding:10px 20px;
+			}
+			.menu li:hover a { 
+				color:#000; 
+				font-weight:bold;
+			}
+		.content { 
+			clear:both;
+			text-align:justify;
+			line-height:160%;
+			margin:15px 0;
+		}
+		.content h2, .content p.pan { margin-bottom:10px; }
+	#footer {
+		clear:both;
+		height:80px;
+		line-height:80px;
+		background-color:#aaa;
+		text-align:center;
+	}
+		address { 
+			color:#fff; 
+			font-size:14px;
+			font-style:normal;
+		}
+}

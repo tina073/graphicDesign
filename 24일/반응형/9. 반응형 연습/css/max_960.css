@@ -1,0 +1,10 @@
+﻿@charset "utf-8";
+* { margin:0; padding:0; }
+li { list-style:none; }
+
+@media all and (min-width:521px) and (max-width:960px) {
+				#container { width:auto; }
+					h1 { background-color:#00f; color:#fff; }
+					#content { float:none; width:auto; }
+					#sidebar { float:none; width:auto; background-color:#f0f; border:3px solid #f00; }
+			}
