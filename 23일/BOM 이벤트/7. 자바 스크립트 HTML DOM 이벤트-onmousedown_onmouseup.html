@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 자바 스크립트 HTML DOM 이벤트-onmousedown_onmouseup </title>
+			<script>
+				function lighton() {
+				    document.getElementById('myimage').src = "../images/img4.jpg";
+				}
+				function lightoff() {
+				    document.getElementById('myimage').src = "../images/img5.jpg";
+				}
+			</script>
+		</head>
+		<body>
+			<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="../images/img5.jpg" width="100" height="180" />
+	</body>
+</html>

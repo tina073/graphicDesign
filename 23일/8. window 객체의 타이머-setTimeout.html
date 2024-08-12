@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> BOM(Browser Object Model)-window의 타이머-setTimeout</title>
+	</head>
+
+	<body>
+		<script>
+			setTimeout(function() {
+				let message=document.getElementById("message");
+				message.innerHTML = "작업이 완료되었습니다.";				
+			}, 3000);
+		</script>
+		<p id="message">3초만 기다리세요.</p>	
+		
+
+
+
+		<!-- 
+				---- 결과 ----
+					3초만 기다리세요.
+					
+				메세지 출력 후 3초후에 아래 메시지로 바뀜.
+					
+					작업이 완료되었습니다.
+					
+			
+		-->
+
+	</body>
+</html>

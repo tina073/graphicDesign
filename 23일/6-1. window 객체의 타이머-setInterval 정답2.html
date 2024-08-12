@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> Math 객체 3-random-2 정답 </title>
+		<style>
+			#ans{ font:30px 맑은고딕; }
+		</style>
+	</head>
+	<body>
+		<div id="ans">아래 그림중 2초 단위 무작위로 나타나도록 만드시오.</div>
+		
+		<script>
+			let banner = new Array();	
+			
+		    for(i=0; i<7; i++) {
+				banner[i] = "./images/pic" + (i+1)+".jpg";
+				document.write("<img src = '" + banner[i] + "' width='100'> ");
+			}
+			document.write("<center><h3>");		
+		</script>
+		<p id="path"></p> <!-- 경로 나오는 곳 -->
+		<p id="here"></p> <!-- 이미지가 바뀌는 곳 -->
+		<script>
+			function ab(){
+				let n = Math.ceil(Math.random() * 7)-1; //0~6				
+				document.getElementById("path").innerHTML="인덱스 번호 [" + n + "] : ./images/pic" + (n+1) +".jpg";				
+				let img=document.getElementById("here");
+				img.innerHTML="<hr><p><img src = '" + banner[n] + "'><br>";			
+			}
+			
+			setInterval("ab()",2000);
+			ab(); // 시작하자마자 곧바로 함수를 호출하여 빈 공간이 나오지 않도록 함.
+			// 또는 <body>문에  onload="ab()"를 추가하면 2초간의 빈 공백이 지속되는 현상을 해결하게됨...
+			document.write("</h3></center>");
+	</script>	
+	
+<!--
+
+-->
+	</body>
+</html>

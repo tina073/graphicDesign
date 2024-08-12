@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> BOM(Browser Object Model)-window의 타이머 문제 </title>
+		<style type="text/css">
+			.myimg{ width:400px; height:250px; border:1px solid red; }
+		</style>
+	</head>
+
+	<body>
+		<h3>아래 그림들이 계속 2초 간격으로 바뀌도록 만드세요. </h3>
+		<img src="./images/herbtea3.jpg" id="img2" class="myimg">
+		<script>
+			let arr=["./images/lemonbalm2.jpg", "./images/sunflower.jpg", "./images/herbtea3.jpg"];
+			/*
+			let cnt = 0;
+			
+			function changeImg() {
+				let random = document.getElementById("img2");
+				cnt = (cnt + 1) % arr.length;
+				random.src = arr[cnt];
+			}
+			
+			setInterval(changeImg, 2000);
+			*/
+			
+			indexNum = 0;  //현재 화면에 보이는 이미지는 arr 배열의 마지막 이미지가 보이므로 다움은 첫번째 이미지가 보여야 하므로 0을 준다
+			function changeImg() {
+				let img2 = document.getElementById("img2");
+				img2.src = arr[indexNum % arr.length];
+				indexNum++;
+			/*	if(indexNum >= arr.length) {
+					indexNum=0;
+				}
+				*/
+				
+			}
+			setInterval(changeImg, 2000);
+		</script>
+	</body>
+</html>
+
+
+
+

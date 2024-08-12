@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Math 객체 3-random-2 문제</title>
+		<style>
+			#ans{ font:30px "맑은 고딕"; }
+		</style>
+	</head>
+	<body>	
+		<div id="ans">
+			아래 그림(썸네일)중 무작위로 2초마다 바뀌며 나타나도록 만드시오.
+		</div>
+		<script>
+			let banner = new Array();	 // 변수 banner를 배열 객체(object)로 선언.
+			
+		    for(i=0; i<7; i++) {
+				banner[i] = "./images/pic" + (i+1) + ".jpg";
+				document.write("<img src = '" + banner[i] + "' width='100'> ");
+				//document.write("<img src = '../images/pic" + (i+1) + ".jpg' width='100'> ");
+			}
+			document.write("<div align='center'><h1>");
+		</script>
+			
+			<p id="path"></p> <!-- 이미지 경로 표시 -->
+			<p id="img"></p> <!-- 이미지가 표시될 곳. -->			
+			
+			<script>			
+				function changeImg(){
+					let num = Math.floor(Math.random()*7); // 0~6
+					console.log(num);
+					document.getElementById("path").innerHTML = "banner[" + num + "] : ./images/pic" + (num+1) + ".jpg"; 
+					document.write("</h1><hr />");
+					document.getElementById("img").innerHTML = "<img src='" + banner[num] + "'><br />";
+					/*
+					document.getElementById("path").innerHTML = "banner[" + num + "] : " + banner[num]; 
+            document.getElementById("img").innerHTML = "<img src='" + banner[num] + "'><br />";
+			*/
+        }
+				}
+				
+				setInterval(changeImg, 2000);
+				changeImg();
+				document.write("</div>");
+			</script>
+	</body>
+</html>

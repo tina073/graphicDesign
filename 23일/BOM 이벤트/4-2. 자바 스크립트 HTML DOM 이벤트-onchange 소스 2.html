@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 자바 스크립트 HTML DOM 이벤트-onchange 소스2 </title>
+		
+	</head>
+	<body>
+		<p>리스트 목록에서 여러분이 원하는 히어로를 선택하세요...</p>
+		<select id="mySelect" onchange="myHero()">
+			<option value="아이언맨">Iron man</option>
+			<option value="졸라맨">Jola man</option>
+			<option value="스파이더맨">Spider man</option>
+			<option value="슈퍼맨">Super man</option>
+		</select>
+		<p>당신이 선택한 히어로가 한글이름으로 나옵니다.</p>
+		<p id="demo"></p>		
+		<script>
+		/*
+			function myHero() {
+				let en = document.getElementById("mySelect");
+				let ko = en.value;
+				document.getElementById("demo").innerHTML = ko;
+			}
+			*/
+			
+			function myHero() {
+				let hero = document.getElementById("mySelect").value;
+				document.getElementById("demo").innerHTML = "당신이 선택한 영웅은 <span style='color:red; font-size:20px;'>" + hero + "</span>입니다.";
+			}
+		</script>
+
+	</body>
+</html>

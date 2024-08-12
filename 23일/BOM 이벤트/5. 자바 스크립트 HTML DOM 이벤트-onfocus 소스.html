@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 자바 스크립트 HTML DOM 이벤트-onfocus 소스</title>
+			<script>			
+			//변수.style.background="색상";
+				function myFunction(aa) {
+					aa.style.background = "yellow";
+				}
+				
+				function myFunction2(bb) {
+					bb.style.background = "white";
+				}
+			</script>
+	</head>
+	<body>
+		Enter your name: <input type="text" onfocus="myFunction(this)" onblur="myFunction2(this)">
+		<p>입력란을 클릭하면 입력란의 배경색이 변합니다.</p>
+	</body>
+</html>
+
+

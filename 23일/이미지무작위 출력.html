@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Math 객체 3-random-2 문제</title>
+		<style>
+			#ans{ font:30px "맑은 고딕"; }
+		</style>
+	</head>
+	<body>	
+		<div id="ans">
+			아래 그림중 무작위로 2초마다 나타나도록 만드시오.
+		</div>
+		<script>
+			let banner = new Array();	 // 변수 banner를 배열 객체(object)로 선언.
+			
+		    for(let i=0; i<7; i++) {
+				banner[i] = "./images/pic" + (i+1) + ".jpg";
+				document.write("<img src = '" + banner[i] + "' width='100'> ");
+			}
+			document.write("<div align='center'>");
+		</script>
+		
+		<div id="path"></div> <!--이미지 경로-->
+		<div id="img"><img src="" id="randomImg"></div><!--이미지 표시-->
+		
+		<script>
+			function changeImg() {
+				let num = Math.floor(Math.random() * 7); // 0~6
+				
+				
+				document.getElementById("path").innerHTML = "banner[" + num + "] : " + banner[num]; // 경로를 배열에서 가져옴
+				document.getElementById("randomImg").src = banner[num]; // 이미지를 배열에서 가져옴
+			
+			}
+			
+			setInterval(changeImg, 2000);
+			
+			document.write("</div >");
+			
+			
+		</script>
+		
+	</body>
+</html>

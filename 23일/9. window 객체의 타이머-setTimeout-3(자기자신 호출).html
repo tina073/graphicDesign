@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> BOM(Browser Object Model)-window의 타이머-setTimeout-2 </title>
+	</head>
+	<body>
+		<img src="./images/choco.jpg" id="img1">	
+		<script>
+			let cnt=0;
+			let img1=document.getElementById("img1");
+			//setTimeout(함수명, 지연시간)
+			setTimeout("changeImg()", 2000); // 2초후 딱 한 번만 changeIme 함수호출
+			function changeImg(){	//재귀함수
+				if(cnt==0){
+					img1.src="./images/heart_choco.jpg";
+					cnt=1;
+				}else{
+					img1.src="./images/choco.jpg";
+					cnt=0;
+				}
+				setTimeout("changeImg()", 2000);
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+

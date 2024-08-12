@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3. 자바 스크립트 HTML DOM 이벤트-onlclick2</title>
+</head>
+<body>
+	<p>버튼을 클릭하시면 날짜가 표시됩니다.</p>
+	<button onclick="displayDate()">오늘은?</button>
+	<script>
+		let aa = new Date();
+		function displayDate() {
+			document.getElementById("demo").innerHTML = aa.toLocaleString();
+		}
+	</script>
+	
+	<p id="demo"></p>
+	<h1 id="header">클릭하세요1</h1>
+	<p id="para">클릭하세요2</p>
+	
+	<script>
+		function click() {
+			let cn=0;
+			this.innerHTML += "<br>클릭했습니다." + cn;
+			//this.innerHTML = this.innerHTML + "<br>클릭했습니다." + cn;
+			cn++;
+		}
+		
+		let header = document.getElementById("header");
+		header.onclick = click;
+		
+		let para = document.getElementById("para");
+		para.onclick = click;
+	</script>
+</body>
+</html>

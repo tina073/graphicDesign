@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> BOM(Browser Object Model)-window의 타이머-setInterval</title>
+	</head>
+
+	<body>
+	<!--
+		타이머 : 주기적으로 특정 코드를 실행함으로써 반복적인 작업을 처리하는 장치
+				  이미지를 주기적으로 교체하여 애니메이션을 실행. 서버의 상태를 계속적으로 모니터링 가능
+			
+			let aa = setInterval(code, millisec, lang)
+			let bb = setTimeout(code, millisec, lang)
+			
+			setInterval : 한 번 호출하면 지정한 millisec 주기마다 함수를 반복적으로 계속 호출
+			setTimeout : millisec 시간 후 에 함수를 딱 한번 호출. 일회용 타이머
+			
+			code : 매 주기마다 실행할 코드를 지정하되 주로 함수를 호출하며 이 함수에서 반복적으로 처리할 작업을 수행한다.
+			millisec : 함수를 호출할 주기를 지정하며 1/1000초 단위이다.
+			lang : 스크립트 언어의 종류를 지정하되 현재는 자바스크립트만 남아 있어 거의 사용되지 않고 생략한다.
+			
+			위 두 함수 모두 타이머의 ID를 리턴한다.
+			타이머를 중지할 때는 다음 메서드로 타이머 ID를 전달한다.
+			
+				clearInterval(id)
+				clearTimeout(id)
+				
+			중간에 타이머를 제거하려면 설치할 때 리턴되는 ID를 별도의 변수에 반드시 저장해 두어야 한다.			
+	-->
+			
+		<p id="nowtime">현재 시간</p>
+		<script>
+			function timer() {
+				let nowTime=document.getElementById("nowtime");
+				nowTime.innerHTML = (new Date()).toLocaleString(); // 
+			}
+						
+			setInterval("timer()", 1000); 
+			//setInterval(timer, 1000);	// 1초에 한 번씩 timer() 함수를 호출.
+			
+		</script>
+
+		<!-- 
+				---- 결과 ----
+					현재 시간이 1초단위로 계속 갱신이 된다.
+					
+			setInterval 함수로 1초에 한 번씩 timer() 함수를 호출하도록 타이머를 등록했다.
+			timer() 함수는 현재 시간을 조사하여 nowtime 문단에 계속 출력한다.
+			
+			getElementById 메서드로 문단을 찾고 이 문단의 innerHTML 속성에 
+			원하는 문장을 대입하면서 문단의 내용을 바꾸고 있다.
+			
+			하지만 이 경우 시간을 갱신하는 timer() 함수를 setInterval() 함수의 첫 번째 인수로 이 함수를 전달하지만
+			timer() 함수가 다른 용도로는 사용되지 않으므로 굳이 함수에 이름을 줄 필요가 없이 setInterval() 함수의 
+			첫 번째 인수에 함수 리터럴을 바로 작성해도 무방하다.
+			또 timer() 함수내의 변수는 따로 작성하지 않고 곧바로 문단에서 찾아 수정할 수 있게 만들 수 있다.
+			
+			
+			<p id="nowtime">현재 시간</p>
+			<script>
+				setInterval(function() {
+					document.getElementById("nowtime").innerHTML = 
+						(new Date()).toLocaleString();}, 1000);
+			</script>
+
+			
+			
+			이때 함수에 이름이 없으므로 강제로 호출할 수 없어 1초간 기다려야 시간이 갱신된다.
+		-->
+
+	</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>이벤트</title>
+</head>
+<body>
+	<h1 onclick="this.innerHTML='자바스크립트는 재미있어요.'">여기를 눌러보세요</h1>
+	<h1 id="header">클릭하세요.</h1>
+	<script>
+		let header = document.getElementById("header");
+		header.onclick = function() {
+			alert("클릭했습니다.");
+		}
+	</script>
+	<h1 id="header2">클릭하세요.2</h1>
+	<script>
+		function headerClick() {
+			alert("클릭했습니다.");
+			header2.onclick = null;
+		}
+		
+		let header2 = document.getElementById("header2");
+		header2.onclick = headerClick;
+	</script>
+</body>
+</html>

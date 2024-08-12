@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 번호 추첨기</title>
+  <style>
+		p { font:30px "맑은 고딕"; color:#fff; text-shadow:2px 2px 2px #ccc; border-radius:50%; width:50px; height:50px; box-shadow:2px 2px 2px #ccc; float:left; margin-right:10px; text-align:center; line-height:50px; }
+		p:nth-of-type(7) { margin-left:50px; }
+		.yellow { background-color:yellow; }
+		.orange { background-color:orange; }
+		.pink { background-color:pink; }
+		.gray { background-color:gray; }
+		.red { background-color:red; }
+		span { font:30px "맑은 고딕"; color:#ccc; position:absolute; top:120px; left:380px; }
+  </style>
+</head>
+<body>
+	<h1>로또 번호 추첨기</h1>
+	<div id="ans"></div>
+	<script>
+		let lotto = [];  //1~45번까지 숫자가 들어갈 배열
+		let choiceNum = [];  //선택된 7개의 번호가 들어갈 배열
+		
+		for(let i=1; i <=45; i++) {
+			lotto.push(i);
+		}
+		
+		for(let k=0; k < 6; k++){
+			let indexNum = Math.floor(Math.random()*lotto.length);  //indexNum : lotto 배열에서 뽑을 숫자가 있는 인덱스 번호
+			choiceNum.push(lotto[indexNum]);  //lotto배열에서 선택된 숫자가 choiceNum배열에 들어감
+			lotto.splice(indexNum, 1);  //lotto배열에서 선택되어 choiceNum 배열에 들어가 숫자를 중복을 피하기 위해 lotto배열에서 제거함
+		}  //lotto번호 추첨 끝
+		choiceNum = choiceNum.sort(function(a,b) {
+			return a-b;  //작은 순으로 나열, b-a는 큰 숫자부터 나열
+		});
+		indexNum = Math.floor(Math.random()*lotto.length);  //보너스 번호
+		choiceNum.push(lotto[indexNum]);  //보너스 번호를 7번째 위치에 삽입
+		
+		for(let m = 0; m < 7; m++) {  //숫자별 색상 넣기
+			if(choiceNum[m] <= 10) {  //1~10 노랑
+				document.write("<p class='yellow'>" + choiceNum[m] + "</p>");
+			} else if(choiceNum[m] > 10 && choiceNum[m] <= 20) {
+				document.write("<p class='orange'>" + choiceNum[m] + "</p>");  //11~20 오렌지
+			} else if(choiceNum[m] > 20 && choiceNum[m] <= 30) {
+				document.write("<p class='pink'>" + choiceNum[m] + "</p>");  //21~30 핑크
+			} else if(choiceNum[m] > 30 && choiceNum[m] <= 40) {
+				document.write("<p class='gray'>" + choiceNum[m] + "</p>");  //31~40 회색
+			} else {
+				document.write("<p class='red'>" + choiceNum[m] + "</p>");
+			}
+		}
+		document.write(choiceNum)
+	</script>
+	<span>+</span>
+</body>
+</html>

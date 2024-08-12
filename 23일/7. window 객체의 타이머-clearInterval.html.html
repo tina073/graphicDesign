@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>7 window 객체의 타이머-clearInterval </title>
+		<script>
+			let cnt=0;
+			let timerId=setInterval(changeImg, 1000); //1초에 한번씩 changeImg함수를 반복적으로 호출
+			// setInterval(호출할함수, 반복주기);
+			function changeImg(){
+				let img1=document.getElementById("img1");
+				if(cnt%2==0){
+					img1.src="../images/bg23.jpg";
+				} else {
+					img1.src="../images/bg26.jpg";
+				}
+				cnt++;
+			}
+			
+			function stopChange(){
+				clearInterval(timerId); //타이머해제하기
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Stop"  onclick="stopChange()"><br>
+		<img src="../images/bg23.jpg" style="width:300px; height:200px;" id="img1">
+	</body>
+</html>
+
+
+
+
