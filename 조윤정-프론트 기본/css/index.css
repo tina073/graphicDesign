@@ -1,0 +1,234 @@
+﻿@charset "utf-8";
+@import url(reset.css);
+
+#wrapper {
+    background-color: #e2f3de;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 900px;
+    margin: 0 auto;
+}   
+    /*헤더*/
+    header {}
+
+        /*네비게이션바*/
+        #gnb {
+            position: relative; /*메뉴바 포지션의 기준*/
+            background-color: #4E4039;
+            width: 900px;
+            height: 70px;
+            z-index: 999;
+        }
+            /*로고*/
+            .logo {
+                position: relative;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                cursor: pointer;
+            }
+
+            /*메뉴바*/
+            #gnb{ position: relative;}
+            .nav {
+                margin-top: 15px;
+                text-align: center;
+            }
+                /*상위메뉴*/
+                .topMenu {
+                    display: inline-block;
+                    width: 170px;
+                }
+                    .topMenu a { font-size: 18px; }
+                        /*하위메뉴*/
+                        .bottomMenu { 
+                            display: none; 
+                            width: 300px;
+                            white-space: nowrap;
+                            position: relative;   
+                            z-index: 888;
+                        }
+                            .bottomMenu li { 
+                                float: left;
+                                
+                                margin-top: 3px;
+                            }
+                                .bottomMenu a { 
+                                    font-size: 15px;
+                                    padding: 4px 10px;
+                                    
+                                }
+            /*하위메뉴 배경 addClass*/
+            .bottomMenuBg {
+                width: 900px;
+                height:25px;
+                background-color: #4E4039;
+                opacity: 0.6;
+                top: 70px;
+                position: absolute;
+                display: none;
+            }
+    #popup {
+        width: 450px;
+        height: 520px;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display:none;
+    }
+        #popup img {
+            border: 4px solid #5BBA47;
+            box-shadow: 2px 2px 2px #333;
+        }
+        .close i {
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            right: -70px;
+        }
+        
+
+    main {
+        position: relative;
+        margin-top: 20px;
+    }
+        .intro { height: 280px; }
+            .intro h2 { 
+                float: left;
+                font-size: 30px;
+            }
+            .introTxt { 
+                position: absolute;
+                top: 70px;
+                left: 100px;
+            }
+            .introTxt h3 {
+                position: relative;
+                top: 15px;
+            }
+            .introTxt p, .galleryTxt p { 
+                clear: both;
+                padding: 15px 0;
+                line-height: 160%;
+            }
+            .introTxt div {
+                background-color: #5BBA47;
+                opacity: 0.6;
+                width: 330px;
+                height: 10px;
+                position: absolute;
+                left: -100px;
+            }
+                
+            .intro img {
+                width: 50%;
+                float: right;
+            }
+        .gallery { 
+            position: relative;
+            height: 430px;
+        }
+            .galleryBg{
+                background-color: rgba(173, 209, 54, .6);
+                margin-top: 80px;
+                width: 590px;
+                height: 350px;
+                float: right;
+            }
+            .galleryBg div {
+                background-color: #e2f3de;
+                width: 300px;
+                height: 10px;
+                position: absolute;
+                right: 0;
+                top: 180px;
+            }
+            .outside {
+                width: 370px;
+                position: absolute;
+                top: 20px;
+                left: 0;
+            }
+            .inside {
+                width: 200px;
+                position: absolute;
+                bottom: 40px;
+                left: 330px;
+            }
+            .galleryTxt {
+                position: absolute;
+                bottom: 70px;
+                right: 50px;
+            }
+            .galleryTxt h2, .facility h2 { 
+                font-size: 30px;
+            }
+            .viewBtn { text-align: right; }
+
+        .facility {
+            width: 100%;
+            height: 440px;
+            background-color: rgba(131,109,98,.8);
+            margin-top: 40px;
+            position: relative; /*이미지의 absolute 때문에 넣음*/
+            color: #fff;
+            text-align: right;
+        }
+            .poolTxt, .bbqTxt, .terraceTxt{
+                position: absolute;
+                top: 140px;
+                right: 540px;
+            }
+            .bbqTxt, .terraceTxt{
+                visibility: hidden;
+            }
+            .facility p {
+                padding: 15px 0;
+                line-height: 160%;
+            }
+            .pool img {
+                width: 400px;
+                height: 440px;
+                position: absolute;
+                top: -20px;
+                right: 20px;
+            }
+            .bbq img {
+                width: 400px;
+                height: 440px;
+                position: absolute;
+                top: -20px;
+                right: 20px;
+            }
+            .terrace img {
+                width: 400px;
+                height: 440px;
+                position: absolute;
+                top: -20px;
+                right: 20px;
+            }
+            .slide2 {
+                background-color: #806358cb;
+                width: 300px;
+                height: 5px;
+                position: absolute;
+                bottom: 135px;
+                left: 90px;
+                z-index: 100;
+            } 
+            .slide1 {
+                background-color: #4E4039;
+                width: 100px;
+                height: 5px;
+                position: absolute;
+                bottom: 135px;
+                left: 90px;
+                z-index: 200;
+            } 
+    footer { text-align: center; }
+        footer h1 { padding: 10px 0; }
+        footer p { line-height: 160%; }

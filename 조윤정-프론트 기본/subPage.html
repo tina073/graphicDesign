@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조윤정 - 펜션 리디자인 subPage</title>
+    <link rel="stylesheet" href="css/subPage.css">
+    <script>
+        let date = new Date();
+        let nowYear = date.getFullYear();
+        let nowMonth = date.getMonth();
+        let nowDate = date.getDate();
+
+        let lastDate = [31,28,31,30,31,30,31,31,30,31,30,31];  //월별 마지막 일
+        if(nowYear % 4 == 0) {  //윤년 계산
+            lastDate[1] = 29;  //lastDate[1]=2월, 2월이 28로 끝나는지 29로 끝나는지를 구하는 코드
+        } else if(nowYear % 100 == 0) {
+            lastDate[1] = 28;
+        } else if(nowYear % 400 == 0) {
+            lastDate[1] = 29;
+        }
+
+        let monthFirstDate = new Date(nowYear, nowMonth, 1); // 각 월의 1일이 시작되는 요일을 구하는 코드
+        let monthStartDate = monthFirstDate.getDay(); 
+        let monthLastDate = lastDate[nowMonth]; //각 월의 마지막 날을 구하는 코드
+
+        let weekNum = Math.ceil((monthStartDate + monthLastDate) / 7);  // 각 월의 주수를 구하는 코드
+        
+        let nowYM = nowYear + "년 " + (nowMonth + 1) + "월";
+        
+        let calendar = '<table>';
+        calendar += '<caption>' + nowYM + '</caption>';
+        calendar += '<thead><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr></thead>';
+        calendar += '<tbody>';
+            
+        let dayNum = 1;
+        //날짜를 채우기 위한 코드
+        for (let week = 1; week <= weekNum; week++) {   //행 생성(주 생성)
+            calendar += '<tr>';
+            for (let day = 0; day < 7; day++) {  //열 생성
+                if (week === 0 && day < monthStartDate) {  //일요일
+                    calendar += '<td></td>';    
+                } else if (dayNum > monthLastDate) {  //토요일
+                    calendar += '<td></td>';
+                } else {    //평일
+                    calendar += '<td>' + dayNum + '</td>'; 
+                }
+                dayNum++;
+            }
+            calendar += '</tr>';
+        }
+        calendar += '</tbody></table>';
+        
+        document.write(calendar);
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="../images/bookingPageImg.jpg" width="900px" alt="실시간 예약 페이지 이미지">
+            <div id="gnb">
+                <h1><img src="images/logo_w.png" alt="로고"></h1>
+                <ul class="nav">
+                    <li>
+                        <a href="#">ABOUT</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ACCOMMODATION</a>
+                        <ul>
+                            <li>임시</li>
+                            <li>임시</li>
+                            <li>임시</li>
+                            <li>임시</li>
+                            <li>임시</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">SPECIAL</a>
+                        <ul>
+                            <li><a href="#">외부 시설</a></li>
+                            <li><a href="#">내부 시설</a></li>
+                            <li><a href="#">주변 관광지</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">RESERVATION</a>
+                        <ul class="m3">
+                            <li><a href="#">안내사항</a></li>
+                            <li><a href="#">실시간 예약</a></li>
+                            <li><a href="#">예약 확인/취소</a></li>
+                        </ul>
+                    </li>
+                    <div class="navBottomMenu"></div>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="calender"></div>
+            
+        </main>
+        <footer>
+            <h1><img src="images/logo.png" alt="로고"></h1>
+            <small>상호명 : 온전히ㅣ주소 : 경기도 화성시 효행로 229 온전히ㅣ사업자 등록번호 : 362-01-02164
+                <br>대표 :  조윤정ㅣTEL :  010-0000-0000 | 이메일 :  seio073@gmail.com</small>
+        </footer>
+    </div>
+</body>
+</html>
