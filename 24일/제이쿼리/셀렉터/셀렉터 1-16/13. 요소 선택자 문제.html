@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> ID 선택자 문제</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("h1").css("text-align","right");
+				$("span, p").css({
+					backgroundColor:"yellow",
+					color:"green"
+				});
+			});
+		</script>
+		<style>
+			#boxer { 
+				position: relative;
+				margin: 0;
+				padding: 0;
+				background-color: #3498db;
+				font-weight: bold;
+				font-size: 30px;
+				color: #fff;
+				text-align: center;
+				line-height: 200px;
+				width: 400px;
+				height: 200px;
+			}
+
+			#boxer .inner {
+				margin: 0 auto;
+			}
+		</style>
+		<script>
+			
+		</script>
+	</head>
+	<body>
+		<h3> h1요소의 위치를 오른쪽정렬시키고, p요소와 span요소를 노랑 배경색을 입히고 글자색을 초록색으로 만드시오. </h3>
+		<hr>
+		<h1> 선택자 예제 </h1>
+		<div id="boxer">
+			<div class="inner">재미있는 <span>jQuery!</span></div>
+		</div>
+		<p> 매우 쉬운 jQuery! </p>
+	</body>
+</html>

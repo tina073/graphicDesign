@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 전체선택자 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("h2, p, button").css("background-color","yellow");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2> 전체선택자 예제입니다. </h2>
+
+		<p> 전체선택자는 모든 요소를 선택합니다. </p>
+		<p> 기호로는 "*"을 사용합니다. </p>
+
+		<button> 누르면 모두 사라집니다. </button>
+		
+		<!--
+			body문안에 있는 모든 요소에 노랑색 배경을 입힌다.
+		-->
+	</body>
+</html>

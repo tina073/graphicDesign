@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> ID 선택자 문제</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#boxer").css({
+					backgroundColor:"yellow",
+					color:"brown",
+					border:"3px double red"
+				});
+			});
+		</script>
+		<style>
+			#boxer { 
+				position: relative;
+				margin: 0;
+				padding: 0;
+				background-color: #3498db;
+				font-weight: bold;
+				font-size: 30px;
+				color: #fff;
+				text-align: center;
+				line-height: 200px;
+				width: 400px;
+				height: 200px;
+			}
+
+			#boxer .inner { margin: 0 auto; }
+		</style>
+		
+	</head>
+	<body>
+		<h3>ID선택자를 이용하여 박스의 배경색을 노랑색, 글자색은 밤색(brown), 테두리를 붉은색 3px두께의 이중선으로 만드시오. </h3>
+		<hr>
+		<h1> 선택자 예제 </h1>
+		
+		<div id="boxer">
+			<div class="inner">재미있는 <span>jQuery!</span></div>
+		</div>
+		<p> 매우 쉬운 jQuery! </p>
+	</body>
+</html>
+
+
+
+

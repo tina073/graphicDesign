@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css 문제2</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					$("#box1").css({
+						width:"200px",
+						backgroundColor:"red"
+					});
+					/*
+					alert("200px로 폭이 변경되었습니다.");
+					*/
+					let changeWidth = $("#box1").css("width");
+					alert(changeWidth);
+
+				});
+				
+				$("#btn2").click(function(){
+					$("#box1").css({
+						width:"400px",
+						height:"400px",
+						backgroundColor:"blue"
+					});
+					let changeWidth = $("#box1").css("width");
+					let changeHeight = $("#box1").css("height");
+					alert("변경된 폭 값은 " + changeWidth + "이고, 높이는 " + changeHeight + "입니다");
+				});
+			});
+			
+		</script>
+		<style type="text/css">
+			#box1{ width:300px; height:100px; background-color:green; }
+		</style>
+	</head>
+	<body>
+		<h2>문제1.css변경1 버튼을 누르면 #box1의 폭 값을 200px로 변경하여 적용시키고, 배경색을 빨간색으로 바꾼 후 바뀐 폭 값을 경고창에 표시하세요.</h2>
+		<input type="button" value="css변경1" id="btn1"> 
+		
+		<h2>문제2.css변경2 버튼을 누르면 #box의 폭과 높이 값을 400px로 변경하여 적용시키고, 배경색을 파란색으로 바꾼 후 바뀐 폭 값을 경고창에 표시하세요.</h2>
+		<input type="button" value="css변경2" id="btn2">
+		<div id="box1"></div>
+	</body>
+</html>
+
+
+
+
+
+
+

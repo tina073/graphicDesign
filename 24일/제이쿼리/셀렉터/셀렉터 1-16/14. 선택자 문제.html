@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> Class 선택자 문제</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("h1").css({
+					width:"500px",
+					height:"200px",
+					color:"red",
+					border:"3px solid blue",
+					textAlign:"center",
+					transform: "rotate(45deg)"
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>아래 &lt;h1&gt;요소의 크기 - 폭 500px, 높이 200px. 글자색 - 붉은색. 
+			3px두께의 파란색 테두리를 만들고 박스중앙에 글자를 위치시키시오. </h3>
+		<hr>
+		<h1> 제이쿼리는 재미있어요! </h1>
+		<p class="intro"> 저는 <span>클래스 이름</span>이 "intro"인 p요소입니다. </p>
+		<p> 저도 p요소이지만 <span>클래스 이름</span>이 없어요. ㅠ.ㅠ </p>
+		<div class="intro"> 저는 <span>클래스 이름</span>이 "intro"인 div요소입니다. </div>
+		<p id="intro"> 저는 <span>아이디 이름</span>이 "intro"인 p요소입니다. </p>
+	</body>
+</html>
