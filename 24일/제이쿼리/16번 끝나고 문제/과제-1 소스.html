@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("body").css({
+				background:"url(woo01.jpg)",
+				backgroundSize:"cover",
+				backgroundRepeat:"no-repeat"
+			})
+			$("header").css("color","blue");
+			$("#main").css({
+				backgroundColor:"black",
+				opacity:0.7,
+				color:"white",
+				fontSize:"50px",
+				textAlign:"center"
+			});
+			$("footer").css({
+				backgroundColor:"gray",
+				width:"700px",
+				margin:"50px",
+				paddingBottom:"50px"
+			});
+		});
+	</script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            height: 100px;
+        }
+        #main {
+            width: 700px;
+            height: 300px;                       
+        }
+        #footer {
+            height:100px;
+            width:700px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Creative jQuery Sample</header>
+    <div id="main">
+        <h1>Creative jQuery</h1>
+    </div>
+    <footer>
+        Creative jQuery Sample
+    </footer>
+
+
+</body>
+</html>

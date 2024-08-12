@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta  charset="utf-8" />
+		<title> 문제-배경색 바꾸기6 </title>
+		<style>
+			#wrapper { width:320px; margin:100px auto; }
+			#color { margin-top:30px; width:300px; height:300px; box-shadow:3px 3px 5px #333; }
+			#color span { font:bold 40px arial; color:#000; text-shadow:2px 2px 1px #fff; }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<form>
+				빨간색 : <input type="range" value="0" min="0" max="255" step="1" class="backcolor" id="red"><br>
+				초록색 : <input type="range" value="0" min="0" max="255" step="1" class="backcolor" id="green"><br>
+				파란색 : <input type="range" value="0" min="0" max="255" step="1" class="backcolor" id="blue">
+			</form>
+			<div id="color">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<script>
+			$(".backcolor").change(function() {
+				let r = $("#red").val();
+				let g = $("#green").val();
+				let b = $("#blue").val();
+				$("#color").css("background-color","rgb(" + r + ", " + g + ", " + b +")")
+				$("span:nth-child(1)").text(r + ", ")
+				$("span:nth-child(2)").text(g + ", ")
+				$("span:nth-child(3)").text(b)
+			});
+			</script>
+		</div> 
+	</body>
+</html>
+
+
+
+

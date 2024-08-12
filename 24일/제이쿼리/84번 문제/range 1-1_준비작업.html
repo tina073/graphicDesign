@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta  charset="utf-8" />
+		<title> 준비작업1 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			
+	</head>
+
+	<body>
+		<form>
+			<input type="range" value="1" min="1" max="130" step="1" id="ori">
+			<input type="text" id="tar" value="0">
+		</form>
+		<div id="txt">글자크기</div>
+		<script>
+		
+		$("#ori").change(function(){
+				let nowVal = $(this).val();
+				$("#tar").val(nowVal);
+				$("#txt").css("font-size",nowVal + "px")
+			});
+			
+		$("#tar").keyup(function(){
+				let keyVal = $(this).val();
+				$("#ori").val(keyVal);
+				$("#txt").css("font-size",keyVal + "px")
+			});
+		</script>
+	</body>
+</html>
