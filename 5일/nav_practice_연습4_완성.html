@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title> 메뉴 포지션 연습하기 3</title>
+			<style type="text/css">
+				*{margin:0; padding:0;}
+				body{margin:50px;}
+				li{list-style-type:none;}
+				
+				/*내 방식
+				li a { float:left; width:129px; height:27px; background:url(images/up.jpg) no-repeat; color:#fff; text-decoration:none; font:14px arial; text-align:center; line-height:27px;}
+				li a:hover { text-decoration:underline; background:url(images/over.jpg); }
+				*/
+				
+				#gnb4 {}
+					#gnb4 li { display:inline; }
+						#gnb4 li a { float:left; width:129px; height:27px; background:url(images/up.jpg); font:bold 13px arial; text-decoration:none; color:#fff; text-align:center; line-height:27px; }
+						#gnb4 li a:hover { text-decoration:underline; background:url(images/over.jpg); }
+			</style>
+	</head>	
+	<body>
+		<ul id="gnb4">
+			<li class="m1"><a  class="selected"  href="#">COMPANY</a></li>
+			<li class="m2"><a href="#">PRODUCT</a></li>
+			<li class="m3"><a href="#">SERVICE</a></li>
+			<li class="m4"><a href="#">CUSTOMER</a></li>
+			<li class="m5"><a href="#">EDUCATION</a></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+	<title>Navigation Position</title>
+		<style type="text/css">
+			* { margin:0; padding:0; }
+			li { list-stye-type:none; }
+			
+			#gnb { margin: } /*나중에 필요해질수 있으니 당장 필요없어도 #gnb {} 라도 /*만들어 놓음*/
+		 		#gnb li { display:inline; }
+				#gnb li { display:inline; }
+					/*#gnb li a { display:inline-block; margin-right:-6px; width:109px; height:38px; background-color:red; }*/
+					#gnb li a { float:left; width:109px; height:38px; outline:1px solid red; text-indent:-9999px;/*영역 밖으로 빼기 위함*/ overflow:hidden; /*영역 밖으로 나간 것을 안보이게 함*/ background:url(images/navbg.gif);} /*라인을 제거하기 위해 주는 display,margin-right값 대신 float으로 한번에 처리*/
+					#gnb li a.selected { background-position:0 -38px;} /*.selected만 주면 css의 우선순위에서 밀려서 안나오는 것처럼 보임
+						우선순위 : 같은 속성이 같은 우선순위 값을 갖는다면 디자인의 적용은 위에서 아래방향, 왼쪽에서 오른쪽 방향으로 흘러가면서 적용. 하지만 위쪽이나 왼쪽에 있는 속성값이 지정이 되기도 하는데 이때는 우선순위 값이 높으면 된다.
+						우선순위값 : 
+						#=100점
+						.=10점
+						일반태그=1점
+						*/
+					#gnb li.m2 a { background-position:-109px 0;}
+					#gnb li.m3 a { background-position:-218px 0;}
+					#gnb li.m4 a { background-position:-327px 0;}
+					#gnb li.m1 a:hover { background-position:0 -76px;}
+					#gnb li.m2 a:hover { background-position:-109px -76px;}
+					#gnb li.m3 a:hover { background-position:-218px -76px;}
+					#gnb li.m4 a:hover { background-position:-327px -76px;}
+					
+		</style>
+	
+	</head>
+
+	<body>
+		<ul id="gnb">
+			<li class="m1"><a class="selected" href="#">home</a></li>
+			<li class="m2"><a href="#">guide</a></li>
+			<li class="m3"><a href="#">magazine</a></li>
+			<li class="m4"><a href="#">bbs</a></li>
+		</ul>
+	</body>
+</html>
