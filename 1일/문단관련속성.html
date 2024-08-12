@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+	<title>웹표준퍼블리싱중급</title>
+		<style type="text/css">
+			h1 { /*text-decoration:underline overline;*/ 
+				text-align:center; 
+				width:500px; 
+				border-top:5px solid red; padding-top:10px; margin-top:50px;
+				border-bottom:5px solid red; padding-bottom:5px; margin-bottom:50px;
+				} /*border : 두께 모양 색상 순서(바꿔도 상관은 없음)*/
+			img { vertical-align:middle; } /*이미지와 텍스트의 수직 정렬을 가운데로 조정*/
+			p { color:blue; text-align:justify; 
+				text-indent:30px; } /*문장 첫줄 들여쓰기*/
+			a:link, a:visit { text-decoration:none; color:#000; } /*(:)은 가상요소*/
+			a:hover { text-decoration:underline; color:#f00; }
+			a:active { text-decoration:none; color:#0f0; font-size:20px; }
+			/* 기본 : link
+				방문 : visited
+				마우스를 올렸을 떼 : hover
+				클릭한 순간 : active 
+				link -> visited -> hover -> active 순서가 반드시 지켜져야 한다 */
+		</style>
+	</head>
+	<body>
+		<h1>문단 관련 속성<img src="images/heart.gif" alt="하트" /></h1>
+		<p>문서를 작성할 때 사용하는 <a href="#">텍스트 관련 서식</a>중에서 단락 첫번째 줄 들여쓰기 기능과 같은 것으로효과를 적용할 수 있습니다. 문서를 작성할 때 사용하는 텍스트 관련 서식중에서 단락 첫번째 줄 들여쓰기 기능과 같은 것으로효과를 적용할 수 있습니다. 문서를 작성할 때 사용하는 텍스트 관련 서식중에서 단락 첫번째 줄 들여쓰기 기능과 같은 것으로효과를 적용할 수 있습니다. 문서를 작성할 때 사용하는 텍스트 관련 서식중에서 단락 첫번째 줄 들여쓰기 기능과 같은 것으로효과를 적용할 수 있습니다. 문서를 작성할 때 사용하는 텍스트 관련 서식중에서 단락 첫번째 줄 들여쓰기 기능과 같은 것으로효과를 적용할 수 있습니다. <img src="images/heart.gif" alt="하트" />문서를 작성할 때 사용하는 텍스트 관련 서식중에서 단락 첫번째 줄 들여쓰기 기능과 같은 것으로효과를 적용할 수 있습니다. 문서를 작성할 때 사용하는 텍스트 관련 서식중에서 단락 첫번째 줄 들여쓰기 기능과 같은 것으로효과를 적용할 수 있습니다. 문서를 작성할 때 사용하는 텍스트 관련 서식중에서 단락 text indent과 같은 것으로효과를 적용할 수 있습니다. 
+		</p>
+	</body>
+</html>

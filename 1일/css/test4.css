@@ -1,0 +1,10 @@
+﻿@charset "utf-8";
+
+p { color:red; }
+div { color:blue; }
+p, div { font-family:휴먼옛체; font-size:32px; }
+.fontColor { color:green; }
+p#fontColor { background-color:yellow; }
+		
+	/*글꼴이 없을 시 사용할 수 있는 대체 폰트를 지정해주기 위해 familly를 사용 (,)를 사용하여 사용할 폰트를 모두 적어주면 된다*/
+	/*글꼴 사이에 공백이 존재한다면 반드시("")나('')를 이용 ex."맑은 고딕"*/
