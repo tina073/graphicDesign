@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+/*  Reset CSS  */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0;}
+body { } 
+input, img { vertical-align:top;}
+
+h1 {
+	position:fixed;
+	top:50px;
+	left:50px;
+}
+	h1 img { width:300px; }
+	
+.sns { position:fixed; top:40px; right:50px; z-index:10; }
+.sns li {
+	float:left;
+	margin-left:20px;
+}
+
+.frame {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+	#wrap {
+		position:relative;
+		width:80%;
+		height:70%;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		outline:2px solid red;
+	}
+		.box {
+			position:relative;
+			width:100%;
+			height:15%;
+			border-bottom:5px solid black;
+			overflow:hidden;
+		}
+			.box video {
+				position:absolute;
+				top:0;
+				width:100%;
+				height:auto;
+				outline:2px solid yellow;
+				display:none;
+			}
+			.box h2 {
+				position:absolute;
+				bottom:-7px;
+				font-family:바탕;
+				font-weight:thin;
+				font-size:30px;
+			}
+			.box img {
+				position:absolute;
+				right:5px;
+				bottom:5px;
+			}
