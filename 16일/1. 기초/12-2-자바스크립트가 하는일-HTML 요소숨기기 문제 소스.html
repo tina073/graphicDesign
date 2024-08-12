@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML내용바꾸기-내용 보이고 숨기기 문제</title>
+		<style>
+			#demo { width:500px; font-size:30px; font-family:arial; font-weight:bold; background-color:yellow; border:3px double red; color:blue; padding:5px 10px; }
+			button { border:3px solid blue; background-color:#000; color:#fff; font-weight:bold; font-size:24px; padding:5px 10px; border-radius:10px; }
+			button:active { color:red; background-color:yellow; }
+			
+		</style>
+	</head>
+	<body>
+		<h1>내용이 안보이지만 공간은 유지를 해요.</h1>
+		<p id="demo">자바스크립트는 HTML의 요소를 숨기거나 나타낼수 있다.</p>
+		<button type="button" onclick="document.getElementById('demo').style.visibility='hidden'">숨기기</button>
+		<button type="button" onclick="document.getElementById('demo').style.visibility='visible'">나타내기</button>
+	</body>
+</html>
+
+
+

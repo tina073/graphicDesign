@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>변수선언 var와 let의 차이</title>
+</head>
+<body>
+	<script>
+			/*
+			function test(){
+				var age=43;  // 변수=상수 : 오른쪽에 있는 상수값을 왼쪽에 있는 변수에 넣어라.
+			} // 함수 끝
+			
+			var age=11;  // variable, 호이스팅
+			test();  // 함수의 호출
+			var age=50;
+			document.write(age+"<br>");
+			document.write("프로그램이 끝났습니다.!!!!");
+			*/
+			
+			function test(){
+				let age=43;
+			
+			let age=11;
+			test();
+			let age=50;
+			document.write(age+"<br>");
+			document.write("프로그램이 끝났습니다.!!!!");
+			
+			/*let은 같은 변수명이 있을 땐 실행되지 않게 한다 */
+	</script>
+</body>
+</html>
+
+

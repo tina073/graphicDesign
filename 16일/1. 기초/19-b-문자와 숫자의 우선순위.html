@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>tostring3</title>
+</head>
+<body>
+	<script>
+				let a = 2 + "3"; //"23"
+		let b = 1 + 2 + "3"; //"33"
+		let c = "1" + 2 + 3; //"123"
+		let d = 1 + "2" + 3; //"123"
+	
+		document.write('2 + "3" = ' + a + "<br>");
+		document.write('1 + 2 + "3" = ' + b + "<br>");
+		document.write('"1" + 2 + 3 = ' + c + "<br>");
+		document.write('1 + "2" + 3 = ' + d + "<br>");
+	</script>
+	<!-- 문자와 숫자가 더해질 경우 왼쪽부터 계산되기 때문에 문자와 숫자 중 왼쪽에 있는 것이 우선순위가 높다. -->
+</body>
+</html>
+
+
+

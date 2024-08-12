@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>toboolean</title>
+</head>
+<body>
+<script>
+	if (0) { // 숫자 0을 입력했으므로 조건은 거짓(FALSE)으로 처리가 된다.
+		document.write("참입니다.");
+	} else {
+		document.write("거짓입니다.");
+	}
+	/*
+		1. IF(조건식) {                       		IF(나이>=20) {
+			참값.....;                                		술집에 입장하세요.;
+		}                                          		}
+		
+		1-1. IF(조건식) 참값.... (추천X)      	IF(나이>=20) 술집에 입장하세요.;
+	
+		2. IF(조건식) {								IF(성별=="남") {    // 성별 : 남, 여
+			참값.....;										GOTO 남탕;
+		} ELSE {									} ELSE {
+			거짓값.....;									GOTO 여탕;
+		}												}
+	
+		3. IF(조건식1) {							IF(성별=="남") {    // 성별 : 남, 여, 변태
+			참값.....;										GOTO 남탕;
+		} ELSE IF(조건식2) {						} ELSE IF(성별=="여") {
+			참값.....;										GOTO 여탕;
+		} ELSE IF(조건식3) {						} ELSE {
+			참값.....;										GOTO 경찰서;
+		} ELSE {									}
+			거짓값.....;									
+		}
+			
+		
+		// 90점 이상 A, 80점대 B, 70점대 C, 60점대 D, 나머지 F	
+		IF(성적>=90) {
+			등급="A";
+		} ELSE IF(성적>=80) { // 80~89
+			등급="B";
+		} ELSE IF(성적>=70) { // 70~79
+			등급="C";
+				...
+		} ELSE {
+			등급="F";
+		}	
+	*/
+</script>
+</body>
+</html>

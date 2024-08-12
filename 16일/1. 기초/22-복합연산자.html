@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>복합연산자 표만들기 22-table.html</title>
+</head>
+<body>
+	<script>
+		let t = "<table border='1'>";
+		t += "<tr>"; // t="<table border='1'><tr>"; +=, -=, /=, *=, %=
+		t += "<td>1</td><td>2</td><td>3</td>";
+		//t="<table border='1'><tr><td>1</td><td>2</td><td>3</td></tr>";
+		t += "</table>";
+		//t="<table border='1'><tr><td>1</td><td>2</td><td>3</td></tr></table>";
+		document.write(t);
+	</script>
+</body>
+</html>

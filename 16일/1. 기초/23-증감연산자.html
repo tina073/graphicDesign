@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>increase</title>
+</head>
+<body>
+	<script>
+		let a = 2;
+		let b = a++; 	// 후치연산자, 후위연산자
+		//b=a; a = a+1; // b=a++ : 변수 a에 있는 값을 변수 b에 넣은 후, 변수 a의 값을 1 증가시켜라..
+							// b : 2, a : 3
+		document.write("a = " + a + ", b = " + b + "<br>");
+	
+		let a2 = 2;
+		let b2 = ++a2; // 전치연산자, 전위연산자 ---> b2=++a2 : 변수 a2에 있는 값을 1 증가시킨 후, 그 값을 변수 b2에 넣어라..
+							// a2:3, b2=3
+		document.write("a2 = " + a2 + ", b2 = " + b2 + "<br>");	
+		
+		// a=a+1; a+=1, a++, ++a		
+	</script>
+</body>
+</html>
