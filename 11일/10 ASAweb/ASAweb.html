@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title> asa레이아웃구성_test </title>
+		<style type="text/css">
+			*{margin:0;padding:0;}	
+			li{list-style-type:none;}	  
+			fieldset,img{border:0;}    
+			li img, li a{vertical-align:top;}
+			a { text-decoration:none;}
+			body{
+				/*background:url(images/bg_grid.gif);*/
+				background:#fff url(images/body_bg.jpg) repeat-x 0 236px;
+				font:12px 굴림;
+			}
+			.hdd {display:none; }
+			#wrapper {
+				width:950px;
+				height:760px;
+				margin:0 auto;
+				background:url(images/wrap_bg.jpg) no-repeat;
+			}
+			
+				#header { position:relative; }
+					h1 { padding:35px 0 0 40px; }
+					.util {
+						width:235px;
+						background-color:#000; 
+						padding:4px 2px; 
+						text-align:center;
+						position:absolute;
+						top:30px;
+						right:20px;
+					}
+						.util li { 
+							display:inline; 
+							color:#fff;
+						}
+							.util li a { 
+								display:inline;  
+								color:#fff; 
+								font-size:11px;
+							}
+							.util li a:hover { color: yellow;}
+					.gnb { }
+					.gnb li { 
+						float:left; 
+						position:relative;
+						left:254px;
+						top:157px;
+						font-size:24px;
+						font-weight:bold;
+						text-align:center;
+						padding:11px 18px;
+					}
+					.gnb li a { color:#fff; }
+					.gnb li a span { 
+						display:block; 
+						font-size:12px;
+						font-weight:normal;
+					}
+					
+				#container { 
+					clear:both; 
+					position:relative; 
+				}
+					#container h2.hdd { display:none; }
+					.jijum { 
+						width:224px;
+						height:111px;
+						background:url(images/map.jpg);
+						position:relative;
+						top:465px;
+						left:15px;
+						float:left;
+						
+					}
+					
+					.contents { 
+						display:inline-block;
+						position:relative; 
+						top:205px;
+						left:30px;
+					}
+						#gongTab { }
+							
+							#gongTab li { background:url(images/icon_1.gif) no-repeat 0 center; padding:5px 0 5px 10px; border-bottom:1px dashed #ccc;}
+							#gongTab li span { position:absolute; right:0;}
+							#gongTab .t1 li span { position:absolute; right:0; }
+							#gongTab .t2 { position:absolute; top:0; left:74px;}
+						
+						#product { padding-top:23px;}
+					.aside { float:right;background:url(images/story.jpg) no-repeat; width:269px; height:116px;  position:relative; top:200px;  right:30px; }
+						
+						.story { text-align:right; padding:70px 0 0 110px;}
+						.banner {margin-top:30px; }
+							.banner dd { padding-top:5px; }
+				#footer {clear:both; width:100%; background-color:#eee; text-align:center; }
+					address { font-style:normal; padding:30px; }
+		</style>
+	</head>
+
+	<body>
+		 <div id="wrapper">
+				<div id="header">
+						<h1><a href="#"><img src="images/logo.png"></a></h1>
+						<ul class="util">
+								<li><a href="#">HOME</a> /</li>
+								<li><a href="#">LOGIN</a> /</li>
+								<li><a href="#">SITEMAP</a> /</li>
+								<li><a href="#">CONTACT US</a></li>
+						</ul>
+						<p class="hdd">For your life. 가장 빠르게, 가장 안전하게 믿을 수 있는 서비스</p>
+						<h2 class="hdd">주메뉴</h2>
+						<ul class="gnb" id="gnb">
+								<li><a href="#">회사소개<span>COMPANY</span></a></li>
+								<li><a href="#">제품안내<span>PRODUCT</span></a></li>
+								<li><a href="#">고객센터<span>CUSTOMER</span></a></li>
+								<li><a href="#">채용정보<span>RECRUIT</span></a></li>
+								<li><a href="#">커뮤니티<span>COMMUNITY</span></a></li>
+						</ul>
+				</div><!-- header -->
+
+				<div id="container">
+						<h2 class="hdd">해외지점</h2>
+						<div class="jijum">
+								<a class="usa" href="#"><span class="hdd">USA</span></a>  
+									<!--  style="border:1px solid blue;" 이미지맵에서 영역의 크기를 알아보기 위한 것. -->
+								<a class="europe" href="#"><span class="hdd">EUROPE</span></a>
+								<a class="korea" href="#"><span class="hdd">KOREA</span></a>
+								<a class="asia" href="#"><span class="hdd">ASIA</span></a>
+						</div>
+						<div class="contents">
+								<dl id="gongTab">
+										<dt class="t1"><a href="#"><img src="images/t_notice_over.gif" alt="공지사항" /></a></dt>
+										<dd>
+												<ul>
+														<li><a href="#">DC 정밀 체권단은...</a><span>[2012/04/28]</span></li>
+														<li><a href="#">KF 사랑의 봉사단, 복구활동에...</a><span>[2012/04/29]</span></li>
+														<li><a href="#">삼호 TSD,신제품 출시</a><span>[2012/04/30]</span></li>
+														<li><a href="#">ASA 홈쇼핑, 한국대표 홈쇼핑...</a><span>[2012/04/30]</span></li>
+														<li><a href="#">아사웹 홈페이지 템플릿 출시!</a><span>[2012/04/30]</span></li>
+												</ul>
+										</dd>
+										<dt class="t2"><a href="#"><img src="images/t_webnews.gif" alt="웹뉴스" /></a></dt>
+										<dd>
+												<ul></ul>
+										</dd>
+
+								</dl>
+								<p id="product"><img src="images/c_phone.jpg" alt="제품소개" /></p>
+						</div>  <!-- container -->
+						<div class="aside">
+						<h2 class="hdd">Businesssman Story</h2>
+								<p class="story">직장인의 에피소드를 다룬 재미난 수기를 공모합니다.<a href="#"><img src="images/btn_detail.jpg" alt="자세히 보기" /></a></p>
+								<dl class="banner">
+								<dt class="hdd">Banner</dt>
+										<dd><img src="images/banner1.jpg" alt="회사소개" /></dd>
+										<dd><img src="images/banner2.jpg" alt="제품안내" /></dd>
+										<dd><img src="images/banner3.jpg" alt="인재채용" /></dd>
+										<dd><img src="images/banner4.jpg" alt="제품검색" /></dd>
+								</dl>
+						</div>
+				</div><!--container-->
+		 </div>
+
+		 <div id="footer">
+		 <address>Copyright(C) 2005 asaweb.com All rights reserved.<br />Contact webmaster for more information. <a href="mail:webmaster@asaweb.com">e-mail : webmaster@asaweb.com</a>
+		 </address>
+		 </div>
+	</body>
+</html>

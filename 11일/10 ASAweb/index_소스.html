@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title> asa레이아웃구성_test </title>
+<style type="text/css">
+*{margin:0;padding:0;}	
+li{list-style-type:none;}	  
+fieldset,img{border:0;}    
+li img, li a{vertical-align:top;}
+.hdd {display:none; }
+a { text-decoration:none; }
+body{ font:12px 굴림; 
+		background:#fff url(images/body_bg.jpg) repeat-x 0 236px;}
+		
+#wrapper {
+				width:950px;
+				margin:0 auto;
+				background:url(images/wrap_bg.jpg) no-repeat;
+			}
+	#header { 
+		overflow:hidden;
+		margin-bottom:40px;
+		
+	}
+		h1 { 
+			float:left; 
+			padding:30px 0 0 40px; 
+		}
+			.util {
+					float:right;
+					margin:30px 20px 0 0;
+					background-color:#000; 
+					padding:5px; 
+					}
+				.util li { 
+							display:inline; 
+							color:#fff; 
+						}
+					.util li a { 
+								color:#fff; 
+								font-weight:bold;
+							}
+					.util li a:hover { color:magenta; }
+			.gnb { 
+				clear:both;
+				padding:165px 0 0 255px;
+			}
+				.gnb li {
+					display:inline;
+					
+				}
+					.gnb li a {
+						color:#fff;
+						float:left;
+						width:135px;
+						height:65px;
+						text-align:center;
+						font-size:18px;
+						font-weight:bold;
+						padding-top:16.5px; /*h65'18+14 65-32=33/2=16.5*/
+					}
+						.gnb li a span { 
+							display:block; 
+							font-size:14px;
+							font-weight:norma;
+						}
+	#container { overflow:hidden; }
+		.jijum { 
+						float:left;
+						position:relative;
+						width:224px;
+						height:111px;
+						background:url(images/map.jpg);
+						margin:260px 15px 0;		
+					}
+			.jijum a {
+				position:absolute;
+				left:0;
+				top:0;
+				height:13px; 
+			}		
+			.jijum a.usa {
+				width:34px;
+				left:53px;
+				top:40px;
+			}
+			.jijum a.europe {
+				width:40px;
+				left:128px;
+				top:32px;
+			}
+			.jijum a.korea {
+				width:34px;
+				left:177px;
+				top:35px;
+			}
+			.jijum a.asia {
+				width:34px;
+				left:157px;
+				top:52px;
+			}
+		.contents { float:left; }
+			#gongTab { position:relative; }
+			#gongTab dt { position:absolute; top:0; }
+			#gongTab dt.t2 { left:74px; }
+			#gongTab dd { padding-top:22px; }
+				#gongTab dd ul { border-top:1px solid #ccc; padding-top:18px; }
+				#gongTab dd ul li { 
+					background:url(images/icon_1.gif) no-repeat 5px 50%;
+					border-bottom:1px dashed #ccc;
+					padding:5px 0 5px 15px; 
+				}
+					#gongTab dd ul li a { color:#000; }
+					#gongTab dd ul li a:hover { color:#00f; }
+						#gongTab dd ul li span { position:absolute; right:5px; }
+						
+		.aside {
+			width:300px;
+			float:right;
+		}
+			.story {
+				width:157px;
+				height:46px;
+				background:url(images/story.jpg) no-repeat;
+				text-align:right;
+				padding:70px 0 0 80px;
+			}
+			dl.banner { margin-top:10px; }
+				dl.banner dd { width:270px; margin-top:10px; border-bottom:1px dashed #000; }
+	#footer {
+		padding:20px;
+		background-color:#eee;
+		text-align:center;		
+		border-top:3px solid #000; 
+		margin-top:40px;
+	}
+		address { 
+			color:#fff;
+			font-style:normal;
+		}
+			address a { color:#fff; }
+</style>
+</head>
+
+<body>
+ <div id="wrapper">
+		<div id="header">
+				<h1><a href="#"><img src="images/logo.png"></a></h1>
+				<ul class="util">
+						<li><a href="#">HOME</a> /</li>
+						<li><a href="#">LOGIN</a> /</li>
+						<li><a href="#">SITEMAP</a> /</li>
+						<li><a href="#">CONTACT US</a></li>
+				</ul>
+				<p class="hdd">For your life. 가장 빠르게, 가장 안전하게 믿을 수 있는 서비스</p>
+				<h2 class="hdd">주메뉴</h2>
+				<ul class="gnb" id="gnb">
+						<li><a href="#">회사소개<span>COMPANY</span></a></li>
+						<li><a href="#">제품안내<span>PRODUCT</span></a></li>
+						<li><a href="#">고객센터<span>CUSTOMER</span></a></li>
+						<li><a href="#">채용정보<span>RECRUIT</span></a></li>
+						<li><a href="#">커뮤니티<span>COMMUNITY</span></a></li>
+				</ul>
+		</div><!-- header -->
+
+		<div id="container">
+				<h2 class="hdd">해외지점</h2>
+				<div class="jijum">
+						<a class="usa" href="#" style="border:1px solid blue;"><span class="hdd">USA</span></a>  
+							<!--  style="border:1px solid blue;" 이미지맵에서 영역의 크기를 알아보기 위한 것. -->
+						<a class="europe" href="#" style="border:1px solid red;"><span class="hdd">EUROPE</span></a>
+						<a class="korea" href="#" style="border:1px solid green;"><span class="hdd">KOREA</span></a>
+						<a class="asia" href="#" style="border:1px solid black;"><span class="hdd">ASIA</span></a>
+				</div>
+				<div class="contents">
+						<dl id="gongTab">
+								<dt class="t1"><a href="#"><img src="images/t_notice_over.gif" alt="공지사항" /></a></dt>
+								<dd>
+										<ul>
+												<li><a href="#">DC 정밀 체권단은...</a><span>[2012/04/28]</span></li>
+												<li><a href="#">KF 사랑의 봉사단, 복구활동에...</a><span>[2012/04/29]</span></li>
+												<li><a href="#">삼호 TSD,신제품 출시</a><span>[2012/04/30]</span></li>
+												<li><a href="#">ASA 홈쇼핑, 한국대표 홈쇼핑...</a><span>[2012/04/30]</span></li>
+												<li><a href="#">아사웹 홈페이지 템플릿 출시!</a><span>[2012/04/30]</span></li>
+										</ul>
+								</dd>
+								<dt class="t2"><a href="#"><img src="images/t_webnews.gif" alt="웹뉴스" /></a></dt>
+								<dd>
+										<ul></ul>
+								</dd>
+
+						</dl>
+						<p id="product"><img src="images/c_phone.jpg" alt="제품소개" /></p>
+				</div>  <!-- container -->
+				<div class="aside">
+				<h2 class="hdd">Businesssman Story</h2>
+						<p class="story">직장인의 에피소드를 다룬 재미난 수기를 공모합니다.<a href="#"><img src="images/btn_detail.jpg" alt="자세히 보기" /></a></p>
+						<dl class="banner">
+						<dt class="hdd">Banner</dt>
+								<dd><img src="images/banner1.jpg" alt="회사소개" /></dd>
+								<dd><img src="images/banner2.jpg" alt="제품안내" /></dd>
+								<dd><img src="images/banner3.jpg" alt="인재채용" /></dd>
+								<dd><img src="images/banner4.jpg" alt="제품검색" /></dd>
+						</dl>
+				</div>
+		</div><!--container-->
+ </div>
+
+ <div id="footer">
+ <address>Copyright(C) 2005 asaweb.com All rights reserved.<br />Contact webmaster for more information. <a href="mail:webmaster@asaweb.com">e-mail : webmaster@asaweb.com</a>
+ </address>
+ </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title> 메뉴_소스 </title>
+		<style type="text/css">
+			* {margin:0;padding:0;}
+			li{list-style-type:none;}
+			li img{vertical-align:top;}
+			img,fieldset{border:0;}
+			table{border-collapse:collapse;}
+			table,th,td{border:1px solid #000;}
+			/*	*/
+			
+			/*body {
+				background:url(images/bg_grid.gif);
+				opacity:0.6;
+			}
+			*/
+				.gnb {
+					width:982px;   /*1002 - 20(좌우 padding)*/
+					height:50px;
+					padding:10px;
+					background:url(images/mainNavBG.jpg);
+				}
+					.gnb li { display:inline; }
+						.gnb li a { 
+							float:left; /*display:inline을 줘도 되는데 margin 5px이 자동으로 들어가지만 완벽히 5px이 아니기 때문에 완벽히 제어하기 위해 플롯을 줌*/
+							width:139.5px; /* 982-25(margin-right값)=957/6=159.5-20(padding값) */
+							height:40px;
+							margin-right:5px;
+							padding:3px 10px 0;
+							background-color:#f0f;
+							border-top:7px solid blue;
+							text-decoration:none; 
+							color:#fff;
+							font:16px arial;
+						} 
+						.gnb li:nth-of-type(6) a { margin-right:0;}
+						.gnb li a:hover {
+							background-color:#ffaf00;
+							color:#000;
+							border-top-color:#ff3cbb;
+						}
+							.gnb li a span { 
+								font-size:10px; 
+								display:block;
+								line-height:100%;
+							}
+			
+		</style>
+	</head>
+	
+	<body>
+		<ul class="gnb">
+			<li><a href="#">Learn About Us
+			<span>Meet the board and learn more about PACR</span></a></li>
+			<li><a href="#">Event Schedule
+			<span>View our upcoming event and meeting schedule</span></a></li>
+			<li><a href="#">News & Views
+			<span>Read our blog for news and opinion pieces</span></a></li>
+			<li><a href="#">Media Center
+			<span>Videos, Audio and Photos that we find interesting</span></a></li>
+			<li><a href="#">Join PACR
+			<span>Sign-up to be a member of the PA College Republicans</span></a></li>
+			<li><a href="#">Get Involved
+		<span>Learn how you can help us and our cause</span></a></li>
+		</ul>
+	</body>
+</html>
