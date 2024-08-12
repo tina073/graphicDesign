@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>switch</title>
+</head>
+<body>
+	<script>
+		let menu = prompt("먹고 싶은 음식을 입력하세요","짜장면");
+		swithch(menu) {
+			case 짜장면:
+				document.write("수타명으로 준비해드리겠습니다");
+				break; //switch문 종료
+			case 짬뽕:
+				document.write("시원한 홍합짬뽕입니다.");
+				
+			case 탕수육:
+				document.write("소고기 탕수육입니다.");
+
+			default:
+				document.write("군만두를 드세요");
+		}
+	</script>
+	<!-- prompt 함수로 입력받은 값은 문자열이므로 case문의 데이터값도 문자여야만 하지만 Number 함수를 이용하요 문자형 숫자를 숫자로 만들었다. -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>1부터 임의의 수까지 홀수의 합</title>
+</head>
+<body>
+	<script>
+		let sum = 0;
+		let num = prompt("원하는 숫자를 입력하세요.");
+		let numTwo = prompt("홀수를 구하려면 '홀', 짝수를 구하려면 '짝'을 입력하세요.");
+		
+		if(numTwo == "홀") {
+			for(let st = 1; st <= num; st++) {
+				if(st % 2 == 1) {
+				sum = sum + st;
+				}
+			}
+		} else if(numTwo == "짝") {
+			for(let st = 1; st <= num; st++) {
+				if(st % 2 == 0) {
+				sum = sum + st;
+				}
+			}
+		}
+		document.write("1부터 " + num + "까지 " + numTwo +"수의 합계 : " + sum);
+	</script>
+</body>
+</html>

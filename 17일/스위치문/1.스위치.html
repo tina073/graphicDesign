@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>switch</title>
+</head>
+<body>
+	<script>
+		let menu = prompt("통화는 1번, 문자는 2번, 영상통화는 3번",1); //prompt에 의해서 입력되는 숫자데이터는 변수에 전달이 될 때 문자형 숫자 형태로 전달이 된다.ex>1 -->"1"
+		switch(Number(menu)) {  //경우에 해당하는 값을 입력
+			case 1:
+				document.write("전화를 겁니다.");
+				break; //switch문 종료
+			case 2:
+				document.write("문자를 보냅니다.");
+				break;
+			case 3:
+				document.write("영상 통화를 연결니다.");
+				break;
+			default:
+				document.write("잘못 입력하셨습니다.");
+		}
+	</script>
+	<!-- prompt 함수로 입력받은 값은 문자열이므로 case문의 데이터값도 문자여야만 하지만 Number 함수를 이용하요 문자형 숫자를 숫자로 만들었다. -->
+</body>
+</html>

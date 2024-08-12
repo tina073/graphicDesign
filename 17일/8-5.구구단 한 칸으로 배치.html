@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2단 구구단 만들기</title>
+
+</head>
+<body>
+	<script>
+		let gugu = 0;
+		let gongback = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		for(let i = 1; i <= 9; i++) {
+			for(let dan = 2; dan <= 9; dan++){
+			gugu = dan*i;
+			document.write(dan + " * " + i + " = " + gugu + gongback);
+			}
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>
