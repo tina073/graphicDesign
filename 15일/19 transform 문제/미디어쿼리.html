@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>미디어쿼리</title>
+		<style>		
+			* {margin:0; padding:0;}
+			div { width:300px; height:300px; margin:100px auto; }
+			
+			/* pc용 1024px 이상 일때 */
+			@media screen and (min-width:1024px) and (max-width:3278px) {
+				div { background-color:#ff0; color:#ff0; font-size:30px; font-weight:bold; }
+			}
+			
+			/* 태블릿용 768px~1023px 일때*/
+			@media screen and (min-width:768px) and (max-width:1023px) {
+				div { background-color:#ff0; color:#f00; font-size:20px; text-shadow:2px 2px 2px #000; }
+			}
+			
+			/* 모바일용 767px이하 일때*/
+			@media screen and (min-width:767) {
+				div { background:url(sun-flower.jpg) no-repeat right top/cover; color:#000; }
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+		
+		</div>
+		<!--
+   mediaquery - 해상도별 로 서로 다른 CSS를 연결하여 상황에 맞는 최적화도니 디자인을 제공하는 반응형 웹의 기본 개념
+   
+   ▶ @media screen(또는 all) and (min-width:최소 넓이폭) and (max-width:최대 넓이폭){
+            해당 조건에 부합 될 때 연결할 CSS 구문
+      }
+      
+      http://troy.labs.daum.net  - 스마트기기의 해상도별로 작업 화면을 확인하기 좋은 사이트.
+-->
+	</body>
+</html>

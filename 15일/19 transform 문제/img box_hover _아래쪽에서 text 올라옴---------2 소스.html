@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>hover-effect2.html</title>
+		<style>		
+			* {margin:0; padding:0;}
+			/*.box-wrap {
+				position:absolute;
+				left:0;
+				right:0;
+				top:0;
+				bottom:0;
+				margin:0 auto;
+			}
+				.box {
+					width:400px;
+					height:350px;
+					text-align:center;
+					outline:2px solid green;
+				}
+					.info h3, .info p {
+					width:400px;
+					padding
+					background-color:#eee;
+					}
+					img { 
+						width:400px;
+						height:300px;
+					}*/
+					
+				.box-wrap {
+					width:400px;
+					height:350px;
+					position:absolute;
+					left:50%;
+					top:50%;
+					margin-left:-200px;
+					margin-top:-175px;
+					overflow:hidden;
+					outline:2px solid green;
+				}
+					.box {}
+						.top {
+							width:400px;
+							height:50px;
+							text-align:center;
+						}
+						.info {
+							width:400px;
+							height:350px;
+							text-align:center;
+							transform:translateY(0);
+							transition:all 0.5s;
+						}
+						.info img {
+							width:400px;
+							height:300px;
+						}
+					.box:hover .info { transform:translateY(-50px); }
+		</style>
+	</head>
+	<body>
+		<div class="box-wrap">
+			<section class="box">				
+				<article class="top">
+					<h3>보이시지요?</h3>
+					<p>해바라기 그림입니다.</p>
+				</article>				
+				
+				<article class="info">
+					<img src="sun-hat.jpg" alt="">
+					<h3>올라왔어요.</h3>
+					<p>^^ 해바라기는 영어로 'sunflower'입니다.</p>
+				</article>				
+			</section>
+		</div>
+	</body>
+</html>

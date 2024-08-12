@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>간단하게 롤오버 이미지 만들기-스프라이트 이용2</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<style>
+			a.btn {
+				    position:relative;
+				    display:block; 
+				    width:150px; 
+				    height:150px; 
+				    overflow:hidden;
+			}
+			a:hover.btn img {
+					position:absolute;
+					top:-150px;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="http://www.naver.com" class="btn"><img src="test3.png"></a>
+<!--
+	스프라이트 이미지 사이즈 : 150*300
+-->
+	</body>
+</html>

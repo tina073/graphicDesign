@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>hover-effect1.html</title>
+		<style>
+			* {margin:0; padding:0;}
+			/*.box-wrap {
+				position:absolute;
+				left:0;
+				right:0;
+				top:0;
+				bottom:0;
+				margin:0 auto;
+			}*/
+			.box-wrap { 
+			overflow:hidden;
+			width:400px;
+			height:300px;
+			position:absolute;
+			left:50%;
+			top:50%;
+			margin-left:-200px;
+			margin-top:-150px;
+			outline:3px solid red;
+			}
+				.box {
+					width:400px;
+					height:300px;
+					transform:translateY(0);
+					transform:all 0.5s;
+				}
+					.img img {
+						width:400px;
+						height:300px;
+						vertical-align:middle;
+					}
+						.info {
+							width:400px;
+							height:62px;
+							padding-top:18px;
+							text-align:center;
+							background-color:#999;
+							color:#fff;
+							opacity:0;
+							transition:all 0.5s;
+						}
+				.box:hover	{transform:translateY(-80px);}
+				.box:hover .info {
+					opacity:1;
+				}
+		</style>
+	</head>
+
+	<body>
+		<div class="box-wrap">
+			<div class="box">
+				<div class="img">
+					<img src="sun-flower.jpg" alt="">
+				</div>
+				<div class="info">
+					<h3>Title</h3>
+					<p>이미지 설명 부분입니다.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!-- 
+vh와 vw
+반응형 웹디자인 기술은 퍼센트 값에 상당히 의존하고 있습니다. 하지만 CSS의 퍼센트 값이 모든 문제를 해결할 좋은 방법은 아니지요. CSS의 너비 값은 가장 가까운 부모 요소에 상대적인 영향을 받습니다. 만약 너비값과 높이값을 부모 요소의 너비값의 뷰포트에 맞게 사용할 수 있다면 어떨까요? 바로 vh와 vw 단위가 그런 의도에 맞는 단위라는 사실.
+
+vh 요소는 높이값의 100분의 1의 단위입니다. 예를 들어 브라우저 높이값이 900px일때 1vh는 9px이라는 뜻이 되지요. 그와 유사하게 뷰포트의 너비값이 750px이면 1vw는 7.5px이 됩니다.
+
+이 규칙에는 무궁무진한 사용방법이 있습니다. 예를 들면, 최대 높이값이나 그의 유사한 높이값의 슬라이드를 제작할때 아주 간단한 CSS만 입력하면 됩니다.
+
+1
+2
+3
+.slide {
+    height: 100vh;
+}
+스크린의 너비값에 꽉 차는 헤드라인을 만든다고 상상해보세요. vw로 폰트 사이즈를 지정하면 쉽게 달성할 수 있습니다. 저 사이즈는 브라우저의 너비에 맞춰 변할 것입니다.
+
+
+지금 사용 가능한가?
+뷰포트 vw, vh 단위의 호환성은 caniuse.com에서 확인할 수 있습니다.
+
+vmin과 vmax
+vh와 vw이 늘 뷰포트의 너비값과 높이값에 상대적인 영향을 받는다면 vmin과 vmax는 너비값과 높이값에따라 최대, 최소값을 지정할 수 있습니다. 예를 들면 브라우저의 크기가 1100px 너비, 그리고 700px 높이일때 1vmin은 7px이 되고 1vmax는 11px이 됩니다. 너비값이 다시 800px이 되고 높이값이 1080px이 되면 vmin은 8px이 되고 vmax는 10.8px이 됩니다.
+
+어때요, 이 값들을 사용할 수 있나요?
+
+언제나 스크린에 보여지는 요소를 만든다고 상상해보세요. 높이값과 너비값을 vmin을 사용해 100으로 지정합니다. 예를 들어 터치화면 양 변에 가득차는 정사각형 요소를 만들때는 이렇게 정의하면 됩니다.
+
+1
+2
+3
+4
+.box {
+    height: 100vmin;
+    width: 100vmin;
+}
+
+만약 커버처럼 뷰포트 화면에 보여야 하는(모든 네 변이 스크린에 꽉 차 있는) 경우에는 같은 값을 vmax로 적용하면 됩니다.
+
+1
+2
+3
+4
+.box {
+    height: 100vmax;
+    width: 100vmax;
+}
+
+알려드린 이 규칙들을 잘 조합해 활용하면 뷰포트에 맞는 매우 유연한 방식으로 사이즈 조절을 가능하게 할 수 있습니다.
+
+지금 사용 가능한가?
+뷰포트 단위: vmin, vmax의 호환성은 caniuse.com에서 확인할 수 있습니다.
+
+-->

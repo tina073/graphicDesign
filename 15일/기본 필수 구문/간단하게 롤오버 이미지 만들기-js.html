@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>간단하게 롤오버 이미지 만들기-js이용</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("img")
+					.mouseover(function(){ 
+						$(this).attr('src', 'test2.png');
+					})
+					.mouseout(function(){
+						$(this).attr('src', 'test1.png');
+					});
+			});
+		</script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+<a href="http://www.naver.com"><img src="test1.png"></a>
+<!--
+	
+-->
+	</body>
+</html>
