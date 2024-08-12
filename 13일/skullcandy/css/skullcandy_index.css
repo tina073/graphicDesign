@@ -1,0 +1,143 @@
+﻿@charset "utf-8";
+@import url(reset.css);
+
+body {}
+	#body_bg { 
+		background-color:#000;
+		height:80px;
+		opacity:0.8;
+	}
+	
+	#wrapper {
+		position:absolute; 
+		top:0; 
+		left:0; 
+		right:0; 
+		width:1200px; 
+		margin:0 auto;
+		outline:1px solid red;
+	}
+		#header { outline:5px solid yellow; }
+		#header:after { content:""; display:block; clear:both; }
+			#logo { 
+				padding:25px 0 0 50px;
+				float:left;
+			}
+			#gnb { 
+				float:right; 
+				margin-right:100px;
+			}
+				#gnb li { 
+					float:left;
+					width:150px; 
+					height:80px; 
+					text-align:center;
+					line-height:80px;
+				}
+				#gnb li ul { display:none; }
+					#gnb a { 
+						color:#fff; 
+						font-size:16px; 
+						font-weight:bold; 
+					}
+					#gnb .sub li { 
+						height:50px; 
+						line-height:50px; 
+						background-color:pink; 
+					}
+				#gnb li:hover { background-color:lightgreen; }
+				#gnb li:hover a { color:#000; }
+				#gnb li:hover ul { display:block; }
+				#gnb .sub li:hover { background-color:#333; }
+				#gnb .sub li:hover a { color:#fff; }
+				
+		#container { outline:3px solid green; }	
+			#mainSlider { position:relative; width:1200px; height:430px; overflow:hidden; }
+				#slider { position:absolute; left:0; top:0; width:2400px; height:430px; }
+					#slider li { float:left; }
+					
+			#contents {padding-bottom:150px; overflow:hidden;}
+				#contents p,a { color:#fff;}
+				#contents	.title { font-size:50px; font-weight:bold; padding-bottom:40px; }
+				#contents .txt { margin-top:10px;}
+				#contents .btn { position:absolute; background-color:#000; padding:15px 10px;}
+				#contents .btn:hover { box-shadow:2px 2px 10px #ff8f00, -2px -2px 10px #ff8f00;}
+				#contents .red {
+					width:320px;
+					height:250px;
+					background:#ad0000 url(../images/feelhead.png) no-repeat right top;
+					margin:160px 0 0 60px;
+					padding:0 20px;
+					padding-top:350px;
+					position:relative;
+					float:left;
+				}
+					#contents	.r_title { border-bottom:2px solid #940000; }
+					#contents .red a {bottom:20px; left:20px;}
+				#contents .green {
+					width:300px;
+					height:270px;
+					background-color:#3f6343;
+					position:relative;
+					top:160px;
+					left:450px;
+					padding:40px 10px 0 400px;
+				}
+					#contents .green p {text-align:right;}
+					#contents .green .green_HP {
+						width:710px;
+						height:445px;
+						background:url(../images/greenhead.png) no-repeat;
+						position:absolute;
+						top:-135px; left:0;
+						}
+						
+					#contents	.g_title { border-bottom:2px solid #fff; }
+					#contents .g_btn { 
+						position:absolute;
+						right:20px;
+						bottom:20px;
+					}
+					
+					#contents .blue {
+					width:710px;
+					height:250px;
+					background-color:#345adb;
+					position:relative;
+					top:200px;
+					left:450px; 
+				}
+				#contents .blue p {
+					display:inline-block; 
+					position:relative;
+					left:-400px;
+					top:10px;
+					padding:0 10px 30px 10px;
+					
+				}
+				#contents .blue .blue_HP {
+					width:690px;
+					height:261px;
+					background:url(../images/bluehead.png) no-repeat right 0;
+					position:absolute;
+					top:0; left:0;
+				}
+				#contents	.b_title { border-bottom:2px solid #fff; }
+				#contents .b_btn { 
+						position:absolute;
+						left:20px;
+						bottom:20px;
+					}
+					
+				#multi{ padding:0 25px; overflow:hidden;}
+				.youtube { float:left;}
+				.man { float:right; }
+				.text { clear:both; margin-top:35px; font-size:16px; text-align:center;}
+					.text p { font-weight:bold; font-size:28px;}
+					
+				#best {clear:both; padding:100px 0 75px; outline:1px solid red; }
+					.bestTitle { color:#fff; font-weight:bold; font-size:28px; text-align:center; padding-top:15px; background:url(../images/title.png) no-repeat center 0; width:490px; height:60px;}
+					
+					#shop {outline:1px solid red; }
+					#shop li { float:left; text-align:center; }
+				
